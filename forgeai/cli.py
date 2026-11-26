@@ -92,7 +92,7 @@ def _cmd_summary(a: argparse.Namespace) -> int:
 def _cmd_check(_: argparse.Namespace) -> int:
     from .llm import SETTINGS, check_backend
     problems = check_backend()
-    print(f"backend={SETTINGS.backend} model={SETTINGS.model} judge={SETTINGS.judge_model} embed={SETTINGS.embed_model}")
+    print(f"backend={SETTINGS.backend} model={SETTINGS.model} judge={SETTINGS.judge_model} embed={SETTINGS.embed_id}")
     print("\n".join(problems) if problems else "OK: backend ready")
     return 1 if problems else 0
 

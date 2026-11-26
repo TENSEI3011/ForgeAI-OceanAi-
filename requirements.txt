@@ -8,3 +8,4 @@ python-dotenv>=1.0
 reportlab>=4.0   # only used to render the synthetic demo PDFs
 pytest>=8.0
 streamlit>=1.35  # optional web UI (app.py)
+fastembed>=0.4   # hosting without Ollama (EMBED_BACKEND=fastembed); unused with the default Ollama setup

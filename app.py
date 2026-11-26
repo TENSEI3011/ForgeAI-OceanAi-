@@ -6,6 +6,7 @@ The UI is a thin shell: the factory runs as the same CLI subprocess you would ru
 """
 from __future__ import annotations
 
+import hmac
 import json
 import os
 import subprocess
@@ -19,6 +20,34 @@ ROOT = Path(__file__).resolve().parent
 RUNS = ROOT / "runs"
 st.set_page_config(page_title="ForgeAI", page_icon="🛠️", layout="wide")
 
+# Hosted deployments (e.g. Streamlit Community Cloud) pass settings such as LLM_BACKEND and GROQ_API_KEY as
+# secrets. Expose them as environment variables BEFORE forgeai reads its configuration; the factory subprocess
+# inherits them too. Locally there is no secrets file and .env is used as before.
+try:
+    for _k, _v in st.secrets.items():
+        if isinstance(_v, (str, int, float, bool)):
+            os.environ.setdefault(_k, str(_v))
+except Exception:
+    pass
+FACTORY_PASSWORD = os.getenv("FACTORY_PASSWORD", "")
+
+
+@st.cache_resource(show_spinner="Preparing the demo documents (first start only)...")
+def ensure_demo_docs() -> str:
+    """The demo PDFs are not committed: rebuild them from demos/*/source/*.md if they are missing."""
+    needed = [ROOT / "demos/hr_policy/docs/leave_policy.pdf", ROOT / "demos/hr_policy_v2/docs/leave_policy.pdf",
+              ROOT / "demos/ship_spares/docs/supplier_terms_a.pdf"]
+    if all(p.exists() for p in needed):
+        return ""
+    r = subprocess.run([sys.executable, "demos/synthesize.py", "--regression"], cwd=ROOT, capture_output=True,
+                       text=True, encoding="utf-8", errors="replace")
+    return "" if r.returncode == 0 else f"Could not build the demo PDFs: {r.stderr[-400:]}"
+
+
+_docs_problem = ensure_demo_docs()
+if _docs_problem:
+    st.warning(_docs_problem)
+
 
 def run_dirs() -> list[Path]:
     return sorted([p for p in RUNS.glob("*") if (p / "brief.txt").exists()], key=lambda p: p.name)
@@ -29,7 +58,7 @@ from forgeai.llm import SETTINGS, check_backend  # noqa: E402
 
 with st.sidebar:
     st.markdown(f"**Backend:** `{SETTINGS.backend}`  \n**Model:** `{SETTINGS.model}`  \n"
-                f"**Judge:** `{SETTINGS.judge_model}`  \n**Embeddings:** `{SETTINGS.embed_model}`")
+                f"**Judge:** `{SETTINGS.judge_model}`  \n**Embeddings:** `{SETTINGS.embed_id}`")
     problems = check_backend()
     st.success("backend ready") if not problems else st.warning("\n".join(problems))
 
@@ -37,6 +66,14 @@ tab_factory, tab_runs, tab_chat = st.tabs(["🏭 Factory", "📊 Runs", "💬 Ch
 
 # ------------------------------------------------------------------ factory
 with tab_factory:
+    unlocked = True
+    if FACTORY_PASSWORD:
+        st.info("Building an agent uses the hosted model's quota, so the factory needs an access code. "
+                "The Runs and Chat tabs are open to everyone.")
+        code = st.text_input("Access code", type="password")
+        unlocked = hmac.compare_digest(code.encode(), FACTORY_PASSWORD.encode())
+        if code and not unlocked:
+            st.error("Wrong access code.")
     brief = st.text_area("Brief (one paragraph)", height=110,
                          placeholder="I need an assistant that answers HR policy questions for shore staff.")
     demo_dirs = sorted(str(p.relative_to(ROOT).as_posix()) for p in (ROOT / "demos").glob("*/docs"))
@@ -51,7 +88,7 @@ with tab_factory:
     name = c1.text_input("Run name", value=f"ui_{time.strftime('%Y%m%d_%H%M')}")
     n_evals = c2.number_input("Eval cases", 20, 40, 24)
     max_iters = c3.number_input("Max iterations", 0, 3, 3)
-    if st.button("Build agent", type="primary", disabled=not brief.strip()):
+    if st.button("Build agent", type="primary", disabled=not brief.strip() or not unlocked):
         out = RUNS / name
         if files:
             docs_dir = str((out / "uploaded_docs").relative_to(ROOT))

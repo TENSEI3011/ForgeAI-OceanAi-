@@ -38,6 +38,13 @@ T = TypeVar("T", bound=BaseModel)
 
 
 # ---------------------------------------------------------------- configuration
+FASTEMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"   # same model as Ollama's all-minilm
+# Hosted defaults (Groq): generator and judge from DIFFERENT model families (self-preference defence)
+GROQ_DEFAULT_MODEL = "qwen/qwen3.8-27b"
+GROQ_DEFAULT_JUDGE = "openai/gpt-oss-20b"
+GROQ_REASONING_PREFIXES = ("openai/gpt-oss",)
+
+
 @dataclass
 class Settings:
     backend: str = os.getenv("LLM_BACKEND", "ollama").lower()
@@ -45,8 +52,10 @@ class Settings:
     ollama_model: str = os.getenv("OLLAMA_MODEL", "qwen3:4b-instruct")
     num_ctx: int = int(os.getenv("OLLAMA_NUM_CTX", "4096"))
     embed_model: str = os.getenv("EMBED_MODEL", "all-minilm")
+    # ollama (default) or fastembed: the same all-MiniLM-L6-v2 run in-process (ONNX, CPU), for hosting without Ollama
+    embed_backend: str = os.getenv("EMBED_BACKEND", "ollama").lower()
     groq_key: str = os.getenv("GROQ_API_KEY", "")
-    groq_model: str = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
+    groq_model: str = os.getenv("GROQ_MODEL") or GROQ_DEFAULT_MODEL
     use_cache: bool = os.getenv("FORGEAI_LLM_CACHE", "1") == "1"
 
     @property
@@ -54,9 +63,14 @@ class Settings:
         return self.groq_model if self.backend == "groq" else self.ollama_model
 
     @property
+    def embed_id(self) -> str:
+        """Names the embedding source (also part of the embedding cache key, so the two never mix)."""
+        return FASTEMBED_MODEL if self.embed_backend == "fastembed" else self.embed_model
+
+    @property
     def judge_model(self) -> str:
         if self.backend == "groq":
-            return os.getenv("GROQ_JUDGE_MODEL") or self.groq_model
+            return os.getenv("GROQ_JUDGE_MODEL") or GROQ_DEFAULT_JUDGE
         return os.getenv("JUDGE_MODEL") or self.ollama_model
 
 
@@ -110,7 +124,7 @@ class RunStats:
             "backend": SETTINGS.backend,
             "model": SETTINGS.model,
             "judge_model": SETTINGS.judge_model,
-            "embed_model": SETTINGS.embed_model,
+            "embed_model": SETTINGS.embed_id,
             "wall_seconds": round(self.elapsed, 1),
             "total_calls": sum(s.calls for s in self.stages.values()),
             "total_cached_calls": sum(s.cached_calls for s in self.stages.values()),
@@ -241,20 +255,34 @@ def _groq_chat(messages: list[dict], model: str, temperature: float, max_tokens:
         raise LLMError("LLM_BACKEND=groq but GROQ_API_KEY is not set")
     payload: dict[str, Any] = {"model": model, "messages": messages, "temperature": temperature,
                                "max_tokens": max_tokens, "seed": 7}
+    if model.startswith(GROQ_REASONING_PREFIXES):
+        # Reasoning models spend completion tokens on hidden reasoning before the answer. Keep the effort low
+        # and add headroom, or the small budgets used for JSON steps end with an empty or truncated answer.
+        payload["reasoning_effort"] = os.getenv("GROQ_REASONING_EFFORT", "low")
+        payload["max_tokens"] = max_tokens + 512
+    elif model.startswith("qwen/"):
+        payload["reasoning_effort"] = "none"     # answer directly; no <think> block in the content
     if fmt is not None:
         payload["response_format"] = {"type": "json_object"}
+        if not any("json" in str(m.get("content", "")).lower() for m in messages):
+            # Groq's JSON mode requires the word "json" somewhere in the messages
+            payload["messages"] = [{"role": "system", "content": "Respond with a single JSON object."}, *messages]
     for attempt in range(6):
         r = requests.post("https://api.groq.com/openai/v1/chat/completions", json=payload, timeout=120,
                           headers={"Authorization": f"Bearer {SETTINGS.groq_key}"})
         if r.status_code == 429:  # rate limited: back off and retry
             time.sleep(min(60, 4 * (attempt + 1)))
             continue
+        if r.status_code == 400 and "json_validate_failed" in r.text:
+            # Groq rejected the model's JSON: return it so llm_json's repair-and-retry handles it like any
+            # other invalid output, instead of failing the whole run.
+            return str(r.json().get("error", {}).get("failed_generation") or ""), 0, 0
         if r.status_code != 200:
             raise LLMError(f"Groq error {r.status_code}: {r.text[:300]}")
         data = r.json()
         usage = data.get("usage", {})
-        return (data["choices"][0]["message"]["content"], usage.get("prompt_tokens", 0),
-                usage.get("completion_tokens", 0))
+        content = re.sub(r"<think>.*?</think>\s*", "", data["choices"][0]["message"]["content"] or "", flags=re.S)
+        return content, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
     raise LLMError("Groq rate limit: retries exhausted")
 
 
@@ -357,12 +385,31 @@ def _hashed_vector(text: str) -> np.ndarray:
     return vec
 
 
+_FASTEMBED: Any = None
+
+
+def _fastembed_vectors(batch: list[str]) -> list[np.ndarray]:
+    """all-MiniLM-L6-v2 in-process via fastembed (ONNX on CPU): the hosted alternative to Ollama embeddings."""
+    global _FASTEMBED
+    if _FASTEMBED is None:
+        from fastembed import TextEmbedding  # optional dependency, only needed with EMBED_BACKEND=fastembed
+        _FASTEMBED = TextEmbedding(FASTEMBED_MODEL)
+    return [np.asarray(v, dtype=np.float32) for v in _FASTEMBED.embed(batch)]
+
+
+def _ollama_vectors(batch: list[str]) -> list[np.ndarray]:
+    r = requests.post(f"{SETTINGS.ollama_url}/api/embed",
+                      json={"model": SETTINGS.embed_model, "input": batch, "truncate": True}, timeout=300)
+    r.raise_for_status()
+    return [np.array(v, dtype=np.float32) for v in r.json()["embeddings"]]
+
+
 def embed(texts: list[str]) -> np.ndarray:
     """L2-normalised embeddings for texts, cached per text in .cache/emb.sqlite."""
     global _EMB_CACHE, _EMBED_FALLBACK_WARNED
     if _EMB_CACHE is None:
         _EMB_CACHE = _Cache(CACHE_DIR / "emb.sqlite")
-    keys = [hashlib.sha1(f"{SETTINGS.embed_model}|{t}".encode()).hexdigest() for t in texts]
+    keys = [hashlib.sha1(f"{SETTINGS.embed_id}|{t}".encode()).hexdigest() for t in texts]
     out: list[np.ndarray | None] = []
     todo: list[int] = []
     for i, k in enumerate(keys):
@@ -374,10 +421,7 @@ def embed(texts: list[str]) -> np.ndarray:
         idx = todo[b:b + 64]
         batch = [texts[i] for i in idx]
         try:
-            r = requests.post(f"{SETTINGS.ollama_url}/api/embed",
-                              json={"model": SETTINGS.embed_model, "input": batch, "truncate": True}, timeout=300)
-            r.raise_for_status()
-            vecs = [np.array(v, dtype=np.float32) for v in r.json()["embeddings"]]
+            vecs = _fastembed_vectors(batch) if SETTINGS.embed_backend == "fastembed" else _ollama_vectors(batch)
             for i, v in zip(idx, vecs):
                 out[i] = v
                 _EMB_CACHE.put(keys[i], json.dumps(v.round(6).tolist()))
@@ -396,9 +440,20 @@ def embed(texts: list[str]) -> np.ndarray:
 def check_backend() -> list[str]:
     """Preflight: return a list of problems (empty list = good to go)."""
     problems: list[str] = []
+    if SETTINGS.embed_backend == "fastembed":
+        try:
+            import fastembed  # noqa: F401
+        except ImportError:
+            problems.append("EMBED_BACKEND=fastembed but the fastembed package is not installed (lexical fallback "
+                            "will be used)")
     if SETTINGS.backend == "groq":
         if not SETTINGS.groq_key:
             problems.append("GROQ_API_KEY is not set")
+        if SETTINGS.embed_backend != "fastembed":
+            try:
+                requests.get(f"{SETTINGS.ollama_url}/api/tags", timeout=5)
+            except Exception:
+                problems.append("no Ollama for embeddings: set EMBED_BACKEND=fastembed (else lexical fallback)")
         return problems
     try:
         tags = requests.get(f"{SETTINGS.ollama_url}/api/tags", timeout=10).json()
@@ -406,7 +461,8 @@ def check_backend() -> list[str]:
         for needed in {SETTINGS.model, SETTINGS.judge_model}:
             if needed not in names and f"{needed}:latest" not in names:
                 problems.append(f"Ollama model '{needed}' not pulled (run: ollama pull {needed})")
-        if SETTINGS.embed_model not in names and f"{SETTINGS.embed_model}:latest" not in names:
+        if (SETTINGS.embed_backend == "ollama" and SETTINGS.embed_model not in names
+                and f"{SETTINGS.embed_model}:latest" not in names):
             problems.append(f"embedding model '{SETTINGS.embed_model}' not pulled (lexical fallback will be used)")
     except Exception as exc:
         problems.append(f"cannot reach Ollama at {SETTINGS.ollama_url}: {exc}")

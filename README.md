@@ -108,6 +108,32 @@ REPORT.md that explains why).
 folder, live build log), *Runs* (reports, scorecards, iteration logs, eval sets of any run) and *Chat*
 (talk to any generated agent with its sources and tool calls). It shells out to the same CLI.
 
+**Hosted version (Streamlit Community Cloud).** Free hosting has no GPU and no Ollama, so the hosted app
+switches two settings and changes nothing else:
+
+- `LLM_BACKEND=groq`: `qwen/qwen3.8-27b` builds and answers, and `openai/gpt-oss-20b` judges (different
+  model families, as locally). Reasoning models automatically get low reasoning effort and extra token
+  headroom, and Groq's JSON-mode rules are handled in `_groq_chat`.
+- `EMBED_BACKEND=fastembed`: the same all-MiniLM-L6-v2 model, run in-process on the CPU. Its vectors match
+  Ollama's `all-minilm` (cosine 1.0000 on test sentences), so retrieval behaves exactly as it does locally.
+
+The demo PDFs are rebuilt on first start. Building an agent in the *Factory* tab needs an access code
+(`FACTORY_PASSWORD`), so visitors cannot use up the API quota; *Runs* and *Chat* are open. The hosted chat runs
+the committed agent definitions on Groq's models, not on the local 4B model they were tested with. A test build
+of the SMS brief on Groq's free tier (20 cases) took 12 minutes and 118 calls, mostly waiting on rate limits.
+
+To deploy your own copy: on [share.streamlit.io](https://share.streamlit.io), create an app from this repository
+(branch `main`, file `app.py`, Python 3.12) and paste these secrets under *Advanced settings*:
+
+```toml
+LLM_BACKEND = "groq"
+GROQ_API_KEY = "gsk_..."            # free key from console.groq.com
+GROQ_MODEL = "qwen/qwen3.8-27b"
+GROQ_JUDGE_MODEL = "openai/gpt-oss-20b"
+EMBED_BACKEND = "fastembed"
+FACTORY_PASSWORD = "choose-a-code"
+```
+
 **Running a review quickly:** a full build is about an hour on a 4 GB laptop GPU. For a live session use
 `--n-evals 20 --max-iters 2` (about 35 min), or point `LLM_BACKEND=groq` at a hosted open model
 (minutes). Every stage writes its artifact immediately, so partial progress is always inspectable.
@@ -269,8 +295,8 @@ See [Demo runs and results](#demo-runs-and-results). Both run folders are commit
   helpful); the dev split picks the winner (`tournament.json`, comparison table in REPORT.md).
 - **Factory vs human baseline:** `scripts/run_stretch.py` scores a hand-written agent on the factory's eval
   set and compares case by case (`runs/hr_policy/handwritten_baseline/`).
-- **Web UI:** `streamlit run app.py` (factory, run browser, chat). Not hosted: the factory needs a local
-  Ollama or a Groq key, which free hosting tiers do not provide.
+- **Web UI and hosting:** `streamlit run app.py` (factory, run browser, chat), hosted on Streamlit Community
+  Cloud with Groq and in-process embeddings (see [Running the factory](#running-the-factory)).
 
 ---
 
