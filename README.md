@@ -32,35 +32,9 @@ python chat.py runs/my_agent/agent_definition_final.json
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    B[Brief] --> I
-    D[(Document folder<br/>pdf/txt/md/csv/docx/html)] --> ING[Ingest + chunk<br/>contextual headers, CSV rows]
-    ING --> IDX[Hybrid index<br/>MiniLM dense + BM25 + RRF]
-    I[1. Intake interviewer<br/>doc summaries, max 5 questions] --> R[requirements.json]
-    A[answers.json / human / defaults] --> I
-    R --> G[2. Groundability guard<br/>LLM verdict + verified quote + retrieval cap]
-    IDX --> G
-    G -- most topics unsupported --> STOP[Stop + explain]
-    G --> H{--approve<br/>human checkpoint}
-    H --> GEN[3. Generator<br/>prompt spec, retrieval policy,<br/>tools w/ quoted justification + critic]
-    GEN --> DEF[agent_definition_v1.json]
-    DEF --> EG[4. Eval generator<br/>answerable / out-of-scope /<br/>ambiguous / multi-doc / arithmetic]
-    IDX --> EG
-    EG --> V{Deterministic verification<br/>quotes, facts, leaks, answerability}
-    V -- drop + regenerate --> EG
-    V --> EV[evals.json<br/>dev / holdout split]
-    DEF --> RUN[Generic runner<br/>retrieve, tools, answer]
-    EV --> RUN
-    RUN --> J[5. Judge<br/>deterministic checks decide;<br/>LLM judge can only veto]
-    J --> C[6. Critic: classify failures<br/>retrieval_miss / prompt_defect /<br/>hallucination / wrong_refusal]
-    C --> O[Targeted fix on DEV failures<br/>max 2 categories, leak guard]
-    O --> DEF2[agent_definition_vN.json]
-    DEF2 --> RUN
-    J -- regression --> RB[Roll back]
-    J --> REP[7. Report<br/>scorecard, iteration log,<br/>what still fails and why]
-    DEF2 --> CHAT[8. chat.py loads ANY definition]
-```
+![ForgeAI architecture: brief and documents go through intake, the groundability guard and the agent generator; the eval generator, runner, judge and critic-optimizer loop test and improve the agent; the report and chat.py use the final definition](docs/architecture.png)
+
+The diagram source is [`docs/architecture.mmd`](docs/architecture.mmd) (Mermaid).
 
 One function, `forgeai.llm.llm()`, makes every model call. It handles both backends, caching, token and
 latency accounting per stage, and a per-run log of every prompt and response (`llm_calls.jsonl`).
@@ -487,5 +461,6 @@ prompts/            every prompt the factory uses (generation, eval generation, 
 demos/              hr_policy/, ship_spares/, brief_unseen_example/, synth_prompts/, synthesize.py
 runs/               committed artifacts of the demo runs
 tests/              offline tests (LLM mocked)
+docs/               architecture diagram (PNG + Mermaid source)
 chat.py             python chat.py <agent_definition.json>
 ```

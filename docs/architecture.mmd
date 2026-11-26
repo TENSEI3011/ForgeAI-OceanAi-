@@ -1,0 +1,28 @@
+%%{init: {"flowchart": {"wrappingWidth": 420, "nodeSpacing": 35, "rankSpacing": 45}, "themeVariables": {"fontSize": "15px"}}}%%
+flowchart TD
+    B["Brief (one paragraph)"] --> I
+    D[("Document folder<br/>pdf, txt, md, csv, docx, html")] --> ING["Ingest + chunk<br/>contextual headers, CSV rows"]
+    ING --> IDX["Hybrid index<br/>MiniLM dense + BM25 + RRF"]
+    A["answers.json, a human, or defaults"] --> I
+    I["Step 1: Intake interviewer<br/>document summaries, max 5 questions"] --> R["requirements.json"]
+    R --> G["Step 2: Groundability guard<br/>LLM verdict + verified quote + retrieval cap"]
+    IDX --> G
+    G -- "most topics unsupported" --> STOP["Stop and explain<br/>(exit code 2)"]
+    G --> H(["Human checkpoint<br/>optional: --approve flag"])
+    H --> GEN["Step 3: Agent generator<br/>prompt spec, retrieval policy,<br/>tools with quoted justification + critic"]
+    GEN --> DEF["agent_definition_v1.json"]
+    DEF --> EG["Step 4: Eval generator<br/>answerable, out-of-scope,<br/>ambiguous, multi-doc, arithmetic"]
+    IDX --> EG
+    EG --> V(["Deterministic verification<br/>quotes, facts, leaks, answerability"])
+    V -- "drop + regenerate" --> EG
+    V --> EV["evals.json<br/>dev / holdout split"]
+    DEF --> RUN["Generic runner<br/>retrieve, call tools, answer"]
+    EV --> RUN
+    RUN --> J["Step 5: Judge<br/>deterministic checks decide,<br/>LLM judge can only veto"]
+    J --> C["Step 6: Critic classifies failures<br/>retrieval_miss, prompt_defect,<br/>hallucination, wrong_refusal"]
+    C --> O["Targeted fix on dev failures<br/>max 2 categories, leak guard"]
+    O --> DEF2["agent_definition_vN.json"]
+    DEF2 --> RUN
+    J -- "score dropped" --> RB["Roll back"]
+    J --> REP["Step 7: Report<br/>scorecard, iteration log,<br/>what still fails and why"]
+    DEF2 --> CHAT["Step 8: chat.py<br/>loads any definition"]
