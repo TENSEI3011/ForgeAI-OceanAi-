@@ -26,14 +26,40 @@ console = Console()
 MAX_QUESTIONS = 5
 
 
+SAMPLE_ROWS = 6
+MAX_CATEGORY_VALUES = 15
+
+
+def table_excerpt(doc: Doc) -> str:
+    """What the LLM sees of a table before summarising it.
+
+    The first rows alone can mislead: if they all share one category (say, all Deck ranks), the summary
+    claims the table covers only that category, and the intake then refuses the rest. So code lists every
+    value of each category-like column, computed from ALL rows, and samples rows across the whole table.
+    """
+    n = len(doc.rows)
+    lines = [f"CSV table with {n} rows. Columns: {', '.join(doc.columns)}"]
+    categories = []
+    for col in doc.columns:
+        values = list(dict.fromkeys(v for r in doc.rows if (v := r.get(col, "").strip())))
+        if 1 < len(values) <= MAX_CATEGORY_VALUES and len(values) < n:
+            categories.append(f"- {col}: {', '.join(values)}")
+    if categories:
+        lines += ["Every value of the category columns (computed from all rows):", *categories]
+    picks = (sorted({round(i * (n - 1) / (SAMPLE_ROWS - 1)) for i in range(SAMPLE_ROWS)}) if n > SAMPLE_ROWS
+             else list(range(n)))
+    lines.append(f"{len(picks)} sample rows, spread across the whole table:")
+    lines += [row_to_text(doc.rows[i]) for i in picks]
+    return "\n".join(lines)
+
+
 def inspect_documents(docs: list[Doc]) -> list[DocInfo]:
     infos = []
     for doc in docs:
         info = DocInfo(source=doc.source, type=doc.type, chars=len(doc.text), pages=len(doc.pages),
                        rows=len(doc.rows), columns=doc.columns, headings=headings_of(doc))
         if doc.type == "table":
-            excerpt = (f"CSV table with {len(doc.rows)} rows. Columns: {', '.join(doc.columns)}\n"
-                       + "\n".join(row_to_text(r) for r in doc.rows[:6]))
+            excerpt = table_excerpt(doc)
         else:
             excerpt = ("Headings: " + "; ".join(info.headings) + "\n\n" if info.headings else "") + doc.text[:2500]
         try:

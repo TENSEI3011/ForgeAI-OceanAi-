@@ -249,10 +249,53 @@ def _ollama_chat(messages: list[dict], model: str, temperature: float, max_token
     return data["message"]["content"], data.get("prompt_eval_count", 0), data.get("eval_count", 0)
 
 
+class LLMQuotaError(LLMError):
+    """Every configured hosted model has used up its daily quota (free tiers refill gradually)."""
+
+
+# Tried in order when a Groq model's DAILY quota is used up (each model has its own quota)
+GROQ_FALLBACK_MODELS = [m.strip() for m in os.getenv(
+    "GROQ_FALLBACK_MODELS", "openai/gpt-oss-120b,openai/gpt-oss-20b,qwen/qwen3.8-27b").split(",") if m.strip()]
+_GROQ_EXHAUSTED: dict[str, float] = {}       # model -> time until which its daily quota is used up
+_GROQ_FALLBACK_NOTED: set[tuple[str, str]] = set()
+
+
+def _retry_after(r: requests.Response) -> float:
+    """Seconds Groq asks us to wait: the retry-after header, or 'try again in 3m57.1s' in the message."""
+    try:
+        return float(r.headers.get("retry-after", ""))
+    except ValueError:
+        pass
+    m = re.search(r"try again in (?:(\d+)h)?(?:(\d+)m)?(?:([\d.]+)s)?", r.text)
+    if m and any(m.groups()):
+        h, mi, s = (float(x) if x else 0.0 for x in m.groups())
+        return h * 3600 + mi * 60 + s
+    return 10.0
+
+
 def _groq_chat(messages: list[dict], model: str, temperature: float, max_tokens: int,
                fmt: Any) -> tuple[str, int, int]:
+    """Call Groq; if the model's daily quota is used up, answer with the next fallback model instead."""
     if not SETTINGS.groq_key:
         raise LLMError("LLM_BACKEND=groq but GROQ_API_KEY is not set")
+    now = time.time()
+    for cand in [model] + [m for m in GROQ_FALLBACK_MODELS if m != model]:
+        if _GROQ_EXHAUSTED.get(cand, 0) > now:
+            continue
+        result = _groq_call(messages, cand, temperature, max_tokens, fmt)
+        if result is None:          # this model's daily quota is used up: try the next one
+            continue
+        if cand != model and (model, cand) not in _GROQ_FALLBACK_NOTED:
+            _GROQ_FALLBACK_NOTED.add((model, cand))
+            STATS.warnings.append(f"[{current_stage()}] Groq daily quota for {model} is used up; "
+                                  f"{cand} answered instead")
+        return result
+    raise LLMQuotaError("the free daily quota of every configured Groq model is used up; it refills gradually")
+
+
+def _groq_call(messages: list[dict], model: str, temperature: float, max_tokens: int,
+               fmt: Any) -> tuple[str, int, int] | None:
+    """One model. Returns None when the model's DAILY quota is used up (waiting would not help)."""
     payload: dict[str, Any] = {"model": model, "messages": messages, "temperature": temperature,
                                "max_tokens": max_tokens, "seed": 7}
     if model.startswith(GROQ_REASONING_PREFIXES):
@@ -270,8 +313,12 @@ def _groq_chat(messages: list[dict], model: str, temperature: float, max_tokens:
     for attempt in range(6):
         r = requests.post("https://api.groq.com/openai/v1/chat/completions", json=payload, timeout=120,
                           headers={"Authorization": f"Bearer {SETTINGS.groq_key}"})
-        if r.status_code == 429:  # rate limited: back off and retry
-            time.sleep(min(60, 4 * (attempt + 1)))
+        if r.status_code == 429:
+            wait = _retry_after(r)
+            if "per day" in r.text or wait > 120:   # daily quota (tokens or requests per day)
+                _GROQ_EXHAUSTED[model] = time.time() + max(wait, 120)
+                return None
+            time.sleep(min(60.0, max(1.0, wait)))    # per-minute limit: wait as long as Groq asks
             continue
         if r.status_code == 400 and "json_validate_failed" in r.text:
             # Groq rejected the model's JSON: return it so llm_json's repair-and-retry handles it like any

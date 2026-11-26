@@ -7,6 +7,7 @@ Document: {{source}}
 
 In 2-3 sentences say what the document covers, what kinds of concrete facts it contains
 (rules, numbers, limits, items, procedures), and who it is written for. Do not invent content
-that is not in the excerpt.
+that is not in the excerpt. For a table, the listed category values cover EVERY row while the
+sample rows are only examples, so describe what the whole table covers.
 
 Return JSON: {"summary": "..."}

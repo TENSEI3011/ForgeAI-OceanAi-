@@ -58,7 +58,7 @@ ollama pull llama3.2:3b                   # judge: a DIFFERENT model family (sel
 ollama pull all-minilm                    # all-MiniLM-L6-v2 embeddings (45 MB)
 cp .env.example .env                      # Windows: copy .env.example .env
 python -m forgeai check                   # preflight: backend reachable, models pulled
-python -m pytest -q                       # 32 offline tests (no model needed)
+python -m pytest -q                       # 35 offline tests (no model needed)
 python demos/synthesize.py --regression   # build the demo PDFs (see below)
 ```
 
@@ -126,6 +126,14 @@ The demo PDFs are rebuilt on first start. Building an agent in the *Factory* tab
 (`FACTORY_PASSWORD`), so visitors cannot use up the API quota; *Runs* and *Chat* are open. The hosted chat runs
 the committed agent definitions on Groq's models, not on the local 4B model they were tested with. A test build
 of the SMS brief on Groq's free tier (20 cases) took 12 minutes and 118 calls, mostly waiting on rate limits.
+
+**Free-tier quotas.** Groq's free tier allows 8,000 tokens per minute and, for `qwen/qwen3.8-27b`, 200,000
+tokens per day, which refill gradually. One build uses about 95,000 tokens, so plan for at most two builds a day.
+Per-minute limits are waited out for as long as Groq asks. When a model's *daily* quota is used up, ForgeAI does
+not wait: it answers with the next model in `GROQ_FALLBACK_MODELS` (default `openai/gpt-oss-120b`, then
+`openai/gpt-oss-20b`, then `qwen/qwen3.8-27b`, each with its own quota) and records a warning in the run stats,
+because a fallback can put the generator in the judge's model family. Only if every model is out does the chat
+show a "quota used up, try again later" message.
 
 To deploy your own copy: on [share.streamlit.io](https://share.streamlit.io), create an app from this repository
 (branch `main`, file `app.py`, Python 3.12) and paste these secrets under *Advanced settings*:
@@ -422,6 +430,15 @@ Only 2 of 5 two-document pairs survived verification, and the generator stopped 
 being refilled. Fix: a final top-up with answerable cases whenever the total is below the target
 (`tests/test_evalgen_verification.py::test_set_is_topped_up_to_the_minimum_when_a_type_stays_short`).
 The committed runs were not affected: they have 20, 24 and 20 cases.
+
+A third bug was found by building an agent **on the hosted app from a brief and documents never seen before**
+(hours-of-rest rules, a fatigue procedure and a 14-row overtime-rate CSV). The build passed with 19/20 (95%),
+and the one failure exposed the cause. The intake summarised a CSV from its first 6 rows only; those were all
+Deck ranks, so the summary said the table covered "Deck ranks only", and Engine overtime was moved to
+must-refuse although the data was there. The report showed the failure ("refused although the context held the
+answer") but blamed the agent, not the intake. Fix: the excerpt now lists every value of each category column,
+computed by code from all rows, and samples rows across the whole table (`forgeai/intake.py::table_excerpt`,
+`tests/test_table_excerpt_and_groq_quota.py`). The same summary now names Deck, Engine and Catering.
 
 ### What a hand audit of all remaining failures shows
 Across the three runs, 5 cases still fail. By hand: **1 real agent weakness** (E04, overconfident on an

@@ -174,8 +174,17 @@ with tab_chat:
                             st.code(f"{t.name}({t.args}) -> {t.result[:400]}")
         q = st.chat_input("Ask the agent...")
         if q:
-            with st.spinner("thinking..."):
-                ans = runner.answer(q, st.session_state.history)
+            from forgeai.llm import LLMError, LLMQuotaError
+            try:
+                with st.spinner("thinking..."):
+                    ans = runner.answer(q, st.session_state.history)
+            except LLMQuotaError:
+                st.warning("The hosted model's free daily quota is used up right now. It refills gradually, so please "
+                           "try again later. (Run locally with Ollama, ForgeAI has no quota.)")
+                st.stop()
+            except LLMError as exc:
+                st.warning(f"The model could not answer just now ({str(exc)[:160]}). Please try again in a minute.")
+                st.stop()
             st.session_state.history += [{"role": "user", "content": q}, {"role": "assistant", "content": ans.answer}]
             st.session_state.answers.append(ans)
             st.rerun()
