@@ -174,16 +174,18 @@ with tab_chat:
                             st.code(f"{t.name}({t.args}) -> {t.result[:400]}")
         q = st.chat_input("Ask the agent...")
         if q:
-            from forgeai.llm import LLMError, LLMQuotaError
+            import forgeai.llm as _llm
+            # getattr: after a hot redeploy Streamlit can keep an older forgeai.llm in memory; never crash on it
+            quota_error = getattr(_llm, "LLMQuotaError", None)
             try:
                 with st.spinner("thinking..."):
                     ans = runner.answer(q, st.session_state.history)
-            except LLMQuotaError:
-                st.warning("The hosted model's free daily quota is used up right now. It refills gradually, so please "
-                           "try again later. (Run locally with Ollama, ForgeAI has no quota.)")
-                st.stop()
-            except LLMError as exc:
-                st.warning(f"The model could not answer just now ({str(exc)[:160]}). Please try again in a minute.")
+            except _llm.LLMError as exc:
+                if quota_error is not None and isinstance(exc, quota_error):
+                    st.warning("The hosted model's free daily quota is used up right now. It refills gradually, so "
+                               "please try again later. (Run locally with Ollama, ForgeAI has no quota.)")
+                else:
+                    st.warning(f"The model could not answer just now ({str(exc)[:160]}). Please try again in a minute.")
                 st.stop()
             st.session_state.history += [{"role": "user", "content": q}, {"role": "assistant", "content": ans.answer}]
             st.session_state.answers.append(ans)
