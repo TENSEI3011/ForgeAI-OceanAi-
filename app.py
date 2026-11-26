@@ -60,7 +60,10 @@ with st.sidebar:
     st.markdown(f"**Backend:** `{SETTINGS.backend}`  \n**Model:** `{SETTINGS.model}`  \n"
                 f"**Judge:** `{SETTINGS.judge_model}`  \n**Embeddings:** `{SETTINGS.embed_id}`")
     problems = check_backend()
-    st.success("backend ready") if not problems else st.warning("\n".join(problems))
+    if problems:   # a statement, not a bare expression: Streamlit "magic" would render the expression's value
+        st.warning("\n".join(problems))
+    else:
+        st.success("backend ready")
 
 tab_factory, tab_runs, tab_chat = st.tabs(["🏭 Factory", "📊 Runs", "💬 Chat"])
 

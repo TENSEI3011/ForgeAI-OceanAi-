@@ -1,5 +1,9 @@
 # ForgeAI: the agent that builds agents
 
+**Live app: [forgeai-ocean.streamlit.app](https://forgeai-ocean.streamlit.app/)**. Browse the committed runs and
+chat with the generated agents; building a new agent needs an access code
+([how it is hosted](#running-the-factory)).
+
 ForgeAI takes a **one-paragraph brief** and a **folder of documents**. Running unattended on small local
 open models, it produces a **working, tested agent**: system prompt, retrieval configuration, tool
 selection, output contract and an auto-generated eval set. It then improves its own output in a
@@ -108,7 +112,8 @@ REPORT.md that explains why).
 folder, live build log), *Runs* (reports, scorecards, iteration logs, eval sets of any run) and *Chat*
 (talk to any generated agent with its sources and tool calls). It shells out to the same CLI.
 
-**Hosted version (Streamlit Community Cloud).** Free hosting has no GPU and no Ollama, so the hosted app
+**Hosted version: [forgeai-ocean.streamlit.app](https://forgeai-ocean.streamlit.app/)** (Streamlit Community
+Cloud; a sleeping app wakes up in about a minute). Free hosting has no GPU and no Ollama, so the hosted app
 switches two settings and changes nothing else:
 
 - `LLM_BACKEND=groq`: `qwen/qwen3.8-27b` builds and answers, and `openai/gpt-oss-20b` judges (different
