@@ -1,0 +1,2693 @@
+{
+  "scorecard": {
+    "iteration": 0,
+    "definition_version": 1,
+    "n_cases": 24,
+    "pass_rate": 0.833,
+    "dev_pass_rate": 0.833,
+    "holdout_pass_rate": 0.833,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.842,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 0.947,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 4
+    },
+    "pass_by_type": {
+      "answerable": "10/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "2/5",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 429.81,
+    "judge_vetoes": 0,
+    "judge_disagreements": 4,
+    "results": [
+      {
+        "case_id": "A01",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the stock level for the VL-3120 globe valve?",
+        "answer": "The stock level for the VL-3120 globe valve is 0 [source: spares_catalogue.csv].",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 11,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "stock: 0",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 23.85
+      },
+      {
+        "case_id": "A02",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the temperature limit for storing ME-1120 cylinder liner O-ring kits?",
+        "answer": "The temperature limit for storing ME-1120 cylinder liner O-ring kits is not specified in the documents.  \n\n[Source: supplier_terms_b.pdf, page 2] states that ME-1120 cylinder liner O-ring kits must be stored below 25°C, but this is stated in the context of ME-1120 cylinder liner O-ring kits, and the temperature limit is only mentioned in relation to ME-1120, not ME-1120 specifically. However, the passage says: \"ME-1120 cylinder liner O-ring kits must be stored below 25 C\" — this is a direct statement.  \n\nThus, the temperature limit is 25°C, as stated in [source: supplier_terms_b.pdf, page 2].  \n\nNote: The original passage says \"ME-1120 cylinder liner O-ring kits must be stored below 25 C\" — this is a direct statement. Therefore, the temperature limit is 25°C. [source: supplier_terms_b.pdf, page 2]",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 118,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "ME-1120 cylinder liner O-ring kits must be stored below 25 C",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "A03",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "What is the email address for placing orders with Anchorline Marine?",
+        "answer": "The email address for placing orders with Anchorline Marine is orders@anchorline-marine.example [source: supplier_terms_a.pdf, page 2]. \n\n- This email is specified in the supplier terms for order placement.  \n- No other email addresses are provided in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(Note: The above statement contradicts the actual content. Correction: The email is correctly stated in the provided context. The full response is accurate as per the source.)  \n\nFinal corrected version:  \nThe email address for placing orders with Anchorline Marine is orders@anchorline-marine.example [source: supplier_terms_a.pdf, page 2].",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 89,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Orders: orders@anchorline-marine.example",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 30.06
+      },
+      {
+        "case_id": "A04",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the stock level for CO2 fire extinguisher 6 kg part SF-7040?",
+        "answer": "The stock level for CO2 fire extinguisher 6 kg part SF-7040 is 30 [source: spares_catalogue.csv].",
+        "retrieved_sources": [
+          "spares_catalogue.csv",
+          "supplier_terms_a.pdf"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 14,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "stock: 30",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 20.59
+      },
+      {
+        "case_id": "A05",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the 24-hour priority phone number for Bluefin Spares?",
+        "answer": "The 24-hour priority phone number for Bluefin Spares is +971 9 555 0110 [source: supplier_terms_b.pdf, page 2].  \n\nThis number is designated for the VNO priority line and is available 24 hours a day.  \n\nNote: The sales desk and claims contacts are not relevant to a 24-hour priority call.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \nCorrection: The 24-hour priority number is explicitly stated in the document. Final answer: +971 9 555 0110 [source: supplier_terms_b.pdf, page 2].",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 76,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "+971 9 555 0110",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "A06",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "What is the daily cost for a service engineer visit to NV-8000 series gyro compass sensor modules?",
+        "answer": "The daily cost for a service engineer visit to NV-8000 series gyro compass sensor modules is USD 950 per day [source: supplier_terms_a.pdf, page 2].  \n\n- This cost applies to service engineer visits for the NV-8000 series gyro compass sensor modules.  \n- The NV-8000 series is specifically associated with Bulk Carrier vessels [source: spares_catalogue.csv].  \n- The cost does not include travel expenses or other associated fees.  \n\nNote: The NV-8000 series is not explicitly linked to container vessels in the provided data, and no container vessel-specific service engineer visit cost is stated. Thus, applicability to container vessels is not confirmed.",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 94,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "plus travel",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 31.8
+      },
+      {
+        "case_id": "A07",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the stock level for the bilge pump diaphragm kit PU-2261?",
+        "answer": "The stock level for the bilge pump diaphragm kit PU-2261 is 20 [source: spares_catalogue.csv].",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "stock: 20",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 19.63
+      },
+      {
+        "case_id": "A08",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How much does a class approval certificate for SF-series safety equipment cost?",
+        "answer": "A class approval certificate for SF-series safety equipment costs USD 35 per certificate [source: supplier_terms_a.pdf].  \n\n- This fee applies specifically to class approval certificates for safety equipment in the SF-series.  \n- The certificate is provided free of charge on request, but the cost of issuing it is USD 35 [source: supplier_terms_a.pdf].  \n- No information is provided about the cost for non-SF-series equipment or for other types of safety equipment.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The above fact is correct, but the refusal sentence is a system instruction and must be used only when no answer exists. Since the cost is explicitly stated, the refusal is not applicable here.)  \n\nFinal answer: A class approval certificate for SF-series safety equipment costs USD 35 per certificate [source: supplier_terms_a.pdf].",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 131,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Class approval certificates for safety equipment (SF- series) cost USD 35 per certificate.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 34.55
+      },
+      {
+        "case_id": "A09",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "What is the total cost of purchasing 4 fuel injector nozzle sets for a marine vessel?",
+        "answer": "The total cost of purchasing 4 fuel injector nozzle sets is USD 1,839.04 [source: calculator result].  \nEach fuel injector nozzle set (part_no: ME-1042) has a unit price of USD 459.76 [source: spares_catalogue.csv].  \nThe calculation is 4 × 459.76 = 1,839.04 [source: calculator].  \nThis part is for a product tanker, not a container vessel [source: spares_catalogue.csv].  \nThe vessel class for container vessels is not covered in the provided data.  \nThus, the cost is valid only for product tankers, not container vessels.",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "tool:calculator",
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [
+          "csv_lookup",
+          "calculator"
+        ],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 75,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "calculator result: 4 * 459.76 = 1839.04",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.02
+      },
+      {
+        "case_id": "A10",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the total cost of purchasing 4 piston ring sets for a container feeder vessel?",
+        "answer": "The total cost of purchasing 4 piston ring sets for a container feeder vessel is $4,167.16.  \n- Each piston ring set (part_no: ME-1081) has a unit price of $1,041.79 [source: spares_catalogue.csv].  \n- Multiplying 4 by $1,041.79 gives $4,167.16 [calculator result].  \n- The vessel class is Container Feeder, matching the required vessel type [source: spares_catalogue.csv].  \n- Stock availability (30 units) and lead time (1 day) are sufficient for this order [source: spares_catalogue.csv].  \n\nNote: The part ME-1081 is the only piston ring set specifically listed for a container feeder vessel. Other piston ring sets are for different vessel classes.",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [
+          "csv_lookup",
+          "calculator"
+        ],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 94,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "calculator result: 4 * 1041.79 = 4167.16",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "E01",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "If i order less than 2500 usd, how much is freight for a small item?",
+        "answer": "For a small item, if the order value is less than USD 2,500, freight is a flat charge of USD 85 per order [source: supplier_terms_a.pdf, page 1]. This applies to all destinations except for items over 150 kg, which are quoted separately [source: supplier_terms_a.pdf, page 1].  \n\nThe query does not specify the weight or size of the small item, so it is assumed to be under 150 kg.  \n\nThe catalogue does not list any part with \"small item\" in the description or part number [source: spares_catalogue.csv].  \n\nThus, the freight cost of USD 85 applies only if the item is under 150 kg and the order value is below USD 2,500. If the item exceeds 150 kg, the freight is quoted separately and not covered by this rule.",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [
+          "csv_lookup",
+          "csv_lookup"
+        ],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": false,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 120,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Freight is free for orders above USD 2,500 delivered to Singapore or Rotterdam. Below that value, and for other destinations, a flat freight charge of USD 85 per order applies, except for items over 150 kg, which are quoted separately.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "deterministic checks failed but the judge found the answer correct and supported (possible fact-matching false negative, or an over-specific expected fact; NOT rescued)",
+        "judge_notes": "citation problem (cited ['supplier_terms_a.pdf', 'spares_catalogue.csv'], expected ['supplier_terms_a.pdf'], fabricated ['spares_catalogue.csv'])",
+        "failure_category": "prompt_defect",
+        "diagnosis": "citation contract not followed",
+        "passed": false,
+        "latency_s": 55.1
+      },
+      {
+        "case_id": "E02",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "What's the part number for the hatch seal kit?",
+        "answer": "The part number for the hatch seal kit is DK-6021 [source: spares_catalogue.csv].  \n\n- DK-6021: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6020: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6022: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6023: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n\nAll these entries describe a hatch cover hydraulic cylinder seal kit, so \"hatch seal kit\" is a valid description for these parts. The specific part number depends on the vessel class and other specifications, which are not fully specified in the query. The part number DK-6021 is listed under Container Feeder, which may be most relevant for container vessels. However, the exact match for \"hatch seal kit\" is not uniquely defined in the context.",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 117,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "part_no: DK-6021 | description: Hatch cover hydraulic cylinder seal kit",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "All these entries describe a hatch cover hydraulic cylinder seal kit, so ",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "judge said fail but gave no verifiable quote for it (ignored)",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 37.19
+      },
+      {
+        "case_id": "E03",
+        "type": "edge_ambiguous",
+        "split": "holdout",
+        "question": "I need to replace a filter on a product tanker that requires a specific intake component—what is the part number for this filter?",
+        "answer": "The part number for the engine air intake filter on a product tanker is FL-4062 [source: spares_catalogue.csv].  \n\n- FL-4062 is listed under the vessel class \"Product Tanker\" [source: spares_catalogue.csv].  \n- It is categorized as a filter and has a unit price of $108.05 [source: spares_catalogue.csv].  \n- Stock level is 40 units with a lead time of 1 day [source: spares_catalogue.csv].  \n\nNote: While FL-4061 and FL-4063 are also engine air intake filters, they are not applicable to product tankers as their vessel classes are Container Feeder and Offshore Supply Vessel, respectively [source: spares_catalogue.csv].",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [
+          "csv_lookup"
+        ],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 87,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "part_no: FL-4062 | description: Engine air intake filter | category: Filters | unit_price_usd: 108.05 | stock: 40 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Product Tanker",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 9758.84
+      },
+      {
+        "case_id": "E04",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "What's the part no for the turbocharger for aux engine?",
+        "answer": "The part number for the turbocharger for auxiliary engine is AE-1501 [source: spares_catalogue.csv].  \n\n- AE-1501: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1500: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1502: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1503: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n\nNote: Multiple part numbers describe turbochargers for auxiliary engines, but AE-1501 is the first listed and matches the query most directly. The full list of part numbers is not fully covered in the context.",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 74,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "part_no: AE-1501 | description: Turbocharger cartridge for auxiliary engine",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 51.56
+      },
+      {
+        "case_id": "M01",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "For EL-series electrical items, what is the return window and restocking fee if the packaging is opened, and how does this compare to made-to-order items with a lead time over 30 days?",
+        "answer": "For EL-series electrical items, if the packaging is opened, returns are not allowed [source: supplier_terms_a.pdf, page 2].  \n\nFor made-to-order items with a lead time over 30 days (e.g., EL-5140 shore connection cable reel), returns are not permitted [source: supplier_terms_b.pdf, page 2].  \n\nThe return window and restocking fee for opened EL-series items are not defined in the documents, as no return window or fee is specified after packaging is opened. The comparison shows both categories are non-returnable, but the documents do not specify whether the restocking fee applies to opened EL-series items or made-to-order items.  \n\nThe return policy for opened EL-series items is not covered in the provided texts.",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 102,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "The return window and restocking fee for opened EL-series items are not defined in the documents, as no return window or fee is specified after packaging is opened.",
+          "evidence_verified": false,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "judge said fail but gave no verifiable quote for it (ignored)",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 40.91
+      },
+      {
+        "case_id": "M02",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "What is the combined effect of the volume discount and validity period for marine vessel maintenance spares when ordering 10 or more units of the same part number with an order value over USD 10,000?",
+        "answer": "The combined effect of the volume discount and validity period is that a 5% volume discount applies when 10 or more units of the same part number are ordered, and catalogue prices remain valid until 31 March 2026 [source: supplier_terms_a.pdf, page 1]. This discount is applied before any early-payment discount and only applies to orders of 10 or more units of the same part number [source: supplier_terms_a.pdf, page 1]. There is no mention of a combined effect on order value exceeding USD 10,000 or its interaction with the volume discount. The validity period of 31 March 2026 applies to catalogue prices, not to the volume discount itself. The volume discount does not apply if the order value before discount does not exceed USD 10,000 [source: supplier_terms_b.pdf, page 1]. This part of the question is not covered.",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": false,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 0.5,
+        "missing_facts": [
+          "8% volume discount applies when order value exceeds USD 10,000"
+        ],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 127,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "",
+          "contradicts_reference": true,
+          "contradiction_quote": "There is no discount for quantities of a single part number.",
+          "unsupported_claim": "",
+          "evidence_verified": false,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "missing facts: ['8% volume discount applies when order value exceeds USD 10,000']",
+        "failure_category": "prompt_defect",
+        "diagnosis": "context had the facts but the answer missed ['8% volume discount applies when order value exceeds USD 10,000']",
+        "passed": false,
+        "latency_s": 50.43
+      },
+      {
+        "case_id": "M03",
+        "type": "edge_multi_doc",
+        "split": "holdout",
+        "question": "For a vessel in Piraeus requiring urgent delivery, how long after order confirmation will an in-stock spare part be dispatched if express service is not available, and what is the maximum time for delivery to such a location?",
+        "answer": "For a vessel in Piraeus requiring urgent delivery, an in-stock spare part will be dispatched within 3 working days of order confirmation if express service is not available [source: supplier_terms_b.pdf, page 1]. Delivery to such a location takes 4 working days from order confirmation [source: supplier_terms_b.pdf, page 1].  \n\nThe maximum time for delivery to Piraeus is 4 working days from order confirmation.  \n\nNote: Express service is not available, as Bluefin does not offer a standard express service [source: supplier_terms_b.pdf, page 1]. This part of the question is fully covered.",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf"
+        ],
+        "cited_sources": [
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": false,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 0.5,
+        "missing_facts": [
+          "in-stock items are dispatched within 2 working days of order confirmation"
+        ],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 80,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "For a vessel in Piraeus requiring urgent delivery, an in-stock spare part will be dispatched within 3 working days of order confirmation if express service is not available .",
+          "evidence_verified": false,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "missing facts: ['in-stock items are dispatched within 2 working days of order confirmation']",
+        "failure_category": "prompt_defect",
+        "diagnosis": "context had the facts but the answer missed ['in-stock items are dispatched within 2 working days of order confirmation']",
+        "passed": false,
+        "latency_s": 47.59
+      },
+      {
+        "case_id": "M04",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "Which supplier provides main engine and deck machinery spares and under what terms do Coralis Shipping's procurement officers govern purchases for those items?",
+        "answer": "Bluefin Ship Spares provides main engine and deck machinery spares [source: supplier_terms_b.pdf, page 1]. Coralis Shipping's procurement officers govern purchases for these items under Bluefin Ship Spares' Terms and Conditions of Sale, Supplier ID SUP-B, Edition 7, effective 1 February 2025 [source: supplier_terms_b.pdf, page 1].  \n\nThe terms specify warehouses at Piraeus and Fujairah [source: supplier_terms_b.pdf, page 1].  \n\nThe supplier terms do not specify any conditions for Coralis Shipping's procurement officers beyond the terms themselves, nor do they cover vessel class applicability beyond what is listed in the spares catalogue.  \n\nThe part descriptions and vessel class in the spares catalogue (e.g., \"Container Feeder\") are not directly linked to the supplier terms in the provided documents.",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": false,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 0.5,
+        "missing_facts": [
+          "Anchorline Marine Supplies"
+        ],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 105,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Bluefin Ship Spares - Terms and Conditions of Sale Supplier ID: SUP-B | Edition 7 | Effective 1 February 2025 | Warehouses: Piraeus and Fujairah",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "deterministic checks failed but the judge found the answer correct and supported (possible fact-matching false negative, or an over-specific expected fact; NOT rescued)",
+        "judge_notes": "missing facts: ['Anchorline Marine Supplies']",
+        "failure_category": "prompt_defect",
+        "diagnosis": "context had the facts but the answer missed ['Anchorline Marine Supplies']",
+        "passed": false,
+        "latency_s": 49.89
+      },
+      {
+        "case_id": "M05",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "What is the maximum warranty period for main engine parts and pumps, and how do their warranty extensions differ in terms of duration and cost?",
+        "answer": "The maximum warranty period for main engine parts is 12 months [source: supplier_terms_b.pdf]. For pumps and pump parts (PU-series), the extended warranty is 18 months [source: supplier_terms_a.pdf]. Main engine parts have a standard warranty of 6 months from delivery [source: supplier_terms_b.pdf], while pumps have a standard warranty of 12 months from delivery or 6,000 running hours, whichever comes first [source: supplier_terms_a.pdf]. Extended warranty for main engine parts costs 4% of the item price per additional 6 months, up to a maximum of 24 months [source: supplier_terms_b.pdf]. For pumps, the extended warranty is 18 months [source: supplier_terms_a.pdf], but no cost is specified in the documents. The duration and cost of extension for pumps are not fully detailed in the provided texts.",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf"
+        ],
+        "tools_called": [
+          "csv_lookup"
+        ],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 114,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "An extended warranty can be purchased at 4% of the item price for each additional 6 months, up to a maximum total warranty of 24 months.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 63.37
+      },
+      {
+        "case_id": "O01",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "What's a good budget range for a diesel generator spare part for a 20,000 TEU container ship?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.  \n\nThe documents do not contain any diesel generator spare parts specifically for a 20,000 TEU container ship. While several parts for Container Feeder vessels are listed, such as fuel injector nozzles (ME-1041) and starting air valve kits (ME-1161), none are specified as diesel generator spares or linked to a 20,000 TEU vessel class. No price range or part data for diesel generator components is provided in the catalogues. [source: spares_catalogue.csv]",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [
+          "csv_lookup"
+        ],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 81,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.05
+      },
+      {
+        "case_id": "O02",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "I'm trying to find a reliable source for replacing a failed rudder bearing—any recommendations for suppliers in the Asia-Pacific region?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not mention any suppliers in the Asia-Pacific region, nor do they provide information about rudder bearings or spare parts for such components. While Anchorline Marine Supplies and Bluefin Ship Spares are listed with warehouse locations (e.g., Rotterdam, Singapore, Piraeus, Fujairah), no specific part number or detail about rudder bearings is provided, and no supplier is explicitly identified as serving the Asia-Pacific region. [source: supplier_terms_a.pdf, page 1] [source: supplier_terms_b.pdf, page 1]",
+        "retrieved_sources": [
+          "supplier_terms_b.pdf",
+          "supplier_terms_a.pdf"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf"
+        ],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 78,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.02
+      },
+      {
+        "case_id": "O03",
+        "type": "out_of_scope",
+        "split": "holdout",
+        "question": "How do I calculate the optimal stock level for a critical pump seal given the vessel’s operating schedule?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not contain information about vessel operating schedules, demand forecasting, or methods for calculating optimal stock levels for pump seals. While part numbers, prices, and stock levels are provided [source: spares_catalogue.csv], there is no data on vessel usage patterns, failure rates, or inventory management models to support such a calculation.",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "spares_catalogue.csv"
+        ],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 64,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "O04",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "Can you suggest a checklist for verifying the authenticity of a marine spare part before installation?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "O05",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "Should I use a third-party logistics provider for delivering spare parts to remote ports, or stick with direct shipping?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not contain any information about third-party logistics providers, remote ports, or comparisons between direct shipping and third-party delivery services. While delivery timelines for direct shipping are specified [source: supplier_terms_a.pdf], there is no mention of third-party logistics or their performance, costs, or applicability to remote ports. Therefore, the decision between direct shipping and third-party logistics cannot be evaluated based on the provided context.",
+        "retrieved_sources": [
+          "supplier_terms_a.pdf",
+          "supplier_terms_b.pdf",
+          "spares_catalogue.csv"
+        ],
+        "cited_sources": [
+          "supplier_terms_a.pdf"
+        ],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 77,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.02
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question": "What is the stock level for the VL-3120 globe valve?",
+      "answer": "The stock level for the VL-3120 globe valve is 0 [source: spares_catalogue.csv].",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#65",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3120 | description: Globe valve DN50 bronze | category: Valves | unit_price_usd: 300.31 | stock: 0 | lead_time_days: 9 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0328,
+          "dense": 0.5275,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#66",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3121 | description: Globe valve DN50 bronze | category: Valves | unit_price_usd: 310.55 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0318,
+          "dense": 0.4995,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#68",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3123 | description: Globe valve DN50 bronze | category: Valves | unit_price_usd: 210.13 | stock: 40 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0318,
+          "dense": 0.5132,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#67",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3122 | description: Globe valve DN50 bronze | category: Valves | unit_price_usd: 238.34 | stock: 15 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0317,
+          "dense": 0.5096,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#61",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3100 | description: Butterfly valve DN150 with gear operator | category: Valves | unit_price_usd: 436.77 | stock: 10 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0301,
+          "dense": 0.4881,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#69",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3140 | description: Safety relief valve 10 bar | category: Valves | unit_price_usd: 430.93 | stock: 10 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0295,
+          "dense": 0.4955,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 23.85,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the temperature limit for storing ME-1120 cylinder liner O-ring kits?",
+      "answer": "The temperature limit for storing ME-1120 cylinder liner O-ring kits is not specified in the documents.  \n\n[Source: supplier_terms_b.pdf, page 2] states that ME-1120 cylinder liner O-ring kits must be stored below 25°C, but this is stated in the context of ME-1120 cylinder liner O-ring kits, and the temperature limit is only mentioned in relation to ME-1120, not ME-1120 specifically. However, the passage says: \"ME-1120 cylinder liner O-ring kits must be stored below 25 C\" — this is a direct statement.  \n\nThus, the temperature limit is 25°C, as stated in [source: supplier_terms_b.pdf, page 2].  \n\nNote: The original passage says \"ME-1120 cylinder liner O-ring kits must be stored below 25 C\" — this is a direct statement. Therefore, the temperature limit is 25°C. [source: supplier_terms_b.pdf, page 2]",
+      "cited_sources": [
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#10",
+          "source": "supplier_terms_b.pdf",
+          "text": " NV-8020 series ECDIS display units include software updates for 24 months from delivery.  ME-1120 cylinder liner O-ring kits must be stored below 25 C; storage instructions are included in each box.  Orders for EL-5100 series circuit breakers must state the switchboard maker and serial number.",
+          "score": 0.0328,
+          "dense": 0.4115,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#18",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1121 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 215.23 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0318,
+          "dense": 0.3836,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#17",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1120 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 202.53 | stock: 30 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0318,
+          "dense": 0.377,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#20",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1123 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 178.15 | stock: 15 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0313,
+          "dense": 0.3826,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#19",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1122 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 220.63 | stock: 0 | lead_time_days: 10 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0313,
+          "dense": 0.3753,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#10",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1081 | description: Piston ring set | category: Main Engine | unit_price_usd: 1041.79 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0281,
+          "dense": 0.2321,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the email address for placing orders with Anchorline Marine?",
+      "answer": "The email address for placing orders with Anchorline Marine is orders@anchorline-marine.example [source: supplier_terms_a.pdf, page 2]. \n\n- This email is specified in the supplier terms for order placement.  \n- No other email addresses are provided in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(Note: The above statement contradicts the actual content. Correction: The email is correctly stated in the provided context. The full response is accurate as per the source.)  \n\nFinal corrected version:  \nThe email address for placing orders with Anchorline Marine is orders@anchorline-marine.example [source: supplier_terms_a.pdf, page 2].",
+      "cited_sources": [
+        "supplier_terms_a.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#1",
+          "source": "supplier_terms_a.pdf",
+          "text": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms the change in writing.",
+          "score": 0.0323,
+          "dense": 0.4385,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#13",
+          "source": "supplier_terms_a.pdf",
+          "text": " Orders: orders@anchorline-marine.example  Account manager for Coralis Shipping: +31 10 555 0142  Warranty and returns: claims@anchorline-marine.example Synthetic document for demonstration purposes.",
+          "score": 0.0323,
+          "dense": 0.6536,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#0",
+          "source": "supplier_terms_a.pdf",
+          "text": "Anchorline Marine Supplies - General Terms of Supply Supplier ID: SUP-A | Terms version 2025-1 | Valid for orders placed from 1 January 2025 | Warehouses: Rotterdam and Singapore",
+          "score": 0.0323,
+          "dense": 0.5208,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#12",
+          "source": "supplier_terms_a.pdf",
+          "text": "Anchorline does not pay penalties for late delivery, but will refund the express surcharge in full if an express shipment is dispatched later than promised.",
+          "score": 0.0295,
+          "dense": 0.3681,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#5",
+          "source": "supplier_terms_b.pdf",
+          "text": " In-stock items are dispatched within 3 working days of order confirmation.  Delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation.  Worldwide delivery by air freight takes 10 to 14 working days from order confirmation.  Out-of-stock items are dispatched within the catalogue lead time (lead_time_days). Bluefin does not offer a standard express service. For a vessel that cannot operate until a part arrives, the Vessel-Not-Operational (VNO) priority service guarantees dispatch within 24 hours for a surcharge of 25% of the order value.",
+          "score": 0.0254,
+          "dense": 0.3314,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#9",
+          "source": "supplier_terms_b.pdf",
+          "text": "If Bluefin delivers later than the confirmed delivery date, Coralis Shipping may deduct a penalty of 1% of the order value for each day of delay, capped at 10% of the order value.",
+          "score": 0.0208,
+          "dense": 0.2852,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 30.06,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the stock level for CO2 fire extinguisher 6 kg part SF-7040?",
+      "answer": "The stock level for CO2 fire extinguisher 6 kg part SF-7040 is 30 [source: spares_catalogue.csv].",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#133",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7040 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 162.00 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0323,
+          "dense": 0.6417,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#135",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7042 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 173.92 | stock: 5 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0323,
+          "dense": 0.6543,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#136",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7043 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 183.24 | stock: 0 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0318,
+          "dense": 0.6431,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#134",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7041 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 181.80 | stock: 4 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0318,
+          "dense": 0.6413,
+          "page": null
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#11",
+          "source": "supplier_terms_a.pdf",
+          "text": " ME-1042 (fuel injector nozzle set, product tanker engines) is supplied as a set of 2 nozzles; the catalogue price is per set.  SF-7000 series immersion suits are packed in cartons of 4; orders are rounded up to full cartons.  For NV-8000 series gyro compass sensor modules a service engineer visit can be booked at USD 950 per day plus travel.",
+          "score": 0.0258,
+          "dense": 0.4158,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#131",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7022 | description: Lifejacket with light | category: Safety Equipment | unit_price_usd: 49.54 | stock: 8 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0256,
+          "dense": 0.3568,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 20.59,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the 24-hour priority phone number for Bluefin Spares?",
+      "answer": "The 24-hour priority phone number for Bluefin Spares is +971 9 555 0110 [source: supplier_terms_b.pdf, page 2].  \n\nThis number is designated for the VNO priority line and is available 24 hours a day.  \n\nNote: The sales desk and claims contacts are not relevant to a 24-hour priority call.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \nCorrection: The 24-hour priority number is explicitly stated in the document. Final answer: +971 9 555 0110 [source: supplier_terms_b.pdf, page 2].",
+      "cited_sources": [
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#11",
+          "source": "supplier_terms_b.pdf",
+          "text": " Sales desk: sales@bluefin-spares.example, +30 210 555 0199  VNO priority line (24 hours): +971 9 555 0110  Claims: claims@bluefin-spares.example Synthetic document for demonstration purposes.",
+          "score": 0.0328,
+          "dense": 0.74,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#0",
+          "source": "supplier_terms_b.pdf",
+          "text": "Bluefin Ship Spares - Terms and Conditions of Sale Supplier ID: SUP-B | Edition 7 | Effective 1 February 2025 | Warehouses: Piraeus and Fujairah",
+          "score": 0.0313,
+          "dense": 0.5804,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#1",
+          "source": "supplier_terms_b.pdf",
+          "text": "These terms govern sales by Bluefin Ship Spares (supplier ID SUP-B) to Coralis Shipping for all catalogue items listed against SUP-B. Bluefin specialises in main engine, electrical and deck machinery spares.",
+          "score": 0.0312,
+          "dense": 0.4792,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#9",
+          "source": "supplier_terms_b.pdf",
+          "text": "If Bluefin delivers later than the confirmed delivery date, Coralis Shipping may deduct a penalty of 1% of the order value for each day of delay, capped at 10% of the order value.",
+          "score": 0.0306,
+          "dense": 0.4887,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#101",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: EL-5120 | description: LED floodlight 150W | category: Electrical | unit_price_usd: 182.67 | stock: 24 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0272,
+          "dense": 0.3947,
+          "page": null
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#5",
+          "source": "supplier_terms_b.pdf",
+          "text": " In-stock items are dispatched within 3 working days of order confirmation.  Delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation.  Worldwide delivery by air freight takes 10 to 14 working days from order confirmation.  Out-of-stock items are dispatched within the catalogue lead time (lead_time_days). Bluefin does not offer a standard express service. For a vessel that cannot operate until a part arrives, the Vessel-Not-Operational (VNO) priority service guarantees dispatch within 24 hours for a surcharge of 25% of the order value.",
+          "score": 0.027,
+          "dense": 0.3709,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the daily cost for a service engineer visit to NV-8000 series gyro compass sensor modules?",
+      "answer": "The daily cost for a service engineer visit to NV-8000 series gyro compass sensor modules is USD 950 per day [source: supplier_terms_a.pdf, page 2].  \n\n- This cost applies to service engineer visits for the NV-8000 series gyro compass sensor modules.  \n- The NV-8000 series is specifically associated with Bulk Carrier vessels [source: spares_catalogue.csv].  \n- The cost does not include travel expenses or other associated fees.  \n\nNote: The NV-8000 series is not explicitly linked to container vessels in the provided data, and no container vessel-specific service engineer visit cost is stated. Thus, applicability to container vessels is not confirmed.",
+      "cited_sources": [
+        "supplier_terms_a.pdf",
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#11",
+          "source": "supplier_terms_a.pdf",
+          "text": " ME-1042 (fuel injector nozzle set, product tanker engines) is supplied as a set of 2 nozzles; the catalogue price is per set.  SF-7000 series immersion suits are packed in cartons of 4; orders are rounded up to full cartons.  For NV-8000 series gyro compass sensor modules a service engineer visit can be booked at USD 950 per day plus travel.",
+          "score": 0.0328,
+          "dense": 0.609,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#141",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: NV-8000 | description: Gyro compass sensor module | category: Navigation | unit_price_usd: 3347.07 | stock: 15 | lead_time_days: 8 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0323,
+          "dense": 0.5633,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#142",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: NV-8001 | description: Gyro compass sensor module | category: Navigation | unit_price_usd: 3383.32 | stock: 4 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0313,
+          "dense": 0.5334,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#144",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: NV-8003 | description: Gyro compass sensor module | category: Navigation | unit_price_usd: 3575.59 | stock: 2 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0313,
+          "dense": 0.5461,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#143",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: NV-8002 | description: Gyro compass sensor module | category: Navigation | unit_price_usd: 3025.25 | stock: 1 | lead_time_days: 6 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0312,
+          "dense": 0.5396,
+          "page": null
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#10",
+          "source": "supplier_terms_a.pdf",
+          "text": "Certificates of conformity are provided free of charge on request. Class approval certificates for safety equipment (SF- series) cost USD 35 per certificate. Butterfly valves VL-3102 are supplied with a class certificate included in the price.",
+          "score": 0.0303,
+          "dense": 0.3885,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 31.8,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the stock level for the bilge pump diaphragm kit PU-2261?",
+      "answer": "The stock level for the bilge pump diaphragm kit PU-2261 is 20 [source: spares_catalogue.csv].",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#53",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2260 | description: Bilge pump diaphragm kit | category: Pumps | unit_price_usd: 121.56 | stock: 8 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0325,
+          "dense": 0.6329,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#54",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2261 | description: Bilge pump diaphragm kit | category: Pumps | unit_price_usd: 143.41 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0323,
+          "dense": 0.6139,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#55",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2262 | description: Bilge pump diaphragm kit | category: Pumps | unit_price_usd: 143.71 | stock: 10 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.032,
+          "dense": 0.6189,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#56",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2263 | description: Bilge pump diaphragm kit | category: Pumps | unit_price_usd: 164.11 | stock: 5 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0312,
+          "dense": 0.6133,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#45",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2200 | description: Ballast pump impeller | category: Pumps | unit_price_usd: 732.75 | stock: 12 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.029,
+          "dense": 0.4555,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#59",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2282 | description: Fresh water generator pump shaft | category: Pumps | unit_price_usd: 451.96 | stock: 20 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.029,
+          "dense": 0.4721,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 19.63,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How much does a class approval certificate for SF-series safety equipment cost?",
+      "answer": "A class approval certificate for SF-series safety equipment costs USD 35 per certificate [source: supplier_terms_a.pdf].  \n\n- This fee applies specifically to class approval certificates for safety equipment in the SF-series.  \n- The certificate is provided free of charge on request, but the cost of issuing it is USD 35 [source: supplier_terms_a.pdf].  \n- No information is provided about the cost for non-SF-series equipment or for other types of safety equipment.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The above fact is correct, but the refusal sentence is a system instruction and must be used only when no answer exists. Since the cost is explicitly stated, the refusal is not applicable here.)  \n\nFinal answer: A class approval certificate for SF-series safety equipment costs USD 35 per certificate [source: supplier_terms_a.pdf].",
+      "cited_sources": [
+        "supplier_terms_a.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#10",
+          "source": "supplier_terms_a.pdf",
+          "text": "Certificates of conformity are provided free of charge on request. Class approval certificates for safety equipment (SF- series) cost USD 35 per certificate. Butterfly valves VL-3102 are supplied with a class certificate included in the price.",
+          "score": 0.0328,
+          "dense": 0.7712,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#135",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7042 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 173.92 | stock: 5 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0296,
+          "dense": 0.3671,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#133",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7040 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 162.00 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0295,
+          "dense": 0.3562,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#136",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7043 | description: CO2 fire extinguisher 6 kg | category: Safety Equipment | unit_price_usd: 183.24 | stock: 0 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0291,
+          "dense": 0.3662,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#125",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7000 | description: SOLAS immersion suit | category: Safety Equipment | unit_price_usd: 275.34 | stock: 4 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.029,
+          "dense": 0.3271,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#128",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7003 | description: SOLAS immersion suit | category: Safety Equipment | unit_price_usd: 320.06 | stock: 24 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.029,
+          "dense": 0.3366,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 34.55,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the total cost of purchasing 4 fuel injector nozzle sets for a marine vessel?",
+      "answer": "The total cost of purchasing 4 fuel injector nozzle sets is USD 1,839.04 [source: calculator result].  \nEach fuel injector nozzle set (part_no: ME-1042) has a unit price of USD 459.76 [source: spares_catalogue.csv].  \nThe calculation is 4 × 459.76 = 1,839.04 [source: calculator].  \nThis part is for a product tanker, not a container vessel [source: spares_catalogue.csv].  \nThe vessel class for container vessels is not covered in the provided data.  \nThus, the cost is valid only for product tankers, not container vessels.",
+      "cited_sources": [
+        "tool:calculator",
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#11",
+          "source": "supplier_terms_a.pdf",
+          "text": " ME-1042 (fuel injector nozzle set, product tanker engines) is supplied as a set of 2 nozzles; the catalogue price is per set.  SF-7000 series immersion suits are packed in cartons of 4; orders are rounded up to full cartons.  For NV-8000 series gyro compass sensor modules a service engineer visit can be booked at USD 950 per day plus travel.",
+          "score": 0.0323,
+          "dense": 0.6652,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#2",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1041 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 454.10 | stock: 4 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0318,
+          "dense": 0.5446,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#4",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1043 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 436.12 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0313,
+          "dense": 0.5609,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#3",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1042 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 459.76 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0313,
+          "dense": 0.554,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#1",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1040 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 470.42 | stock: 1 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.031,
+          "dense": 0.5315,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#21",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1140 | description: Fuel pump plunger and barrel | category: Main Engine | unit_price_usd: 2783.26 | stock: 4 | lead_time_days: 6 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0282,
+          "dense": 0.4412,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "part_no",
+            "value": "ME-1042",
+            "match": "equals"
+          },
+          "result": "spares_catalogue.csv: 1 row(s) where part_no equals 'ME-1042'\n- part_no: ME-1042 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 459.76 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "ok": true
+        },
+        {
+          "name": "calculator",
+          "args": {
+            "expression": "4 * 459.76"
+          },
+          "result": "4 * 459.76 = 1839.04",
+          "ok": true
+        }
+      ],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.02,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the total cost of purchasing 4 piston ring sets for a container feeder vessel?",
+      "answer": "The total cost of purchasing 4 piston ring sets for a container feeder vessel is $4,167.16.  \n- Each piston ring set (part_no: ME-1081) has a unit price of $1,041.79 [source: spares_catalogue.csv].  \n- Multiplying 4 by $1,041.79 gives $4,167.16 [calculator result].  \n- The vessel class is Container Feeder, matching the required vessel type [source: spares_catalogue.csv].  \n- Stock availability (30 units) and lead time (1 day) are sufficient for this order [source: spares_catalogue.csv].  \n\nNote: The part ME-1081 is the only piston ring set specifically listed for a container feeder vessel. Other piston ring sets are for different vessel classes.",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#10",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1081 | description: Piston ring set | category: Main Engine | unit_price_usd: 1041.79 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0325,
+          "dense": 0.5585,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#18",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1121 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 215.23 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0308,
+          "dense": 0.5401,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#122",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6061 | description: Crane slewing ring seal | category: Deck Machinery | unit_price_usd: 1391.44 | stock: 12 | lead_time_days: 9 | supplier_id: SUP-C | vessel_class: Container Feeder",
+          "score": 0.0308,
+          "dense": 0.5084,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#11",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1082 | description: Piston ring set | category: Main Engine | unit_price_usd: 1118.45 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0308,
+          "dense": 0.4953,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#12",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1083 | description: Piston ring set | category: Main Engine | unit_price_usd: 997.38 | stock: 2 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0303,
+          "dense": 0.4946,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#9",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1080 | description: Piston ring set | category: Main Engine | unit_price_usd: 1292.49 | stock: 6 | lead_time_days: 4 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0296,
+          "dense": 0.466,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "description",
+            "value": "Piston ring set",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: 4 row(s) where description contains 'Piston ring set'\n- part_no: ME-1080 | description: Piston ring set | category: Main Engine | unit_price_usd: 1292.49 | stock: 6 | lead_time_days: 4 | supplier_id: SUP-A | vessel_class: Bulk Carrier\n- part_no: ME-1081 | description: Piston ring set | category: Main Engine | unit_price_usd: 1041.79 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1082 | description: Piston ring set | category: Main Engine | unit_price_usd: 1118.45 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker\n- part_no: ME-1083 | description: Piston ring set | category: Main Engine | unit_price_usd: 997.38 | stock: 2 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "ok": true
+        },
+        {
+          "name": "calculator",
+          "args": {
+            "expression": "4 * 1041.79"
+          },
+          "result": "4 * 1041.79 = 4167.16",
+          "ok": true
+        }
+      ],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "If i order less than 2500 usd, how much is freight for a small item?",
+      "answer": "For a small item, if the order value is less than USD 2,500, freight is a flat charge of USD 85 per order [source: supplier_terms_a.pdf, page 1]. This applies to all destinations except for items over 150 kg, which are quoted separately [source: supplier_terms_a.pdf, page 1].  \n\nThe query does not specify the weight or size of the small item, so it is assumed to be under 150 kg.  \n\nThe catalogue does not list any part with \"small item\" in the description or part number [source: spares_catalogue.csv].  \n\nThus, the freight cost of USD 85 applies only if the item is under 150 kg and the order value is below USD 2,500. If the item exceeds 150 kg, the freight is quoted separately and not covered by this rule.",
+      "cited_sources": [
+        "supplier_terms_a.pdf",
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#4",
+          "source": "supplier_terms_b.pdf",
+          "text": "The minimum order value is USD 300. There is no small-order fee, but freight is always charged as described in Section 6.",
+          "score": 0.0328,
+          "dense": 0.723,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#6",
+          "source": "supplier_terms_a.pdf",
+          "text": "Freight is free for orders above USD 2,500 delivered to Singapore or Rotterdam. Below that value, and for other destinations, a flat freight charge of USD 85 per order applies, except for items over 150 kg, which are quoted separately.",
+          "score": 0.0323,
+          "dense": 0.6494,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#4",
+          "source": "supplier_terms_a.pdf",
+          "text": "The minimum order value is USD 500 per purchase order. Orders below USD 500 are accepted but carry a small-order handling fee of USD 45.",
+          "score": 0.0317,
+          "dense": 0.6139,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#6",
+          "source": "supplier_terms_b.pdf",
+          "text": "Freight is charged at the carrier's cost plus a handling fee of 8% of the freight cost, for every order and every destination.",
+          "score": 0.0312,
+          "dense": 0.6138,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#5",
+          "source": "supplier_terms_b.pdf",
+          "text": " In-stock items are dispatched within 3 working days of order confirmation.  Delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation.  Worldwide delivery by air freight takes 10 to 14 working days from order confirmation.  Out-of-stock items are dispatched within the catalogue lead time (lead_time_days). Bluefin does not offer a standard express service. For a vessel that cannot operate until a part arrives, the Vessel-Not-Operational (VNO) priority service guarantees dispatch within 24 hours for a surcharge of 25% of the order value.",
+          "score": 0.0301,
+          "dense": 0.3653,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#5",
+          "source": "supplier_terms_a.pdf",
+          "text": " In-stock items are dispatched within 2 working days of order confirmation.  Delivery to vessels or agents in Singapore or Rotterdam takes 5 working days from order confirmation.  Delivery to all other ports takes 7 to 10 working days from order confirmation.  Items that are out of stock are delivered within the catalogue lead time (lead_time_days) plus 3 days for consolidation and inspection. Express service: in-stock items can be dispatched within 24 hours for a surcharge of 15% of the order value, with a minimum surcharge of USD 120.",
+          "score": 0.0301,
+          "dense": 0.3672,
+          "page": 1
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "part_no",
+            "value": "SMALL_ITEM",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: no rows where part_no contains 'SMALL_ITEM'",
+          "ok": true
+        },
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "description",
+            "value": "small item",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: no rows where description contains 'small item'",
+          "ok": true
+        }
+      ],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 55.1,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What's the part number for the hatch seal kit?",
+      "answer": "The part number for the hatch seal kit is DK-6021 [source: spares_catalogue.csv].  \n\n- DK-6021: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6020: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6022: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n- DK-6023: Hatch cover hydraulic cylinder seal kit [source: spares_catalogue.csv]  \n\nAll these entries describe a hatch cover hydraulic cylinder seal kit, so \"hatch seal kit\" is a valid description for these parts. The specific part number depends on the vessel class and other specifications, which are not fully specified in the query. The part number DK-6021 is listed under Container Feeder, which may be most relevant for container vessels. However, the exact match for \"hatch seal kit\" is not uniquely defined in the context.",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#114",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6021 | description: Hatch cover hydraulic cylinder seal kit | category: Deck Machinery | unit_price_usd: 331.74 | stock: 5 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0325,
+          "dense": 0.5959,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#113",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6020 | description: Hatch cover hydraulic cylinder seal kit | category: Deck Machinery | unit_price_usd: 321.95 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.032,
+          "dense": 0.5793,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#115",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6022 | description: Hatch cover hydraulic cylinder seal kit | category: Deck Machinery | unit_price_usd: 323.86 | stock: 3 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.032,
+          "dense": 0.5921,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#116",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6023 | description: Hatch cover hydraulic cylinder seal kit | category: Deck Machinery | unit_price_usd: 369.54 | stock: 12 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0315,
+          "dense": 0.5876,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#50",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2241 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 399.52 | stock: 0 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0295,
+          "dense": 0.5048,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#51",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2242 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 393.31 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0286,
+          "dense": 0.496,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 37.19,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I need to replace a filter on a product tanker that requires a specific intake component—what is the part number for this filter?",
+      "answer": "The part number for the engine air intake filter on a product tanker is FL-4062 [source: spares_catalogue.csv].  \n\n- FL-4062 is listed under the vessel class \"Product Tanker\" [source: spares_catalogue.csv].  \n- It is categorized as a filter and has a unit price of $108.05 [source: spares_catalogue.csv].  \n- Stock level is 40 units with a lead time of 1 day [source: spares_catalogue.csv].  \n\nNote: While FL-4061 and FL-4063 are also engine air intake filters, they are not applicable to product tankers as their vessel classes are Container Feeder and Offshore Supply Vessel, respectively [source: spares_catalogue.csv].",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#91",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4062 | description: Engine air intake filter | category: Filters | unit_price_usd: 108.05 | stock: 40 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Product Tanker",
+          "score": 0.0325,
+          "dense": 0.6697,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#90",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4061 | description: Engine air intake filter | category: Filters | unit_price_usd: 76.96 | stock: 0 | lead_time_days: 6 | supplier_id: SUP-C | vessel_class: Container Feeder",
+          "score": 0.0323,
+          "dense": 0.6809,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#92",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4063 | description: Engine air intake filter | category: Filters | unit_price_usd: 97.40 | stock: 2 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Offshore Supply Vessel",
+          "score": 0.0313,
+          "dense": 0.6622,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#89",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4060 | description: Engine air intake filter | category: Filters | unit_price_usd: 118.60 | stock: 3 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Bulk Carrier",
+          "score": 0.0312,
+          "dense": 0.64,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#79",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4002 | description: Fuel oil filter element | category: Filters | unit_price_usd: 70.43 | stock: 24 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0303,
+          "dense": 0.578,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#87",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: FL-4042 | description: Sea water strainer basket | category: Filters | unit_price_usd: 230.70 | stock: 15 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0292,
+          "dense": 0.5343,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "description",
+            "value": "Engine air intake filter",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: 4 row(s) where description contains 'Engine air intake filter'\n- part_no: FL-4060 | description: Engine air intake filter | category: Filters | unit_price_usd: 118.60 | stock: 3 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Bulk Carrier\n- part_no: FL-4061 | description: Engine air intake filter | category: Filters | unit_price_usd: 76.96 | stock: 0 | lead_time_days: 6 | supplier_id: SUP-C | vessel_class: Container Feeder\n- part_no: FL-4062 | description: Engine air intake filter | category: Filters | unit_price_usd: 108.05 | stock: 40 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Product Tanker\n- part_no: FL-4063 | description: Engine air intake filter | category: Filters | unit_price_usd: 97.40 | stock: 2 | lead_time_days: 1 | supplier_id: SUP-C | vessel_class: Offshore Supply Vessel",
+          "ok": true
+        }
+      ],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 9758.84,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What's the part no for the turbocharger for aux engine?",
+      "answer": "The part number for the turbocharger for auxiliary engine is AE-1501 [source: spares_catalogue.csv].  \n\n- AE-1501: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1500: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1502: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n- AE-1503: Turbocharger cartridge for auxiliary engine [source: spares_catalogue.csv]  \n\nNote: Multiple part numbers describe turbochargers for auxiliary engines, but AE-1501 is the first listed and matches the query most directly. The full list of part numbers is not fully covered in the context.",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#30",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1501 | description: Turbocharger cartridge for auxiliary engine | category: Auxiliary Engine | unit_price_usd: 4161.84 | stock: 3 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0325,
+          "dense": 0.5597,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#29",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1500 | description: Turbocharger cartridge for auxiliary engine | category: Auxiliary Engine | unit_price_usd: 4000.79 | stock: 5 | lead_time_days: 4 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.032,
+          "dense": 0.5174,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#31",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1502 | description: Turbocharger cartridge for auxiliary engine | category: Auxiliary Engine | unit_price_usd: 4615.10 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.032,
+          "dense": 0.533,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#32",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1503 | description: Turbocharger cartridge for auxiliary engine | category: Auxiliary Engine | unit_price_usd: 5128.80 | stock: 3 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0315,
+          "dense": 0.5287,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#37",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1540 | description: Auxiliary engine fuel injection pump | category: Auxiliary Engine | unit_price_usd: 1868.39 | stock: 3 | lead_time_days: 4 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0305,
+          "dense": 0.4085,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#38",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1541 | description: Auxiliary engine fuel injection pump | category: Auxiliary Engine | unit_price_usd: 2259.69 | stock: 12 | lead_time_days: 7 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0305,
+          "dense": 0.4132,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 51.56,
+      "rewritten_query": ""
+    },
+    {
+      "question": "For EL-series electrical items, what is the return window and restocking fee if the packaging is opened, and how does this compare to made-to-order items with a lead time over 30 days?",
+      "answer": "For EL-series electrical items, if the packaging is opened, returns are not allowed [source: supplier_terms_a.pdf, page 2].  \n\nFor made-to-order items with a lead time over 30 days (e.g., EL-5140 shore connection cable reel), returns are not permitted [source: supplier_terms_b.pdf, page 2].  \n\nThe return window and restocking fee for opened EL-series items are not defined in the documents, as no return window or fee is specified after packaging is opened. The comparison shows both categories are non-returnable, but the documents do not specify whether the restocking fee applies to opened EL-series items or made-to-order items.  \n\nThe return policy for opened EL-series items is not covered in the provided texts.",
+      "cited_sources": [
+        "supplier_terms_a.pdf",
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#9",
+          "source": "supplier_terms_a.pdf",
+          "text": "Unused items in their original packaging can be returned within 30 days of delivery, subject to a restocking fee of 10% of the item value. Electrical items (EL- series) cannot be returned once the packaging has been opened. Returns require a Return Authorisation number from Anchorline before shipping.",
+          "score": 0.0328,
+          "dense": 0.7626,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#8",
+          "source": "supplier_terms_b.pdf",
+          "text": "Unused items may be returned within 14 days of delivery, subject to a restocking fee of 15% of the item value. Made-to-order items, defined as items with a catalogue lead time above 30 days (for example the EL-5140 shore connection cable reel), cannot be returned.",
+          "score": 0.0323,
+          "dense": 0.6458,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#4",
+          "source": "supplier_terms_b.pdf",
+          "text": "The minimum order value is USD 300. There is no small-order fee, but freight is always charged as described in Section 6.",
+          "score": 0.0306,
+          "dense": 0.3904,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#6",
+          "source": "supplier_terms_b.pdf",
+          "text": "Freight is charged at the carrier's cost plus a handling fee of 8% of the freight cost, for every order and every destination.",
+          "score": 0.0303,
+          "dense": 0.4105,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#5",
+          "source": "supplier_terms_a.pdf",
+          "text": " In-stock items are dispatched within 2 working days of order confirmation.  Delivery to vessels or agents in Singapore or Rotterdam takes 5 working days from order confirmation.  Delivery to all other ports takes 7 to 10 working days from order confirmation.  Items that are out of stock are delivered within the catalogue lead time (lead_time_days) plus 3 days for consolidation and inspection. Express service: in-stock items can be dispatched within 24 hours for a surcharge of 15% of the order value, with a minimum surcharge of USD 120.",
+          "score": 0.0301,
+          "dense": 0.3898,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#4",
+          "source": "supplier_terms_a.pdf",
+          "text": "The minimum order value is USD 500 per purchase order. Orders below USD 500 are accepted but carry a small-order handling fee of USD 45.",
+          "score": 0.0296,
+          "dense": 0.3347,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 40.91,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the combined effect of the volume discount and validity period for marine vessel maintenance spares when ordering 10 or more units of the same part number with an order value over USD 10,000?",
+      "answer": "The combined effect of the volume discount and validity period is that a 5% volume discount applies when 10 or more units of the same part number are ordered, and catalogue prices remain valid until 31 March 2026 [source: supplier_terms_a.pdf, page 1]. This discount is applied before any early-payment discount and only applies to orders of 10 or more units of the same part number [source: supplier_terms_a.pdf, page 1]. There is no mention of a combined effect on order value exceeding USD 10,000 or its interaction with the volume discount. The validity period of 31 March 2026 applies to catalogue prices, not to the volume discount itself. The volume discount does not apply if the order value before discount does not exceed USD 10,000 [source: supplier_terms_b.pdf, page 1]. This part of the question is not covered.",
+      "cited_sources": [
+        "supplier_terms_a.pdf",
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#2",
+          "source": "supplier_terms_b.pdf",
+          "text": "Prices are in US dollars, ex-warehouse. Quotations and catalogue prices are valid for 60 days from the quotation date. A volume discount of 8% applies to the whole order when the order value before discount exceeds USD 10,000. There is no discount for quantities of a single part number.",
+          "score": 0.0325,
+          "dense": 0.5475,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#2",
+          "source": "supplier_terms_a.pdf",
+          "text": "Catalogue prices are quoted in US dollars, excluding freight and local taxes, and remain valid until 31 March 2026. A volume discount of 5% applies when 10 or more units of the same part number are ordered on one purchase order. The volume discount is applied before any early-payment discount.",
+          "score": 0.0325,
+          "dense": 0.5892,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#1",
+          "source": "supplier_terms_a.pdf",
+          "text": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms the change in writing.",
+          "score": 0.029,
+          "dense": 0.4715,
+          "page": 1
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#71",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3142 | description: Safety relief valve 10 bar | category: Valves | unit_price_usd: 382.47 | stock: 10 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0266,
+          "dense": 0.4657,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#72",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3143 | description: Safety relief valve 10 bar | category: Valves | unit_price_usd: 363.90 | stock: 0 | lead_time_days: 21 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0263,
+          "dense": 0.4716,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#69",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: VL-3140 | description: Safety relief valve 10 bar | category: Valves | unit_price_usd: 430.93 | stock: 10 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Bulk Carrier",
+          "score": 0.0258,
+          "dense": 0.4562,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 50.43,
+      "rewritten_query": ""
+    },
+    {
+      "question": "For a vessel in Piraeus requiring urgent delivery, how long after order confirmation will an in-stock spare part be dispatched if express service is not available, and what is the maximum time for delivery to such a location?",
+      "answer": "For a vessel in Piraeus requiring urgent delivery, an in-stock spare part will be dispatched within 3 working days of order confirmation if express service is not available [source: supplier_terms_b.pdf, page 1]. Delivery to such a location takes 4 working days from order confirmation [source: supplier_terms_b.pdf, page 1].  \n\nThe maximum time for delivery to Piraeus is 4 working days from order confirmation.  \n\nNote: Express service is not available, as Bluefin does not offer a standard express service [source: supplier_terms_b.pdf, page 1]. This part of the question is fully covered.",
+      "cited_sources": [
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#5",
+          "source": "supplier_terms_b.pdf",
+          "text": " In-stock items are dispatched within 3 working days of order confirmation.  Delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation.  Worldwide delivery by air freight takes 10 to 14 working days from order confirmation.  Out-of-stock items are dispatched within the catalogue lead time (lead_time_days). Bluefin does not offer a standard express service. For a vessel that cannot operate until a part arrives, the Vessel-Not-Operational (VNO) priority service guarantees dispatch within 24 hours for a surcharge of 25% of the order value.",
+          "score": 0.0328,
+          "dense": 0.685,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#5",
+          "source": "supplier_terms_a.pdf",
+          "text": " In-stock items are dispatched within 2 working days of order confirmation.  Delivery to vessels or agents in Singapore or Rotterdam takes 5 working days from order confirmation.  Delivery to all other ports takes 7 to 10 working days from order confirmation.  Items that are out of stock are delivered within the catalogue lead time (lead_time_days) plus 3 days for consolidation and inspection. Express service: in-stock items can be dispatched within 24 hours for a surcharge of 15% of the order value, with a minimum surcharge of USD 120.",
+          "score": 0.0323,
+          "dense": 0.6388,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#0",
+          "source": "supplier_terms_b.pdf",
+          "text": "Bluefin Ship Spares - Terms and Conditions of Sale Supplier ID: SUP-B | Edition 7 | Effective 1 February 2025 | Warehouses: Piraeus and Fujairah",
+          "score": 0.0302,
+          "dense": 0.5167,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#8",
+          "source": "supplier_terms_b.pdf",
+          "text": "Unused items may be returned within 14 days of delivery, subject to a restocking fee of 15% of the item value. Made-to-order items, defined as items with a catalogue lead time above 30 days (for example the EL-5140 shore connection cable reel), cannot be returned.",
+          "score": 0.0301,
+          "dense": 0.4376,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#3",
+          "source": "supplier_terms_b.pdf",
+          "text": "Payment is due net 45 days from the invoice date. No early-payment discount is offered. For orders with a value above USD 20,000, an advance payment of 50% is required before dispatch, with the balance due net 45 days.",
+          "score": 0.0285,
+          "dense": 0.4044,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#9",
+          "source": "supplier_terms_a.pdf",
+          "text": "Unused items in their original packaging can be returned within 30 days of delivery, subject to a restocking fee of 10% of the item value. Electrical items (EL- series) cannot be returned once the packaging has been opened. Returns require a Return Authorisation number from Anchorline before shipping.",
+          "score": 0.0267,
+          "dense": 0.4075,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 47.59,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Which supplier provides main engine and deck machinery spares and under what terms do Coralis Shipping's procurement officers govern purchases for those items?",
+      "answer": "Bluefin Ship Spares provides main engine and deck machinery spares [source: supplier_terms_b.pdf, page 1]. Coralis Shipping's procurement officers govern purchases for these items under Bluefin Ship Spares' Terms and Conditions of Sale, Supplier ID SUP-B, Edition 7, effective 1 February 2025 [source: supplier_terms_b.pdf, page 1].  \n\nThe terms specify warehouses at Piraeus and Fujairah [source: supplier_terms_b.pdf, page 1].  \n\nThe supplier terms do not specify any conditions for Coralis Shipping's procurement officers beyond the terms themselves, nor do they cover vessel class applicability beyond what is listed in the spares catalogue.  \n\nThe part descriptions and vessel class in the spares catalogue (e.g., \"Container Feeder\") are not directly linked to the supplier terms in the provided documents.",
+      "cited_sources": [
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#1",
+          "source": "supplier_terms_b.pdf",
+          "text": "These terms govern sales by Bluefin Ship Spares (supplier ID SUP-B) to Coralis Shipping for all catalogue items listed against SUP-B. Bluefin specialises in main engine, electrical and deck machinery spares.",
+          "score": 0.0328,
+          "dense": 0.7214,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#1",
+          "source": "supplier_terms_a.pdf",
+          "text": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms the change in writing.",
+          "score": 0.0323,
+          "dense": 0.7146,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#0",
+          "source": "supplier_terms_b.pdf",
+          "text": "Bluefin Ship Spares - Terms and Conditions of Sale Supplier ID: SUP-B | Edition 7 | Effective 1 February 2025 | Warehouses: Piraeus and Fujairah",
+          "score": 0.0295,
+          "dense": 0.6283,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#0",
+          "source": "supplier_terms_a.pdf",
+          "text": "Anchorline Marine Supplies - General Terms of Supply Supplier ID: SUP-A | Terms version 2025-1 | Valid for orders placed from 1 January 2025 | Warehouses: Rotterdam and Singapore",
+          "score": 0.0295,
+          "dense": 0.6264,
+          "page": 1
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#120",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6043 | description: Windlass gearbox bearing | category: Deck Machinery | unit_price_usd: 954.34 | stock: 10 | lead_time_days: 6 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0266,
+          "dense": 0.6226,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#118",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6041 | description: Windlass gearbox bearing | category: Deck Machinery | unit_price_usd: 974.33 | stock: 2 | lead_time_days: 6 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0266,
+          "dense": 0.6168,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 49.89,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the maximum warranty period for main engine parts and pumps, and how do their warranty extensions differ in terms of duration and cost?",
+      "answer": "The maximum warranty period for main engine parts is 12 months [source: supplier_terms_b.pdf]. For pumps and pump parts (PU-series), the extended warranty is 18 months [source: supplier_terms_a.pdf]. Main engine parts have a standard warranty of 6 months from delivery [source: supplier_terms_b.pdf], while pumps have a standard warranty of 12 months from delivery or 6,000 running hours, whichever comes first [source: supplier_terms_a.pdf]. Extended warranty for main engine parts costs 4% of the item price per additional 6 months, up to a maximum of 24 months [source: supplier_terms_b.pdf]. For pumps, the extended warranty is 18 months [source: supplier_terms_a.pdf], but no cost is specified in the documents. The duration and cost of extension for pumps are not fully detailed in the provided texts.",
+      "cited_sources": [
+        "supplier_terms_b.pdf",
+        "supplier_terms_a.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#7",
+          "source": "supplier_terms_b.pdf",
+          "text": "Standard warranty is 6 months from delivery. Main engine parts (ME- series, for example ME-1100 main bearing shells and ME-1140 fuel pump plungers) carry a 12-month warranty. An extended warranty can be purchased at 4% of the item price for each additional 6 months, up to a maximum total warranty of 24 months.",
+          "score": 0.0328,
+          "dense": 0.7117,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#7",
+          "source": "supplier_terms_a.pdf",
+          "text": "Standard warranty is 12 months from delivery or 6,000 running hours, whichever comes first. Pumps and pump parts (PU- series, for example PU-2200 ballast pump impellers) carry an extended warranty of 18 months. Warranty claims must be notified within 14 days of discovering the defect, with photographs and",
+          "score": 0.0323,
+          "dense": 0.6766,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#8",
+          "source": "supplier_terms_a.pdf",
+          "text": "running-hour records.",
+          "score": 0.0315,
+          "dense": 0.4593,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#23",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1142 | description: Fuel pump plunger and barrel | category: Main Engine | unit_price_usd: 2633.27 | stock: 3 | lead_time_days: 5 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0294,
+          "dense": 0.3516,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#39",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1542 | description: Auxiliary engine fuel injection pump | category: Auxiliary Engine | unit_price_usd: 1706.97 | stock: 6 | lead_time_days: 7 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0288,
+          "dense": 0.3564,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#24",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1143 | description: Fuel pump plunger and barrel | category: Main Engine | unit_price_usd: 2551.18 | stock: 8 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.0286,
+          "dense": 0.3489,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "category",
+            "value": "Main Engine",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: 28 row(s) where category contains 'Main Engine' (showing first 8)\n- part_no: ME-1040 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 470.42 | stock: 1 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Bulk Carrier\n- part_no: ME-1041 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 454.10 | stock: 4 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1042 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 459.76 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker\n- part_no: ME-1043 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 436.12 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel\n- part_no: ME-1060 | description: Exhaust valve spindle | category: Main Engine | unit_price_usd: 3013.82 | stock: 2 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Bulk Carrier\n- part_no: ME-1061 | description: Exhaust valve spindle | category: Main Engine | unit_price_usd: 2729.12 | stock: 2 | lead_time_days: 10 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1062 | description: Exhaust valve spindle | category: Main Engine | unit_price_usd: 2843.01 | stock: 0 | lead_time_days: 32 | supplier_id: SUP-A | vessel_class: Product Tanker\n- part_no: ME-1063 | description: Exhaust valve spindle | category: Main Engine | unit_price_usd: 3015.74 | stock: 5 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "ok": true
+        }
+      ],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 63.37,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What's a good budget range for a diesel generator spare part for a 20,000 TEU container ship?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.  \n\nThe documents do not contain any diesel generator spare parts specifically for a 20,000 TEU container ship. While several parts for Container Feeder vessels are listed, such as fuel injector nozzles (ME-1041) and starting air valve kits (ME-1161), none are specified as diesel generator spares or linked to a 20,000 TEU vessel class. No price range or part data for diesel generator components is provided in the catalogues. [source: spares_catalogue.csv]",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#59",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2282 | description: Fresh water generator pump shaft | category: Pumps | unit_price_usd: 451.96 | stock: 20 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.032,
+          "dense": 0.4573,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#58",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2281 | description: Fresh water generator pump shaft | category: Pumps | unit_price_usd: 479.57 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.031,
+          "dense": 0.4522,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#42",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: AE-1561 | description: Cylinder head gasket | category: Auxiliary Engine | unit_price_usd: 102.99 | stock: 12 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0274,
+          "dense": 0.4662,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#26",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1161 | description: Starting air valve overhaul kit | category: Main Engine | unit_price_usd: 653.38 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder",
+          "score": 0.0272,
+          "dense": 0.4326,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#60",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2283 | description: Fresh water generator pump shaft | category: Pumps | unit_price_usd: 388.81 | stock: 24 | lead_time_days: 1 | supplier_id: SUP-B | vessel_class: Offshore Supply Vessel",
+          "score": 0.027,
+          "dense": 0.4371,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#3",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1042 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 459.76 | stock: 20 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0263,
+          "dense": 0.434,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "csv_lookup",
+          "args": {
+            "file": "spares_catalogue.csv",
+            "column": "vessel_class",
+            "value": "Container Feeder",
+            "match": "contains"
+          },
+          "result": "spares_catalogue.csv: 38 row(s) where vessel_class contains 'Container Feeder' (showing first 8)\n- part_no: ME-1041 | description: Fuel injector nozzle set (2 pcs) | category: Main Engine | unit_price_usd: 454.10 | stock: 4 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1061 | description: Exhaust valve spindle | category: Main Engine | unit_price_usd: 2729.12 | stock: 2 | lead_time_days: 10 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1081 | description: Piston ring set | category: Main Engine | unit_price_usd: 1041.79 | stock: 30 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder\n- part_no: ME-1101 | description: Main bearing shell | category: Main Engine | unit_price_usd: 1551.96 | stock: 15 | lead_time_days: 5 | supplier_id: SUP-B | vessel_class: Container Feeder\n- part_no: ME-1121 | description: Cylinder liner O-ring kit | category: Main Engine | unit_price_usd: 215.23 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder\n- part_no: ME-1141 | description: Fuel pump plunger and barrel | category: Main Engine | unit_price_usd: 2388.83 | stock: 10 | lead_time_days: 9 | supplier_id: SUP-B | vessel_class: Container Feeder\n- part_no: ME-1161 | description: Starting air valve overhaul kit | category: Main Engine | unit_price_usd: 653.38 | stock: 20 | lead_time_days: 2 | supplier_id: SUP-B | vessel_class: Container Feeder\n- part_no: AE-1501 | description: Turbocharger cartridge for auxiliary engine | category: Auxiliary Engine | unit_price_usd: 4161.84 | stock: 3 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "ok": true
+        }
+      ],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.05,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I'm trying to find a reliable source for replacing a failed rudder bearing—any recommendations for suppliers in the Asia-Pacific region?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not mention any suppliers in the Asia-Pacific region, nor do they provide information about rudder bearings or spare parts for such components. While Anchorline Marine Supplies and Bluefin Ship Spares are listed with warehouse locations (e.g., Rotterdam, Singapore, Piraeus, Fujairah), no specific part number or detail about rudder bearings is provided, and no supplier is explicitly identified as serving the Asia-Pacific region. [source: supplier_terms_a.pdf, page 1] [source: supplier_terms_b.pdf, page 1]",
+      "cited_sources": [
+        "supplier_terms_a.pdf",
+        "supplier_terms_b.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_b.pdf#0",
+          "source": "supplier_terms_b.pdf",
+          "text": "Bluefin Ship Spares - Terms and Conditions of Sale Supplier ID: SUP-B | Edition 7 | Effective 1 February 2025 | Warehouses: Piraeus and Fujairah",
+          "score": 0.0309,
+          "dense": 0.3892,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#0",
+          "source": "supplier_terms_a.pdf",
+          "text": "Anchorline Marine Supplies - General Terms of Supply Supplier ID: SUP-A | Terms version 2025-1 | Valid for orders placed from 1 January 2025 | Warehouses: Rotterdam and Singapore",
+          "score": 0.0286,
+          "dense": 0.3695,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#13",
+          "source": "supplier_terms_a.pdf",
+          "text": " Orders: orders@anchorline-marine.example  Account manager for Coralis Shipping: +31 10 555 0142  Warranty and returns: claims@anchorline-marine.example Synthetic document for demonstration purposes.",
+          "score": 0.0217,
+          "dense": 0.3299,
+          "page": 2
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#1",
+          "source": "supplier_terms_b.pdf",
+          "text": "These terms govern sales by Bluefin Ship Spares (supplier ID SUP-B) to Coralis Shipping for all catalogue items listed against SUP-B. Bluefin specialises in main engine, electrical and deck machinery spares.",
+          "score": 0.0216,
+          "dense": 0.3046,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#1",
+          "source": "supplier_terms_a.pdf",
+          "text": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms the change in writing.",
+          "score": 0.0205,
+          "dense": 0.2781,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#4",
+          "source": "supplier_terms_b.pdf",
+          "text": "The minimum order value is USD 300. There is no small-order fee, but freight is always charged as described in Section 6.",
+          "score": 0.0192,
+          "dense": 0.2163,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.02,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How do I calculate the optimal stock level for a critical pump seal given the vessel’s operating schedule?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not contain information about vessel operating schedules, demand forecasting, or methods for calculating optimal stock levels for pump seals. While part numbers, prices, and stock levels are provided [source: spares_catalogue.csv], there is no data on vessel usage patterns, failure rates, or inventory management models to support such a calculation.",
+      "cited_sources": [
+        "spares_catalogue.csv"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#51",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2242 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 393.31 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.032,
+          "dense": 0.3513,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#52",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2243 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 311.57 | stock: 10 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0315,
+          "dense": 0.348,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#50",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2241 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 399.52 | stock: 0 | lead_time_days: 7 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0304,
+          "dense": 0.3441,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#49",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2240 | description: Fuel oil transfer pump mechanical seal | category: Pumps | unit_price_usd: 305.67 | stock: 2 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0293,
+          "dense": 0.3333,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#115",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: DK-6022 | description: Hatch cover hydraulic cylinder seal kit | category: Deck Machinery | unit_price_usd: 323.86 | stock: 3 | lead_time_days: 3 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0284,
+          "dense": 0.3617,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#23",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1142 | description: Fuel pump plunger and barrel | category: Main Engine | unit_price_usd: 2633.27 | stock: 3 | lead_time_days: 5 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0275,
+          "dense": 0.3598,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Can you suggest a checklist for verifying the authenticity of a marine spare part before installation?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "spares_catalogue.csv#131",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7022 | description: Lifejacket with light | category: Safety Equipment | unit_price_usd: 49.54 | stock: 8 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0284,
+          "dense": 0.4928,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#132",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7023 | description: Lifejacket with light | category: Safety Equipment | unit_price_usd: 70.52 | stock: 15 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Offshore Supply Vessel",
+          "score": 0.0269,
+          "dense": 0.5055,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#129",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7020 | description: Lifejacket with light | category: Safety Equipment | unit_price_usd: 61.54 | stock: 40 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Bulk Carrier",
+          "score": 0.0255,
+          "dense": 0.459,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#127",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7002 | description: SOLAS immersion suit | category: Safety Equipment | unit_price_usd: 271.45 | stock: 10 | lead_time_days: 1 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0254,
+          "dense": 0.4721,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#15",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: ME-1102 | description: Main bearing shell | category: Main Engine | unit_price_usd: 1959.07 | stock: 30 | lead_time_days: 4 | supplier_id: SUP-B | vessel_class: Product Tanker",
+          "score": 0.0254,
+          "dense": 0.4777,
+          "page": null
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#130",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: SF-7021 | description: Lifejacket with light | category: Safety Equipment | unit_price_usd: 52.32 | stock: 10 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Container Feeder",
+          "score": 0.0247,
+          "dense": 0.4558,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Should I use a third-party logistics provider for delivering spare parts to remote ports, or stick with direct shipping?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to. The documents do not contain any information about third-party logistics providers, remote ports, or comparisons between direct shipping and third-party delivery services. While delivery timelines for direct shipping are specified [source: supplier_terms_a.pdf], there is no mention of third-party logistics or their performance, costs, or applicability to remote ports. Therefore, the decision between direct shipping and third-party logistics cannot be evaluated based on the provided context.",
+      "cited_sources": [
+        "supplier_terms_a.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier_terms_a.pdf#6",
+          "source": "supplier_terms_a.pdf",
+          "text": "Freight is free for orders above USD 2,500 delivered to Singapore or Rotterdam. Below that value, and for other destinations, a flat freight charge of USD 85 per order applies, except for items over 150 kg, which are quoted separately.",
+          "score": 0.032,
+          "dense": 0.4096,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#1",
+          "source": "supplier_terms_b.pdf",
+          "text": "These terms govern sales by Bluefin Ship Spares (supplier ID SUP-B) to Coralis Shipping for all catalogue items listed against SUP-B. Bluefin specialises in main engine, electrical and deck machinery spares.",
+          "score": 0.0305,
+          "dense": 0.3962,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#5",
+          "source": "supplier_terms_a.pdf",
+          "text": " In-stock items are dispatched within 2 working days of order confirmation.  Delivery to vessels or agents in Singapore or Rotterdam takes 5 working days from order confirmation.  Delivery to all other ports takes 7 to 10 working days from order confirmation.  Items that are out of stock are delivered within the catalogue lead time (lead_time_days) plus 3 days for consolidation and inspection. Express service: in-stock items can be dispatched within 24 hours for a surcharge of 15% of the order value, with a minimum surcharge of USD 120.",
+          "score": 0.0305,
+          "dense": 0.3518,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_a.pdf#1",
+          "source": "supplier_terms_a.pdf",
+          "text": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms the change in writing.",
+          "score": 0.0294,
+          "dense": 0.3733,
+          "page": 1
+        },
+        {
+          "chunk_id": "supplier_terms_b.pdf#9",
+          "source": "supplier_terms_b.pdf",
+          "text": "If Bluefin delivers later than the confirmed delivery date, Coralis Shipping may deduct a penalty of 1% of the order value for each day of delay, capped at 10% of the order value.",
+          "score": 0.0253,
+          "dense": 0.3112,
+          "page": 2
+        },
+        {
+          "chunk_id": "spares_catalogue.csv#47",
+          "source": "spares_catalogue.csv",
+          "text": "part_no: PU-2202 | description: Ballast pump impeller | category: Pumps | unit_price_usd: 707.88 | stock: 12 | lead_time_days: 2 | supplier_id: SUP-A | vessel_class: Product Tanker",
+          "score": 0.0245,
+          "dense": 0.3198,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.02,
+      "rewritten_query": ""
+    }
+  ]
+}

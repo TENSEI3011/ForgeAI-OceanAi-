@@ -1,0 +1,27 @@
+{
+  "tool_decisions": [
+    {
+      "tool": "csv_lookup",
+      "attached": false,
+      "reason": "The documents provide procedural rules in prose, with no tabular data or lookup tables referenced. No request involves looking up items by ID, code, or other identifiers. Search can extract all required rule-based information from the manuals."
+    },
+    {
+      "tool": "calculator",
+      "attached": false,
+      "reason": "The requester does not ask for any arithmetic computations (e.g., totals, percentages, costs). All numerical answers (e.g., 'how many days left') are derived from dates, not calculations. The assistant only needs to compute time differences, which is covered by current_date and date arithmetic, not a calculator tool."
+    },
+    {
+      "tool": "weather",
+      "attached": true,
+      "reason": "The requester explicitly states that the assistant must provide the current weather at the vessel's next port of call, which directly matches the tool's purpose and use case.",
+      "brief_quote": "give the current weather at the vessel's next port of call"
+    },
+    {
+      "tool": "current_date",
+      "attached": true,
+      "reason": "The requester explicitly asks for the number of days until a report or drill is due, which depends on today's date and the due date — a requirement that only the current_date tool can satisfy.",
+      "brief_quote": "tell them how many days are left until a report or drill is due"
+    }
+  ],
+  "dropped_rules": []
+}

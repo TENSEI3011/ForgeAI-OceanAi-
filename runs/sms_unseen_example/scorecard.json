@@ -1,0 +1,103 @@
+[
+  {
+    "iteration": 0,
+    "definition_version": 1,
+    "n_cases": 20,
+    "pass_rate": 0.9,
+    "dev_pass_rate": 0.867,
+    "holdout_pass_rate": 1.0,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.933,
+    "refusal_accuracy": 0.95,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 1,
+      "wrong_refusal": 1
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "4/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "4/5"
+    },
+    "avg_latency_s": 28.97,
+    "judge_vetoes": 0,
+    "judge_disagreements": 1
+  },
+  {
+    "iteration": 1,
+    "definition_version": 2,
+    "n_cases": 20,
+    "pass_rate": 0.9,
+    "dev_pass_rate": 0.867,
+    "holdout_pass_rate": 1.0,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.867,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 2
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 19.39,
+    "judge_vetoes": 0,
+    "judge_disagreements": 4
+  },
+  {
+    "iteration": 2,
+    "definition_version": 3,
+    "n_cases": 20,
+    "pass_rate": 0.9,
+    "dev_pass_rate": 0.867,
+    "holdout_pass_rate": 1.0,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.867,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 2
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 15.98,
+    "judge_vetoes": 0,
+    "judge_disagreements": 3
+  },
+  {
+    "iteration": 3,
+    "definition_version": 4,
+    "n_cases": 20,
+    "pass_rate": 0.9,
+    "dev_pass_rate": 0.867,
+    "holdout_pass_rate": 1.0,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.867,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.067,
+    "failures_by_category": {
+      "prompt_defect": 2
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 16.46,
+    "judge_vetoes": 0,
+    "judge_disagreements": 3
+  }
+]

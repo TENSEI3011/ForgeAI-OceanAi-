@@ -1,0 +1,9 @@
+{
+  "requester_notes": [
+    "Users are fleet procurement officers and technical superintendents in our technical office.",
+    "Typical questions: which part number fits a vessel class, unit price, stock and lead time, and how the Anchorline (SUP-A) and Bluefin (SUP-B) terms compare on payment, delivery, warranty and returns.",
+    "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms.",
+    "The assistant must not approve purchases, negotiate with suppliers or answer questions about crew, HR or vessel operations.",
+    "Keep answers short and always include part numbers and the supplier ID."
+  ]
+}

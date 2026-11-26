@@ -1,0 +1,1 @@
+We want an assistant for the crew on our vessels that answers questions about our safety management system: drills, permits to work, enclosed space entry and incident reporting. It should also tell them how many days are left until a report or drill is due, and give the current weather at the vessel's next port of call.

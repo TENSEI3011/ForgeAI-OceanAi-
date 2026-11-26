@@ -1,0 +1,73 @@
+{
+  "backend": "ollama",
+  "model": "qwen3:4b-instruct",
+  "judge_model": "llama3.2:3b",
+  "embed_model": "all-minilm",
+  "wall_seconds": 12291.5,
+  "total_calls": 284,
+  "total_cached_calls": 122,
+  "total_tokens": 290850,
+  "budget": {
+    "max_tokens": null,
+    "max_seconds": null
+  },
+  "by_stage": {
+    "intake": {
+      "calls": 11,
+      "cached_calls": 11,
+      "prompt_tokens": 5928,
+      "completion_tokens": 1426,
+      "seconds": 0.0
+    },
+    "groundability": {
+      "calls": 4,
+      "cached_calls": 4,
+      "prompt_tokens": 2203,
+      "completion_tokens": 401,
+      "seconds": 0.0
+    },
+    "generate": {
+      "calls": 3,
+      "cached_calls": 3,
+      "prompt_tokens": 4404,
+      "completion_tokens": 761,
+      "seconds": 0.0
+    },
+    "evalgen": {
+      "calls": 35,
+      "cached_calls": 7,
+      "prompt_tokens": 11649,
+      "completion_tokens": 2725,
+      "seconds": 278.6
+    },
+    "agent_under_test": {
+      "calls": 171,
+      "cached_calls": 89,
+      "prompt_tokens": 193398,
+      "completion_tokens": 13460,
+      "seconds": 11404.2
+    },
+    "judge": {
+      "calls": 57,
+      "cached_calls": 8,
+      "prompt_tokens": 48225,
+      "completion_tokens": 3676,
+      "seconds": 479.8
+    },
+    "optimizer": {
+      "calls": 1,
+      "cached_calls": 0,
+      "prompt_tokens": 938,
+      "completion_tokens": 179,
+      "seconds": 38.5
+    },
+    "report": {
+      "calls": 2,
+      "cached_calls": 0,
+      "prompt_tokens": 1273,
+      "completion_tokens": 204,
+      "seconds": 40.6
+    }
+  },
+  "warnings": []
+}

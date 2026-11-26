@@ -1,0 +1,62 @@
+[
+  {
+    "topic": "Find Container Spares",
+    "status": "partial",
+    "evidence": [
+      {
+        "source": "spares_catalogue.csv",
+        "snippet": "category: Valves"
+      }
+    ],
+    "note": "The excerpts include items related to spares, but none specifically mention container spares or are categorized under container-related equipment, so the topic 'Find Container Spares' is only partially addressed.",
+    "top_similarity": 0.643,
+    "keyword_overlap": 0.33,
+    "llm_status": "partial",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Check Prices and Stock",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "supplier_terms_b.pdf",
+        "snippet": "Prices are in US dollars, ex-warehouse. Quotations and catalogue prices are valid for 60 days from the quotation date. A volume discount of 8% applies to the whole order when the order value before discount exceeds USD 10,000. There is no discount for quantities of a single part number."
+      }
+    ],
+    "note": "The excerpts provide clear pricing rules, validity periods, and discount conditions, which directly support answering questions about checking prices and stock.",
+    "top_similarity": 0.324,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Compare Supplier Terms",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "supplier_terms_a.pdf",
+        "snippet": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms..."
+      }
+    ],
+    "note": "The excerpt explicitly outlines the terms governing supplier agreements, including how they apply to purchase orders and resolve conflicts, directly supporting the topic of comparing supplier terms.",
+    "top_similarity": 0.527,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Estimate Order Costs",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "supplier_terms_b.pdf",
+        "snippet": "A volume discount of 8% applies to the whole order when the order value before discount exceeds USD 10,000."
+      }
+    ],
+    "note": "The excerpt provides a clear rule about when a discount applies to order costs, directly addressing the estimation of order costs based on order value.",
+    "top_similarity": 0.524,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  }
+]

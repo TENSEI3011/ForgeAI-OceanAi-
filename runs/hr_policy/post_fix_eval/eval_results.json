@@ -1,0 +1,1915 @@
+{
+  "scorecard": {
+    "iteration": 0,
+    "definition_version": 1,
+    "n_cases": 20,
+    "pass_rate": 0.95,
+    "dev_pass_rate": 1.0,
+    "holdout_pass_rate": 0.8,
+    "grounded_rate": 1.0,
+    "correct_rate": 1.0,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 0.933,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 1
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "4/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 0.0,
+    "judge_vetoes": 0,
+    "judge_disagreements": 3,
+    "results": [
+      {
+        "case_id": "A01",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How many working days after a grievance isn't resolved can an employee escalate it to their HR Business Partner?",
+        "answer": "An employee can escalate a grievance to their HR Business Partner if it isn't resolved within 10 working days [source: code_of_conduct.pdf].  \n\n- The grievance must first be raised with the line manager.  \n- If unresolved within 10 working days, the employee may escalate it in writing to their HR Business Partner.  \n- The HR Business Partner must respond within a further 10 working days.  \n\nThis process applies to work-related grievances and ensures a clear timeline for resolution.  \n\nNote: The policy does not specify how many working days after the initial escalation the HR Business Partner must respond—only that they must respond within 10 working days of receiving the escalation.",
+        "retrieved_sources": [
+          "code_of_conduct.pdf",
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 108,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "If it is not resolved within 10 working days, the employee may escalate it in writing to their HR Business Partner, who must respond within a further 10 working days.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.02
+      },
+      {
+        "case_id": "A02",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the deadline for submitting an expense claim in Singapore?",
+        "answer": "The deadline for submitting an expense claim in Singapore is 30 days from the end of the trip [source: travel_and_expenses_policy.pdf, page 2].  \n\n- Claims must include itemised receipts for every item above USD 25 (INR 2,000).  \n- Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them.  \n\nNote: The policy applies uniformly to all shore-based staff, including those in Singapore, regardless of location.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(No specific deadline for Singapore is mentioned in the context; the policy is general and applies to all locations, but the exact deadline for Singapore is not stated.)",
+        "retrieved_sources": [
+          "travel_and_expenses_policy.pdf",
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 108,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000).",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "judge said fail but gave no verifiable quote for it (ignored)",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A03",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "How many public holidays does the Mumbai office observe annually?",
+        "answer": "The Mumbai office observes 12 public holidays per year [source: leave_policy.pdf, page 2].  \n\n- These are part of the holiday calendar published by HR every December for the following year.  \n- Staff on duty rosters who work on public holidays receive compensatory time off under Section 10 of the Leave Policy (HR-POL-01).  \n\nNote: The Singapore office observes 11 gazetted public holidays, but the question specifically asks about Mumbai.",
+        "retrieved_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf",
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "leave_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 65,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "The Mumbai office observes 12 public holidays per year . These are part of the holiday calendar published by HR every December for the following year.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": false,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true,
+          "discarded": "claimed support without a verifiable (verbatim) evidence quote"
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "judge verdict discarded (unverifiable quote)",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A04",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How many days after a sexual harassment incident must I report it to the Internal Committee?",
+        "answer": "You must report a sexual harassment incident to the Internal Committee within 3 months of the incident [source: code_of_conduct.pdf, page 2].  \n\n- The Internal Committee must complete its inquiry within 90 days of receiving the complaint [source: code_of_conduct.pdf, page 2].  \n- This policy applies to all shore-based employees in Mumbai and Singapore [source: code_of_conduct.pdf, page 1].  \n\nNote: The documents do not specify a deadline for reporting after the incident occurs beyond the 3-month window. If you need clarification, contact HR or check the PeoplePort system.",
+        "retrieved_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 76,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A05",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the hotel cost limit per night in Dubai?",
+        "answer": "The hotel cost limit per night in Dubai is USD 220 [source: travel_and_expenses_policy.pdf].  \n\n- Dubai is classified as a Tier A city under the policy [source: travel_and_expenses_policy.pdf].  \n- The limit applies to hotel costs excluding taxes.  \n\nThis information is specific to Dubai and does not cover other cities or scenarios.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(Note: The above response is factually correct based on the provided context. However, the instruction says \"reply exactly\" if not found — but the context *does* contain the answer. Thus, the correct response should be the one that cites the fact from the document.)  \n\nFinal correct answer:  \nThe hotel cost limit per night in Dubai is USD 220 [source: travel_and_expenses_policy.pdf].",
+        "retrieved_sources": [
+          "travel_and_expenses_policy.pdf",
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 120,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Hotel costs are reimbursed up to the following nightly limits, excluding taxes:  Tier A cities (Singapore, London, Rotterdam, Dubai, Hamburg): USD 220 per night.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A06",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "How many days of paid sick leave do shore-based employees get per leave year?",
+        "answer": "Shore-based employees receive 12 days of paid sick leave per leave year [source: leave_policy.pdf, page 1].  \n\n- Unused sick leave is not carried forward and is not encashed.  \n- A medical certificate from a registered medical practitioner is required for any absence of more than 2 consecutive working days and must be uploaded to PeoplePort within 3 working days of returning to work [source: leave_policy.pdf, page 1].  \n- Sick leave beyond 12 days is treated as leave without pay, unless the employee chooses to use annual leave instead [source: leave_policy.pdf, page 2].  \n\nThis policy applies to permanent and fixed-term shore-based employees in Mumbai and Singapore [source: leave_policy.pdf, page 1].",
+        "retrieved_sources": [
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "leave_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 97,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Employees receive 12 days of paid sick leave per leave year.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A07",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How many days after joining must employees complete the online Code of Conduct training?",
+        "answer": "Employees must complete the online Code of Conduct training within 30 days of joining [source: code_of_conduct.pdf, page 1].  \n\n- The training must be completed by 30 days after joining.  \n- All shore-based employees, including fixed-term and interns, are required to complete it [source: code_of_conduct.pdf, page 1].  \n- After initial completion, employees must retake the training annually [source: code_of_conduct.pdf, page 1].  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a placeholder; the actual answer is already provided in the context. The correct response should reflect only the facts from the passage.)  \n\nCorrected and final answer:  \nEmployees must complete the online Code of Conduct training within 30 days of joining [source: code_of_conduct.pdf, page 1].",
+        "retrieved_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 108,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A08",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the Global Assist emergency contact number in Singapore?",
+        "answer": "The Global Assist emergency contact number in Singapore is +65 6800 1122 [source: travel_and_expenses_policy.pdf].  \n\n- This number is for medical or security emergencies abroad and is part of the corporate travel insurance coverage.  \n- It is provided in the travel and expenses policy under the emergency contact section.  \n\nNote: The contact number is the same for all locations mentioned in the policy, and it is specifically listed for use in emergencies abroad.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(No additional context supports the location of the number being specifically in Singapore—only that it is for emergencies abroad. The policy does not specify if this number is geographically limited to Singapore.)",
+        "retrieved_sources": [
+          "travel_and_expenses_policy.pdf",
+          "leave_policy.pdf",
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 116,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "In a medical or security emergency abroad, contact Global Assist on +65 6800 1122 (24 hours), then inform your line manager.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "A09",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "How many comp-off days do I get for working a weekend on business travel?",
+        "answer": "You get 1 day of compensatory time off (comp-off) for working a weekend on business travel [source: travel_and_expenses_policy.pdf, page 2].  \n\n- This comp-off must be recorded in PeoplePort and availed within 60 days of the day worked [source: travel_and_expenses_policy.pdf, page 2].  \n- The rule applies to both weekends and public holidays during business travel [source: travel_and_expenses_policy.pdf, page 2].  \n\nNote: The policy does not specify a maximum number of comp-off days or any limits on how many weekends this applies to. For more details, check the Travel and Expenses Policy (HR-POL-03, Section 6).",
+        "retrieved_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf"
+        ],
+        "cited_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": false,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 83,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Employees who are required to travel on a weekend or on a public holiday earn 1 day of compensatory time off for each such day spent travelling.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "deterministic checks failed but the judge found the answer correct and supported (possible fact-matching false negative, or an over-specific expected fact; NOT rescued)",
+        "judge_notes": "citation problem (cited ['travel_and_expenses_policy.pdf'], expected ['leave_policy.pdf'])",
+        "failure_category": "prompt_defect",
+        "diagnosis": "citation contract not followed",
+        "passed": false,
+        "latency_s": 0.02
+      },
+      {
+        "case_id": "A10",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What is the lunch break duration for shore-based employees?",
+        "answer": "The lunch break duration for shore-based employees is 1 hour [source: code_of_conduct.pdf, page 1].  \n\n- The standard working week is Monday to Friday, with a 9-hour day including a 1-hour lunch break.  \n- Core hours are 10:00 to 16:00, during which all staff must be available.  \n- Employees may start work between 08:00 and 10:00.  \n\nThis information is from the Code of Conduct, which outlines working hours and expectations for shore-based staff. The lunch break duration is explicitly stated as 1 hour. No other details about lunch breaks are provided in the documents.",
+        "retrieved_sources": [
+          "code_of_conduct.pdf",
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 90,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "The standard working week is Monday to Friday, with a 9-hour day including a 1-hour lunch break.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "E01",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "I'm asked to give a small payment to a customs officer to speed up a routine process—what should I do?",
+        "answer": "You must refuse any request for a small payment to a customs officer to speed up a routine process. This is prohibited under the Code of Conduct, which states there is zero tolerance for bribery and facilitation payments, including small payments to port or customs officials [source: code_of_conduct.pdf, page 2].  \n\nYou must report the request to the Compliance Officer within 24 hours [source: code_of_conduct.pdf, page 2].  \n\nDo not accept or make any such payment, even if it seems minor or routine. The policy explicitly bans all facilitation payments, regardless of amount.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a placeholder — the actual answer is fully supported by the context above. The correct response should not include this line. It was added by mistake during drafting.)  \n\nCorrected final answer:  \nYou must refuse any such request and report it to the Compliance Officer within 24 hours [source: code_of_conduct.pdf, page 2]. Facilitation payments are strictly prohibited under the Code of Conduct [source: code_of_conduct.pdf, page 2].",
+        "retrieved_sources": [
+          "code_of_conduct.pdf",
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 160,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Facilitation payments are prohibited, including small payments to port or customs officials to speed up routine actions.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "E02",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "can i get paid for using my own car in singapore?",
+        "answer": "Yes, you can get paid for using your own car in Singapore. The reimbursement rate is SGD 0.60 per km for business use of a personal car, on submission of a mileage log [source: travel_and_expenses_policy.pdf].  \n\n- Reimbursement is at SGD 0.60 per km for business travel in Singapore.  \n- A mileage log must be submitted to claim the reimbursement.  \n- This policy applies only to shore-based employees in Singapore.  \n\nNote: This policy does not cover travel for seafarers or personal use. For other queries, refer to the full Travel and Expenses Policy.",
+        "retrieved_sources": [
+          "travel_and_expenses_policy.pdf",
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 91,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Use of a personal car for business is reimbursed at INR 12 per km in India and SGD 0.60 per km in Singapore, on submission of a mileage log.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "E03",
+        "type": "edge_ambiguous",
+        "split": "holdout",
+        "question": "How many days casual leave for personal stuff?",
+        "answer": "Employees receive 6 days of casual leave per leave year for short personal matters [source: leave_policy.pdf, page 2].  \n\n- Casual leave may be taken for a maximum of 2 consecutive days.  \n- Casual leave cannot be combined with annual leave on either side.  \n- Casual leave does not carry forward.  \n\nNote: The policy does not specify if casual leave is paid or unpaid, nor does it cover usage beyond the 2-day limit. This information is not provided in the documents.",
+        "retrieved_sources": [
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [
+          "leave_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 77,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Employees receive 6 days of casual leave per leave year for short personal matters.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "E04",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "I noticed my personal laptop has a file with crew details — what should I do next?",
+        "answer": "You should immediately remove the file containing crew details from your personal laptop, as crew information is classified as Confidential or Restricted data and must not be stored on personal devices [source: code_of_conduct.pdf, page 2].  \n\n- Report any suspected data breach or loss of confidential information to IT Security at security@coralis-shipping.example within 24 hours [source: code_of_conduct.pdf, page 2].  \n- Do not share or store sensitive crew data on personal devices or personal cloud accounts.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The documents do not specify what to do if the file is already on a personal device or how to recover it.)",
+        "retrieved_sources": [
+          "code_of_conduct.pdf",
+          "travel_and_expenses_policy.pdf"
+        ],
+        "cited_sources": [
+          "code_of_conduct.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 104,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Confidential or Restricted data must not be stored on personal devices or personal cloud accounts.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "M01",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "Do shore-based employees in Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses?",
+        "answer": "Yes, shore-based employees in both Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses.  \n- All leave is applied for, approved, and recorded in the PeoplePort HR system [source: leave_policy.pdf].  \n- Business travel and work-related expenses are managed under the Travel and Expenses Policy, which requires submission through the PeoplePort HR system [source: travel_and_expenses_policy.pdf].  \n- This applies to both permanent and fixed-term shore-based employees in the Mumbai and Singapore offices.  \n\nNote: While the documents confirm the use of PeoplePort for leave and travel, they do not specify whether travel expense claims are submitted directly in PeoplePort or through another process. For full clarity, staff should refer to the Travel and Expenses Policy.",
+        "retrieved_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf",
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 117,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "All leave is applied for, approved and recorded in the PeoplePort HR system.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "This applies to both permanent and fixed-term shore-based employees in the Mumbai and Singapore offices.",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "judge said fail but gave no verifiable quote for it (ignored)",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "O01",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "Can you tell me how my recent salary adjustment was calculated?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "O02",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "I heard there was an issue with one of the team members last month—can you share any details about that?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "code_of_conduct.pdf",
+          "leave_policy.pdf"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.01
+      },
+      {
+        "case_id": "O03",
+        "type": "out_of_scope",
+        "split": "holdout",
+        "question": "Is there a way to find out how much my colleague in the Singapore office earns?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "O04",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "I'm trying to understand why my payslip shows a deduction I didn't expect—can you explain that?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "travel_and_expenses_policy.pdf"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      },
+      {
+        "case_id": "O05",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "Do you have any information about the upcoming payroll credit date for next month?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "leave_policy.pdf",
+          "travel_and_expenses_policy.pdf",
+          "code_of_conduct.pdf"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 0.0
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question": "How many working days after a grievance isn't resolved can an employee escalate it to their HR Business Partner?",
+      "answer": "An employee can escalate a grievance to their HR Business Partner if it isn't resolved within 10 working days [source: code_of_conduct.pdf].  \n\n- The grievance must first be raised with the line manager.  \n- If unresolved within 10 working days, the employee may escalate it in writing to their HR Business Partner.  \n- The HR Business Partner must respond within a further 10 working days.  \n\nThis process applies to work-related grievances and ensures a clear timeline for resolution.  \n\nNote: The policy does not specify how many working days after the initial escalation the HR Business Partner must respond—only that they must respond within 10 working days of receiving the escalation.",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#10",
+          "source": "code_of_conduct.pdf",
+          "text": "An employee with a work-related grievance should first raise it with their line manager. If it is not resolved within 10 working days, the employee may escalate it in writing to their HR Business Partner, who must respond within a further 10 working days. Concerns about unethical or illegal conduct can be raised confidentially, and anonymously if preferred, through the Speak-Up hotline on 1800-209-4455 or speakup@coralis-shipping.example. Retaliation against anyone who raises a concern in good faith is itself a disciplinary offence.",
+          "score": 0.0328,
+          "dense": 0.5921,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#12",
+          "source": "leave_policy.pdf",
+          "text": "An employee who works on a weekly off-day or a public holiday at the manager's request earns 1 day of compensatory time off (\"comp-off\") for each such day worked. Comp-off must be recorded in PeoplePort within 7 days and availed within 60 days of the day worked, after which it lapses. Business travel on weekends also earns comp-off, as set out in the Travel and Expenses Policy (HR-POL-03, Section 6).",
+          "score": 0.0306,
+          "dense": 0.369,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#9",
+          "source": "code_of_conduct.pdf",
+          "text": "Misconduct is handled in stages:  Verbal warning, recorded in PeoplePort.  Written warning, which remains valid for 12 months.  Final written warning, which remains valid for 24 months.  Termination of employment. Gross misconduct, including fraud, theft, harassment, violence, being under the influence of alcohol or drugs at work, and unauthorised absence of 3 or more consecutive working days (see Leave Policy HR-POL-01, Section 11), may lead to suspension on full pay pending inquiry and to dismissal without prior warnings. A disciplinary inquiry must be completed within 30 days of the suspension. The employee has the right to be accompanied at any disciplinary hearing by a colleague of their choice.",
+          "score": 0.0304,
+          "dense": 0.4428,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#11",
+          "source": "leave_policy.pdf",
+          "text": "Leave without pay of up to 30 calendar days may be granted for personal reasons once annual leave has been exhausted. It requires approval from both the Department Head and the HR Business Partner. Employees with 7 or more years of service may apply for an unpaid sabbatical of up to 6 months, approved by the Director of Human Resources.",
+          "score": 0.0301,
+          "dense": 0.3631,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#5",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees must declare any actual or potential conflict of interest (for example a family member working for a supplier, or a personal investment in a competitor) within 30 days of it arising, using the Conflict of Interest form in PeoplePort. In addition, every employee must submit an annual declaration by 31 January each year, even if they have nothing to declare.",
+          "score": 0.03,
+          "dense": 0.4223,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.02,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the deadline for submitting an expense claim in Singapore?",
+      "answer": "The deadline for submitting an expense claim in Singapore is 30 days from the end of the trip [source: travel_and_expenses_policy.pdf, page 2].  \n\n- Claims must include itemised receipts for every item above USD 25 (INR 2,000).  \n- Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them.  \n\nNote: The policy applies uniformly to all shore-based staff, including those in Singapore, regardless of location.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(No specific deadline for Singapore is mentioned in the context; the policy is general and applies to all locations, but the exact deadline for Singapore is not stated.)",
+      "cited_sources": [
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#9",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed by bank transfer within 15 working days of approval. A cash advance of up to 70% of the estimated per diem and hotel costs may be requested for international trips. Advances must be settled with an expense claim within 10 days of returning.",
+          "score": 0.0328,
+          "dense": 0.5522,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#15",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Expense claims (Finance): finance.claims@coralis-shipping.example, extension 2305 Synthetic document for demonstration purposes.",
+          "score": 0.0323,
+          "dense": 0.4378,
+          "page": 3
+        },
+        {
+          "chunk_id": "leave_policy.pdf#10",
+          "source": "leave_policy.pdf",
+          "text": "HR publishes the holiday calendar for each office every December for the following year. The Mumbai office observes 12 public holidays per year and the Singapore office observes the 11 gazetted public holidays of Singapore. Staff on duty rosters (for example the 24-hour vessel support desk) who work on a public holiday receive compensatory time off under Section 10.",
+          "score": 0.0315,
+          "dense": 0.4283,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#2",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All business travel must be pre-approved in the PeoplePort Travel module before any booking is made:  Domestic travel is approved by the line manager.  International travel is approved by the Department Head.  Any trip longer than 10 days, or with an estimated total cost above USD 5,000, also requires approval from a Director. Travel requests must be submitted at least 7 days before departure for domestic travel and at least 21 days before departure for international travel. Late requests need a written justification from the approver.",
+          "score": 0.0305,
+          "dense": 0.3336,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#8",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Taxis and ride-hailing services are reimbursed for business journeys. Airport transfers by taxi are allowed at both ends of the trip. Use of a personal car for business is reimbursed at INR 12 per km in India and SGD 0.60 per km in Singapore, on submission of a mileage log. Car hire abroad needs Department Head approval.",
+          "score": 0.0303,
+          "dense": 0.4067,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many public holidays does the Mumbai office observe annually?",
+      "answer": "The Mumbai office observes 12 public holidays per year [source: leave_policy.pdf, page 2].  \n\n- These are part of the holiday calendar published by HR every December for the following year.  \n- Staff on duty rosters who work on public holidays receive compensatory time off under Section 10 of the Leave Policy (HR-POL-01).  \n\nNote: The Singapore office observes 11 gazetted public holidays, but the question specifically asks about Mumbai.",
+      "cited_sources": [
+        "leave_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#10",
+          "source": "leave_policy.pdf",
+          "text": "HR publishes the holiday calendar for each office every December for the following year. The Mumbai office observes 12 public holidays per year and the Singapore office observes the 11 gazetted public holidays of Singapore. Staff on duty rosters (for example the 24-hour vessel support desk) who work on a public holiday receive compensatory time off under Section 10.",
+          "score": 0.0328,
+          "dense": 0.715,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#8",
+          "source": "leave_policy.pdf",
+          "text": "Maternity leave: employees in the Mumbai office are entitled to 26 weeks of paid maternity leave. Employees in the Singapore office are entitled to 16 weeks of paid maternity leave. The employee should notify HR at least 8 weeks before the expected start of maternity leave. Paternity leave: employees are entitled to 10 working days of paid paternity leave, to be taken within 3 months of the birth or adoption of a child. Adoption leave: an employee adopting a child under 12 months of age is entitled to 12 weeks of paid adoption leave.",
+          "score": 0.0318,
+          "dense": 0.4112,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#7",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Employees who are required to travel on a weekend or on a public holiday earn 1 day of compensatory time off for each such day spent travelling. The comp-off must be recorded in PeoplePort and availed within 60 days, as set out in the Leave Policy (HR-POL-01, Section 10).",
+          "score": 0.0315,
+          "dense": 0.3401,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#12",
+          "source": "leave_policy.pdf",
+          "text": "An employee who works on a weekly off-day or a public holiday at the manager's request earns 1 day of compensatory time off (\"comp-off\") for each such day worked. Comp-off must be recorded in PeoplePort within 7 days and availed within 60 days of the day worked, after which it lapses. Business travel on weekends also earns comp-off, as set out in the Travel and Expenses Policy (HR-POL-03, Section 6).",
+          "score": 0.0301,
+          "dense": 0.3289,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0299,
+          "dense": 0.3362,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many days after a sexual harassment incident must I report it to the Internal Committee?",
+      "answer": "You must report a sexual harassment incident to the Internal Committee within 3 months of the incident [source: code_of_conduct.pdf, page 2].  \n\n- The Internal Committee must complete its inquiry within 90 days of receiving the complaint [source: code_of_conduct.pdf, page 2].  \n- This policy applies to all shore-based employees in Mumbai and Singapore [source: code_of_conduct.pdf, page 1].  \n\nNote: The documents do not specify a deadline for reporting after the incident occurs beyond the 3-month window. If you need clarification, contact HR or check the PeoplePort system.",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#11",
+          "source": "code_of_conduct.pdf",
+          "text": "The company does not tolerate harassment of any kind. Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident. The Internal Committee completes its inquiry within 90 days of receiving a complaint.",
+          "score": 0.0328,
+          "dense": 0.628,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#9",
+          "source": "code_of_conduct.pdf",
+          "text": "Misconduct is handled in stages:  Verbal warning, recorded in PeoplePort.  Written warning, which remains valid for 12 months.  Final written warning, which remains valid for 24 months.  Termination of employment. Gross misconduct, including fraud, theft, harassment, violence, being under the influence of alcohol or drugs at work, and unauthorised absence of 3 or more consecutive working days (see Leave Policy HR-POL-01, Section 11), may lead to suspension on full pay pending inquiry and to dismissal without prior warnings. A disciplinary inquiry must be completed within 30 days of the suspension. The employee has the right to be accompanied at any disciplinary hearing by a colleague of their choice.",
+          "score": 0.0313,
+          "dense": 0.5085,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#6",
+          "source": "code_of_conduct.pdf",
+          "text": "Company, customer and crew information must be handled according to its classification (Public, Internal, Confidential, Restricted). Confidential or Restricted data must not be stored on personal devices or personal cloud accounts. Any suspected data breach, lost laptop or phishing incident must be reported to IT Security at security@coralis-shipping.example within 24 hours of discovery.",
+          "score": 0.0306,
+          "dense": 0.2905,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0293,
+          "dense": 0.2676,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#13",
+          "source": "code_of_conduct.pdf",
+          "text": " Confirmed staff: 60 days.  Managers at grade M3 and above: 90 days. Annual leave may not be used to shorten the notice period unless the Department Head approves it in writing; unused leave is otherwise encashed as described in the Leave Policy (HR-POL-01, Section 3). Company property, including laptops and access cards, must be returned on the last working day. Synthetic document for demonstration purposes.",
+          "score": 0.029,
+          "dense": 0.4101,
+          "page": 3
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the hotel cost limit per night in Dubai?",
+      "answer": "The hotel cost limit per night in Dubai is USD 220 [source: travel_and_expenses_policy.pdf].  \n\n- Dubai is classified as a Tier A city under the policy [source: travel_and_expenses_policy.pdf].  \n- The limit applies to hotel costs excluding taxes.  \n\nThis information is specific to Dubai and does not cover other cities or scenarios.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(Note: The above response is factually correct based on the provided context. However, the instruction says \"reply exactly\" if not found — but the context *does* contain the answer. Thus, the correct response should be the one that cites the fact from the document.)  \n\nFinal correct answer:  \nThe hotel cost limit per night in Dubai is USD 220 [source: travel_and_expenses_policy.pdf].",
+      "cited_sources": [
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#4",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Hotel costs are reimbursed up to the following nightly limits, excluding taxes:  Tier A cities (Singapore, London, Rotterdam, Dubai, Hamburg): USD 220 per night.  Tier B cities (Mumbai, Chennai, Kuala Lumpur, Busan): USD 150 per night (INR 12,500 in India).  All other locations: USD 110 per night. Staying with friends or family instead of a hotel is allowed and attracts a flat allowance of USD 30 per night.",
+          "score": 0.0328,
+          "dense": 0.6877,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#3",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All flights and hotels are booked through the company travel desk (Orbit Travels), contactable at travel@coralis-shipping.example. Bookings made privately are reimbursed only if they cost no more than the travel desk's quote. Class of travel:  Economy class for flights under 6 hours.  Premium economy for flights of 6 hours or more.  Business class only for flights longer than 9 hours, and only for managers at grade M3 and above.",
+          "score": 0.0313,
+          "dense": 0.3304,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#11",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "The following are not reimbursed: alcohol (except within approved client hospitality), hotel minibar items, in-room movies and personal entertainment, traffic or parking fines, seat or class upgrades paid by the employee, and costs of family members travelling with the employee.",
+          "score": 0.0311,
+          "dense": 0.3229,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#4",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees may accept a gift from a business partner only if its value does not exceed USD 50 (INR 4,000 or SGD 70) per occasion. Any gift above this value must be declared in the Gifts Register in PeoplePort within 5 working days and may only be kept with approval from the Compliance Officer. Cash or cash equivalents (vouchers, gift cards) must never be accepted. Business hospitality such as a meal is acceptable up to USD 100 per person per event, provided there is a clear business purpose. No gifts or hospitality of any value may be accepted from a supplier that is taking part in an active tender with the company. When employees offer hospitality to clients while travelling, the limits and approval rules of the Travel and Expenses Policy (HR-POL-03, Section 9) apply.",
+          "score": 0.031,
+          "dense": 0.3653,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#9",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed by bank transfer within 15 working days of approval. A cash advance of up to 70% of the estimated per diem and hotel costs may be requested for international trips. Advances must be settled with an expense claim within 10 days of returning.",
+          "score": 0.0299,
+          "dense": 0.2826,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many days of paid sick leave do shore-based employees get per leave year?",
+      "answer": "Shore-based employees receive 12 days of paid sick leave per leave year [source: leave_policy.pdf, page 1].  \n\n- Unused sick leave is not carried forward and is not encashed.  \n- A medical certificate from a registered medical practitioner is required for any absence of more than 2 consecutive working days and must be uploaded to PeoplePort within 3 working days of returning to work [source: leave_policy.pdf, page 1].  \n- Sick leave beyond 12 days is treated as leave without pay, unless the employee chooses to use annual leave instead [source: leave_policy.pdf, page 2].  \n\nThis policy applies to permanent and fixed-term shore-based employees in Mumbai and Singapore [source: leave_policy.pdf, page 1].",
+      "cited_sources": [
+        "leave_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#5",
+          "source": "leave_policy.pdf",
+          "text": "Employees receive 12 days of paid sick leave per leave year. Unused sick leave is not carried forward and is not encashed. An employee who is unwell must inform their line manager by phone or message before 10:00 on the first day of absence. A medical certificate from a registered medical practitioner is required for any absence of more than 2 consecutive working days and must be uploaded to PeoplePort within 3 working days of",
+          "score": 0.0328,
+          "dense": 0.705,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#6",
+          "source": "leave_policy.pdf",
+          "text": "returning to work. Sick leave beyond 12 days is treated as leave without pay, unless the employee chooses to use annual leave instead.",
+          "score": 0.0315,
+          "dense": 0.6866,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#3",
+          "source": "leave_policy.pdf",
+          "text": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day entitlement). During the first 6 months of employment (the probation period), leave accrues normally, but no more than 5 days of annual leave may be taken. Notice requirements:  For annual leave of 3 or more consecutive working days, apply in PeoplePort at least 14 calendar days before the first day of leave.  For 1 or 2 days of annual leave, apply at least 2 working days in advance. Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year.",
+          "score": 0.031,
+          "dense": 0.5688,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#1",
+          "source": "leave_policy.pdf",
+          "text": "This policy sets out the leave entitlements of shore-based employees of Coralis Shipping Pvt. Ltd. working in the Mumbai head office and the Singapore branch office. It applies to permanent and fixed-term employees. It does not apply to seafarers serving on company-managed vessels, whose leave is governed by the Crew Employment Agreement, or to contractors supplied by agencies. All leave is applied for, approved and recorded in the PeoplePort HR system. The leave year runs from 1 January to 31 December.",
+          "score": 0.0308,
+          "dense": 0.4659,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#7",
+          "source": "leave_policy.pdf",
+          "text": "Employees receive 6 days of casual leave per leave year for short personal matters. Casual leave may be taken for a maximum of 2 consecutive days and cannot be combined with annual leave on either side. Casual leave does not carry forward.",
+          "score": 0.0301,
+          "dense": 0.503,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many days after joining must employees complete the online Code of Conduct training?",
+      "answer": "Employees must complete the online Code of Conduct training within 30 days of joining [source: code_of_conduct.pdf, page 1].  \n\n- The training must be completed by 30 days after joining.  \n- All shore-based employees, including fixed-term and interns, are required to complete it [source: code_of_conduct.pdf, page 1].  \n- After initial completion, employees must retake the training annually [source: code_of_conduct.pdf, page 1].  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a placeholder; the actual answer is already provided in the context. The correct response should reflect only the facts from the passage.)  \n\nCorrected and final answer:  \nEmployees must complete the online Code of Conduct training within 30 days of joining [source: code_of_conduct.pdf, page 1].",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0328,
+          "dense": 0.6643,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#2",
+          "source": "code_of_conduct.pdf",
+          "text": "The standard working week is Monday to Friday, 9 hours per day including a 1-hour lunch break. Core hours, when all staff must be available, are 10:00 to 16:00. Employees may start work at any time between 08:00 and 10:00. After completing probation, employees may work from home for up to 2 days per week with their line manager's approval. Staff on the 24-hour vessel support desk follow their published roster instead of these hours.",
+          "score": 0.0315,
+          "dense": 0.5704,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#12",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees who resign must give written notice in PeoplePort:  During probation: 15 days.",
+          "score": 0.0313,
+          "dense": 0.4874,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#5",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees must declare any actual or potential conflict of interest (for example a family member working for a supplier, or a personal investment in a competitor) within 30 days of it arising, using the Conflict of Interest form in PeoplePort. In addition, every employee must submit an annual declaration by 31 January each year, even if they have nothing to declare.",
+          "score": 0.031,
+          "dense": 0.492,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#13",
+          "source": "code_of_conduct.pdf",
+          "text": " Confirmed staff: 60 days.  Managers at grade M3 and above: 90 days. Annual leave may not be used to shorten the notice period unless the Department Head approves it in writing; unused leave is otherwise encashed as described in the Leave Policy (HR-POL-01, Section 3). Company property, including laptops and access cards, must be returned on the last working day. Synthetic document for demonstration purposes.",
+          "score": 0.0294,
+          "dense": 0.5475,
+          "page": 3
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the Global Assist emergency contact number in Singapore?",
+      "answer": "The Global Assist emergency contact number in Singapore is +65 6800 1122 [source: travel_and_expenses_policy.pdf].  \n\n- This number is for medical or security emergencies abroad and is part of the corporate travel insurance coverage.  \n- It is provided in the travel and expenses policy under the emergency contact section.  \n\nNote: The contact number is the same for all locations mentioned in the policy, and it is specifically listed for use in emergencies abroad.  \n\nI'm sorry, I can't answer that from the documents I have access to.  \n(No additional context supports the location of the number being specifically in Singapore—only that it is for emergencies abroad. The policy does not specify if this number is geographically limited to Singapore.)",
+      "cited_sources": [
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#13",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All approved business trips are covered by the company's corporate travel insurance. In a medical or security emergency abroad, contact Global Assist on +65 6800 1122 (24 hours), then inform your line manager.",
+          "score": 0.0328,
+          "dense": 0.5841,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#15",
+          "source": "leave_policy.pdf",
+          "text": " HR Helpdesk: hr.helpdesk@coralis-shipping.example, extension 2210  Questions about leave balances: check the PeoplePort \"My Leave\" page first, then contact your HR Business Partner. Synthetic document for demonstration purposes.",
+          "score": 0.0323,
+          "dense": 0.3274,
+          "page": 3
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#14",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Travel desk (Orbit Travels): travel@coralis-shipping.example",
+          "score": 0.0308,
+          "dense": 0.3061,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0304,
+          "dense": 0.3262,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#15",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Expense claims (Finance): finance.claims@coralis-shipping.example, extension 2305 Synthetic document for demonstration purposes.",
+          "score": 0.0301,
+          "dense": 0.2945,
+          "page": 3
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many comp-off days do I get for working a weekend on business travel?",
+      "answer": "You get 1 day of compensatory time off (comp-off) for working a weekend on business travel [source: travel_and_expenses_policy.pdf, page 2].  \n\n- This comp-off must be recorded in PeoplePort and availed within 60 days of the day worked [source: travel_and_expenses_policy.pdf, page 2].  \n- The rule applies to both weekends and public holidays during business travel [source: travel_and_expenses_policy.pdf, page 2].  \n\nNote: The policy does not specify a maximum number of comp-off days or any limits on how many weekends this applies to. For more details, check the Travel and Expenses Policy (HR-POL-03, Section 6).",
+      "cited_sources": [
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#12",
+          "source": "leave_policy.pdf",
+          "text": "An employee who works on a weekly off-day or a public holiday at the manager's request earns 1 day of compensatory time off (\"comp-off\") for each such day worked. Comp-off must be recorded in PeoplePort within 7 days and availed within 60 days of the day worked, after which it lapses. Business travel on weekends also earns comp-off, as set out in the Travel and Expenses Policy (HR-POL-03, Section 6).",
+          "score": 0.0325,
+          "dense": 0.7113,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#7",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Employees who are required to travel on a weekend or on a public holiday earn 1 day of compensatory time off for each such day spent travelling. The comp-off must be recorded in PeoplePort and availed within 60 days, as set out in the Leave Policy (HR-POL-01, Section 10).",
+          "score": 0.0325,
+          "dense": 0.7571,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#2",
+          "source": "leave_policy.pdf",
+          "text": "Leave must be planned in advance with the line manager so that operations, especially vessel support desks, remain covered. A manager may decline or reschedule leave for genuine business reasons, but must give the reason in PeoplePort within 3 working days of the request. Approved leave can only be cancelled by the company in an emergency, and any non-refundable travel costs incurred by the employee are then reimbursed under the Travel and Expenses Policy (HR-POL-03).",
+          "score": 0.0295,
+          "dense": 0.3859,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#3",
+          "source": "leave_policy.pdf",
+          "text": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day entitlement). During the first 6 months of employment (the probation period), leave accrues normally, but no more than 5 days of annual leave may be taken. Notice requirements:  For annual leave of 3 or more consecutive working days, apply in PeoplePort at least 14 calendar days before the first day of leave.  For 1 or 2 days of annual leave, apply at least 2 working days in advance. Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year.",
+          "score": 0.0292,
+          "dense": 0.542,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#2",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All business travel must be pre-approved in the PeoplePort Travel module before any booking is made:  Domestic travel is approved by the line manager.  International travel is approved by the Department Head.  Any trip longer than 10 days, or with an estimated total cost above USD 5,000, also requires approval from a Director. Travel requests must be submitted at least 7 days before departure for domestic travel and at least 21 days before departure for international travel. Late requests need a written justification from the approver.",
+          "score": 0.0288,
+          "dense": 0.3609,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.02,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the lunch break duration for shore-based employees?",
+      "answer": "The lunch break duration for shore-based employees is 1 hour [source: code_of_conduct.pdf, page 1].  \n\n- The standard working week is Monday to Friday, with a 9-hour day including a 1-hour lunch break.  \n- Core hours are 10:00 to 16:00, during which all staff must be available.  \n- Employees may start work between 08:00 and 10:00.  \n\nThis information is from the Code of Conduct, which outlines working hours and expectations for shore-based staff. The lunch break duration is explicitly stated as 1 hour. No other details about lunch breaks are provided in the documents.",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#2",
+          "source": "code_of_conduct.pdf",
+          "text": "The standard working week is Monday to Friday, 9 hours per day including a 1-hour lunch break. Core hours, when all staff must be available, are 10:00 to 16:00. Employees may start work at any time between 08:00 and 10:00. After completing probation, employees may work from home for up to 2 days per week with their line manager's approval. Staff on the 24-hour vessel support desk follow their published roster instead of these hours.",
+          "score": 0.032,
+          "dense": 0.5162,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#1",
+          "source": "leave_policy.pdf",
+          "text": "This policy sets out the leave entitlements of shore-based employees of Coralis Shipping Pvt. Ltd. working in the Mumbai head office and the Singapore branch office. It applies to permanent and fixed-term employees. It does not apply to seafarers serving on company-managed vessels, whose leave is governed by the Crew Employment Agreement, or to contractors supplied by agencies. All leave is applied for, approved and recorded in the PeoplePort HR system. The leave year runs from 1 January to 31 December.",
+          "score": 0.0313,
+          "dense": 0.3424,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#7",
+          "source": "leave_policy.pdf",
+          "text": "Employees receive 6 days of casual leave per leave year for short personal matters. Casual leave may be taken for a maximum of 2 consecutive days and cannot be combined with annual leave on either side. Casual leave does not carry forward.",
+          "score": 0.0304,
+          "dense": 0.3807,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0298,
+          "dense": 0.2912,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#0",
+          "source": "leave_policy.pdf",
+          "text": "Coralis Shipping Pvt. Ltd. - Leave Policy for Shore Staff Policy code: HR-POL-01 | Version 4.2 | Effective 1 January 2025 | Owner: Human Resources",
+          "score": 0.0297,
+          "dense": 0.3065,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I'm asked to give a small payment to a customs officer to speed up a routine process—what should I do?",
+      "answer": "You must refuse any request for a small payment to a customs officer to speed up a routine process. This is prohibited under the Code of Conduct, which states there is zero tolerance for bribery and facilitation payments, including small payments to port or customs officials [source: code_of_conduct.pdf, page 2].  \n\nYou must report the request to the Compliance Officer within 24 hours [source: code_of_conduct.pdf, page 2].  \n\nDo not accept or make any such payment, even if it seems minor or routine. The policy explicitly bans all facilitation payments, regardless of amount.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a placeholder — the actual answer is fully supported by the context above. The correct response should not include this line. It was added by mistake during drafting.)  \n\nCorrected final answer:  \nYou must refuse any such request and report it to the Compliance Officer within 24 hours [source: code_of_conduct.pdf, page 2]. Facilitation payments are strictly prohibited under the Code of Conduct [source: code_of_conduct.pdf, page 2].",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#8",
+          "source": "code_of_conduct.pdf",
+          "text": "Coralis Shipping has zero tolerance for bribery. Facilitation payments are prohibited, including small payments to port or customs officials to speed up routine actions. Any request for such a payment must be refused and reported to the Compliance Officer within 24 hours.",
+          "score": 0.0323,
+          "dense": 0.3895,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#2",
+          "source": "leave_policy.pdf",
+          "text": "Leave must be planned in advance with the line manager so that operations, especially vessel support desks, remain covered. A manager may decline or reschedule leave for genuine business reasons, but must give the reason in PeoplePort within 3 working days of the request. Approved leave can only be cancelled by the company in an emergency, and any non-refundable travel costs incurred by the employee are then reimbursed under the Travel and Expenses Policy (HR-POL-03).",
+          "score": 0.0305,
+          "dense": 0.283,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#4",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees may accept a gift from a business partner only if its value does not exceed USD 50 (INR 4,000 or SGD 70) per occasion. Any gift above this value must be declared in the Gifts Register in PeoplePort within 5 working days and may only be kept with approval from the Compliance Officer. Cash or cash equivalents (vouchers, gift cards) must never be accepted. Business hospitality such as a meal is acceptable up to USD 100 per person per event, provided there is a clear business purpose. No gifts or hospitality of any value may be accepted from a supplier that is taking part in an active tender with the company. When employees offer hospitality to clients while travelling, the limits and approval rules of the Travel and Expenses Policy (HR-POL-03, Section 9) apply.",
+          "score": 0.0303,
+          "dense": 0.353,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#2",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All business travel must be pre-approved in the PeoplePort Travel module before any booking is made:  Domestic travel is approved by the line manager.  International travel is approved by the Department Head.  Any trip longer than 10 days, or with an estimated total cost above USD 5,000, also requires approval from a Director. Travel requests must be submitted at least 7 days before departure for domestic travel and at least 21 days before departure for international travel. Late requests need a written justification from the approver.",
+          "score": 0.0164,
+          "dense": 0.4392,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#9",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed by bank transfer within 15 working days of approval. A cash advance of up to 70% of the estimated per diem and hotel costs may be requested for international trips. Advances must be settled with an expense claim within 10 days of returning.",
+          "score": 0.0161,
+          "dense": 0.4056,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "can i get paid for using my own car in singapore?",
+      "answer": "Yes, you can get paid for using your own car in Singapore. The reimbursement rate is SGD 0.60 per km for business use of a personal car, on submission of a mileage log [source: travel_and_expenses_policy.pdf].  \n\n- Reimbursement is at SGD 0.60 per km for business travel in Singapore.  \n- A mileage log must be submitted to claim the reimbursement.  \n- This policy applies only to shore-based employees in Singapore.  \n\nNote: This policy does not cover travel for seafarers or personal use. For other queries, refer to the full Travel and Expenses Policy.",
+      "cited_sources": [
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#8",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Taxis and ride-hailing services are reimbursed for business journeys. Airport transfers by taxi are allowed at both ends of the trip. Use of a personal car for business is reimbursed at INR 12 per km in India and SGD 0.60 per km in Singapore, on submission of a mileage log. Car hire abroad needs Department Head approval.",
+          "score": 0.0328,
+          "dense": 0.6322,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#8",
+          "source": "leave_policy.pdf",
+          "text": "Maternity leave: employees in the Mumbai office are entitled to 26 weeks of paid maternity leave. Employees in the Singapore office are entitled to 16 weeks of paid maternity leave. The employee should notify HR at least 8 weeks before the expected start of maternity leave. Paternity leave: employees are entitled to 10 working days of paid paternity leave, to be taken within 3 months of the birth or adoption of a child. Adoption leave: an employee adopting a child under 12 months of age is entitled to 12 weeks of paid adoption leave.",
+          "score": 0.032,
+          "dense": 0.266,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#10",
+          "source": "leave_policy.pdf",
+          "text": "HR publishes the holiday calendar for each office every December for the following year. The Mumbai office observes 12 public holidays per year and the Singapore office observes the 11 gazetted public holidays of Singapore. Staff on duty rosters (for example the 24-hour vessel support desk) who work on a public holiday receive compensatory time off under Section 10.",
+          "score": 0.0312,
+          "dense": 0.262,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#4",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Hotel costs are reimbursed up to the following nightly limits, excluding taxes:  Tier A cities (Singapore, London, Rotterdam, Dubai, Hamburg): USD 220 per night.  Tier B cities (Mumbai, Chennai, Kuala Lumpur, Busan): USD 150 per night (INR 12,500 in India).  All other locations: USD 110 per night. Staying with friends or family instead of a hotel is allowed and attracts a flat allowance of USD 30 per night.",
+          "score": 0.0306,
+          "dense": 0.2819,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#1",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "This policy covers business travel and work-related expenses of shore-based employees of the Mumbai and Singapore offices. Travel for seafarers joining or leaving vessels is arranged by Crewing and is outside the scope of this policy.",
+          "score": 0.0305,
+          "dense": 0.2488,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many days casual leave for personal stuff?",
+      "answer": "Employees receive 6 days of casual leave per leave year for short personal matters [source: leave_policy.pdf, page 2].  \n\n- Casual leave may be taken for a maximum of 2 consecutive days.  \n- Casual leave cannot be combined with annual leave on either side.  \n- Casual leave does not carry forward.  \n\nNote: The policy does not specify if casual leave is paid or unpaid, nor does it cover usage beyond the 2-day limit. This information is not provided in the documents.",
+      "cited_sources": [
+        "leave_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#7",
+          "source": "leave_policy.pdf",
+          "text": "Employees receive 6 days of casual leave per leave year for short personal matters. Casual leave may be taken for a maximum of 2 consecutive days and cannot be combined with annual leave on either side. Casual leave does not carry forward.",
+          "score": 0.0328,
+          "dense": 0.7847,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#3",
+          "source": "leave_policy.pdf",
+          "text": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day entitlement). During the first 6 months of employment (the probation period), leave accrues normally, but no more than 5 days of annual leave may be taken. Notice requirements:  For annual leave of 3 or more consecutive working days, apply in PeoplePort at least 14 calendar days before the first day of leave.  For 1 or 2 days of annual leave, apply at least 2 working days in advance. Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year.",
+          "score": 0.0318,
+          "dense": 0.6326,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#4",
+          "source": "leave_policy.pdf",
+          "text": "Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year. Carried-forward days must be used by 31 March of that year; any carried-forward days not used by 31 March lapse automatically. Leave encashment: unused annual leave is not paid out during employment. On resignation or termination, up to 30 days of accrued but unused annual leave are encashed at the basic rate of pay. Annual leave cannot be used to shorten the notice period without the written approval of the Department Head (see Code of Conduct HR-POL-02, Section 12).",
+          "score": 0.0313,
+          "dense": 0.5884,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#11",
+          "source": "leave_policy.pdf",
+          "text": "Leave without pay of up to 30 calendar days may be granted for personal reasons once annual leave has been exhausted. It requires approval from both the Department Head and the HR Business Partner. Employees with 7 or more years of service may apply for an unpaid sabbatical of up to 6 months, approved by the Director of Human Resources.",
+          "score": 0.0306,
+          "dense": 0.4905,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#5",
+          "source": "leave_policy.pdf",
+          "text": "Employees receive 12 days of paid sick leave per leave year. Unused sick leave is not carried forward and is not encashed. An employee who is unwell must inform their line manager by phone or message before 10:00 on the first day of absence. A medical certificate from a registered medical practitioner is required for any absence of more than 2 consecutive working days and must be uploaded to PeoplePort within 3 working days of",
+          "score": 0.0301,
+          "dense": 0.5233,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I noticed my personal laptop has a file with crew details — what should I do next?",
+      "answer": "You should immediately remove the file containing crew details from your personal laptop, as crew information is classified as Confidential or Restricted data and must not be stored on personal devices [source: code_of_conduct.pdf, page 2].  \n\n- Report any suspected data breach or loss of confidential information to IT Security at security@coralis-shipping.example within 24 hours [source: code_of_conduct.pdf, page 2].  \n- Do not share or store sensitive crew data on personal devices or personal cloud accounts.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The documents do not specify what to do if the file is already on a personal device or how to recover it.)",
+      "cited_sources": [
+        "code_of_conduct.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#6",
+          "source": "code_of_conduct.pdf",
+          "text": "Company, customer and crew information must be handled according to its classification (Public, Internal, Confidential, Restricted). Confidential or Restricted data must not be stored on personal devices or personal cloud accounts. Any suspected data breach, lost laptop or phishing incident must be reported to IT Security at security@coralis-shipping.example within 24 hours of discovery.",
+          "score": 0.0328,
+          "dense": 0.4133,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#7",
+          "source": "code_of_conduct.pdf",
+          "text": "Company IT equipment is for business use; limited personal use is allowed if it does not interfere with work. Employees must not post confidential information, vessel positions or customer names on social media, and must not speak on behalf of the company publicly unless authorised by Corporate Communications.",
+          "score": 0.0304,
+          "dense": 0.2245,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#3",
+          "source": "code_of_conduct.pdf",
+          "text": "Business casual dress is expected from Monday to Thursday and smart casual on Fridays. When visiting a vessel, shipyard or port terminal, staff must wear personal protective equipment: safety shoes, a helmet and a high-visibility vest. A Port Visit Permit must be obtained from the Marine Operations team at least 2 working days before any port or vessel visit.",
+          "score": 0.0287,
+          "dense": 0.2037,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#15",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Expense claims (Finance): finance.claims@coralis-shipping.example, extension 2305 Synthetic document for demonstration purposes.",
+          "score": 0.0161,
+          "dense": 0.2248,
+          "page": 3
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#14",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Travel desk (Orbit Travels): travel@coralis-shipping.example",
+          "score": 0.0156,
+          "dense": 0.2062,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Do shore-based employees in Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses?",
+      "answer": "Yes, shore-based employees in both Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses.  \n- All leave is applied for, approved, and recorded in the PeoplePort HR system [source: leave_policy.pdf].  \n- Business travel and work-related expenses are managed under the Travel and Expenses Policy, which requires submission through the PeoplePort HR system [source: travel_and_expenses_policy.pdf].  \n- This applies to both permanent and fixed-term shore-based employees in the Mumbai and Singapore offices.  \n\nNote: While the documents confirm the use of PeoplePort for leave and travel, they do not specify whether travel expense claims are submitted directly in PeoplePort or through another process. For full clarity, staff should refer to the Travel and Expenses Policy.",
+      "cited_sources": [
+        "leave_policy.pdf",
+        "travel_and_expenses_policy.pdf"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#1",
+          "source": "leave_policy.pdf",
+          "text": "This policy sets out the leave entitlements of shore-based employees of Coralis Shipping Pvt. Ltd. working in the Mumbai head office and the Singapore branch office. It applies to permanent and fixed-term employees. It does not apply to seafarers serving on company-managed vessels, whose leave is governed by the Crew Employment Agreement, or to contractors supplied by agencies. All leave is applied for, approved and recorded in the PeoplePort HR system. The leave year runs from 1 January to 31 December.",
+          "score": 0.0328,
+          "dense": 0.5491,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#1",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "This policy covers business travel and work-related expenses of shore-based employees of the Mumbai and Singapore offices. Travel for seafarers joining or leaving vessels is arranged by Crewing and is outside the scope of this policy.",
+          "score": 0.0323,
+          "dense": 0.5363,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#1",
+          "source": "code_of_conduct.pdf",
+          "text": "This Code sets out the standards of behaviour expected of all shore-based employees in the Mumbai and Singapore offices, including fixed-term employees and interns. Breaches of the Code are handled under the disciplinary procedure in Section 9. Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year.",
+          "score": 0.0315,
+          "dense": 0.4528,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#10",
+          "source": "leave_policy.pdf",
+          "text": "HR publishes the holiday calendar for each office every December for the following year. The Mumbai office observes 12 public holidays per year and the Singapore office observes the 11 gazetted public holidays of Singapore. Staff on duty rosters (for example the 24-hour vessel support desk) who work on a public holiday receive compensatory time off under Section 10.",
+          "score": 0.0308,
+          "dense": 0.5181,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#8",
+          "source": "leave_policy.pdf",
+          "text": "Maternity leave: employees in the Mumbai office are entitled to 26 weeks of paid maternity leave. Employees in the Singapore office are entitled to 16 weeks of paid maternity leave. The employee should notify HR at least 8 weeks before the expected start of maternity leave. Paternity leave: employees are entitled to 10 working days of paid paternity leave, to be taken within 3 months of the birth or adoption of a child. Adoption leave: an employee adopting a child under 12 months of age is entitled to 12 weeks of paid adoption leave.",
+          "score": 0.0308,
+          "dense": 0.4483,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Can you tell me how my recent salary adjustment was calculated?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": true,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I heard there was an issue with one of the team members last month—can you share any details about that?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "code_of_conduct.pdf#5",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees must declare any actual or potential conflict of interest (for example a family member working for a supplier, or a personal investment in a competitor) within 30 days of it arising, using the Conflict of Interest form in PeoplePort. In addition, every employee must submit an annual declaration by 31 January each year, even if they have nothing to declare.",
+          "score": 0.0315,
+          "dense": 0.2496,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#11",
+          "source": "code_of_conduct.pdf",
+          "text": "The company does not tolerate harassment of any kind. Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident. The Internal Committee completes its inquiry within 90 days of receiving a complaint.",
+          "score": 0.0299,
+          "dense": 0.2143,
+          "page": 2
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#10",
+          "source": "code_of_conduct.pdf",
+          "text": "An employee with a work-related grievance should first raise it with their line manager. If it is not resolved within 10 working days, the employee may escalate it in writing to their HR Business Partner, who must respond within a further 10 working days. Concerns about unethical or illegal conduct can be raised confidentially, and anonymously if preferred, through the Speak-Up hotline on 1800-209-4455 or speakup@coralis-shipping.example. Retaliation against anyone who raises a concern in good faith is itself a disciplinary offence.",
+          "score": 0.0164,
+          "dense": 0.2573,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#13",
+          "source": "leave_policy.pdf",
+          "text": "Absence without approval or without informing the manager is unauthorised absence and is unpaid. Unauthorised absence of 3 or more consecutive working days is treated as a serious disciplinary matter",
+          "score": 0.0159,
+          "dense": 0.2391,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#0",
+          "source": "leave_policy.pdf",
+          "text": "Coralis Shipping Pvt. Ltd. - Leave Policy for Shore Staff Policy code: HR-POL-01 | Version 4.2 | Effective 1 January 2025 | Owner: Human Resources",
+          "score": 0.0156,
+          "dense": 0.2361,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.01,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Is there a way to find out how much my colleague in the Singapore office earns?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#10",
+          "source": "leave_policy.pdf",
+          "text": "HR publishes the holiday calendar for each office every December for the following year. The Mumbai office observes 12 public holidays per year and the Singapore office observes the 11 gazetted public holidays of Singapore. Staff on duty rosters (for example the 24-hour vessel support desk) who work on a public holiday receive compensatory time off under Section 10.",
+          "score": 0.0325,
+          "dense": 0.3499,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#8",
+          "source": "leave_policy.pdf",
+          "text": "Maternity leave: employees in the Mumbai office are entitled to 26 weeks of paid maternity leave. Employees in the Singapore office are entitled to 16 weeks of paid maternity leave. The employee should notify HR at least 8 weeks before the expected start of maternity leave. Paternity leave: employees are entitled to 10 working days of paid paternity leave, to be taken within 3 months of the birth or adoption of a child. Adoption leave: an employee adopting a child under 12 months of age is entitled to 12 weeks of paid adoption leave.",
+          "score": 0.0317,
+          "dense": 0.3206,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#8",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Taxis and ride-hailing services are reimbursed for business journeys. Airport transfers by taxi are allowed at both ends of the trip. Use of a personal car for business is reimbursed at INR 12 per km in India and SGD 0.60 per km in Singapore, on submission of a mileage log. Car hire abroad needs Department Head approval.",
+          "score": 0.0309,
+          "dense": 0.4234,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#1",
+          "source": "leave_policy.pdf",
+          "text": "This policy sets out the leave entitlements of shore-based employees of Coralis Shipping Pvt. Ltd. working in the Mumbai head office and the Singapore branch office. It applies to permanent and fixed-term employees. It does not apply to seafarers serving on company-managed vessels, whose leave is governed by the Crew Employment Agreement, or to contractors supplied by agencies. All leave is applied for, approved and recorded in the PeoplePort HR system. The leave year runs from 1 January to 31 December.",
+          "score": 0.0308,
+          "dense": 0.21,
+          "page": 1
+        },
+        {
+          "chunk_id": "leave_policy.pdf#12",
+          "source": "leave_policy.pdf",
+          "text": "An employee who works on a weekly off-day or a public holiday at the manager's request earns 1 day of compensatory time off (\"comp-off\") for each such day worked. Comp-off must be recorded in PeoplePort within 7 days and availed within 60 days of the day worked, after which it lapses. Business travel on weekends also earns comp-off, as set out in the Travel and Expenses Policy (HR-POL-03, Section 6).",
+          "score": 0.0306,
+          "dense": 0.2514,
+          "page": 2
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I'm trying to understand why my payslip shows a deduction I didn't expect—can you explain that?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#9",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed by bank transfer within 15 working days of approval. A cash advance of up to 70% of the estimated per diem and hotel costs may be requested for international trips. Advances must be settled with an expense claim within 10 days of returning.",
+          "score": 0.0164,
+          "dense": 0.3385,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#15",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": " Expense claims (Finance): finance.claims@coralis-shipping.example, extension 2305 Synthetic document for demonstration purposes.",
+          "score": 0.0161,
+          "dense": 0.3222,
+          "page": 3
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#11",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "The following are not reimbursed: alcohol (except within approved client hospitality), hotel minibar items, in-room movies and personal entertainment, traffic or parking fines, seat or class upgrades paid by the employee, and costs of family members travelling with the employee.",
+          "score": 0.0159,
+          "dense": 0.2699,
+          "page": 2
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#3",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "All flights and hotels are booked through the company travel desk (Orbit Travels), contactable at travel@coralis-shipping.example. Bookings made privately are reimbursed only if they cost no more than the travel desk's quote. Class of travel:  Economy class for flights under 6 hours.  Premium economy for flights of 6 hours or more.  Business class only for flights longer than 9 hours, and only for managers at grade M3 and above.",
+          "score": 0.0156,
+          "dense": 0.261,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#0",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "Coralis Shipping Pvt. Ltd. - Travel and Expenses Policy Policy code: HR-POL-03 | Version 2.4 | Effective 1 January 2025 | Owner: Finance and Human Resources",
+          "score": 0.0154,
+          "dense": 0.2537,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Do you have any information about the upcoming payroll credit date for next month?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "leave_policy.pdf#3",
+          "source": "leave_policy.pdf",
+          "text": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day entitlement). During the first 6 months of employment (the probation period), leave accrues normally, but no more than 5 days of annual leave may be taken. Notice requirements:  For annual leave of 3 or more consecutive working days, apply in PeoplePort at least 14 calendar days before the first day of leave.  For 1 or 2 days of annual leave, apply at least 2 working days in advance. Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year.",
+          "score": 0.032,
+          "dense": 0.2487,
+          "page": 1
+        },
+        {
+          "chunk_id": "travel_and_expenses_policy.pdf#12",
+          "source": "travel_and_expenses_policy.pdf",
+          "text": "A corporate credit card is issued to employees who travel more than 4 times a year. Card transactions must be reconciled in PeoplePort within 7 days of the monthly statement date. Personal use of the corporate card is not allowed.",
+          "score": 0.0315,
+          "dense": 0.2319,
+          "page": 2
+        },
+        {
+          "chunk_id": "leave_policy.pdf#4",
+          "source": "leave_policy.pdf",
+          "text": "Carry forward: a maximum of 10 unused annual leave days may be carried forward into the next leave year. Carried-forward days must be used by 31 March of that year; any carried-forward days not used by 31 March lapse automatically. Leave encashment: unused annual leave is not paid out during employment. On resignation or termination, up to 30 days of accrued but unused annual leave are encashed at the basic rate of pay. Annual leave cannot be used to shorten the notice period without the written approval of the Department Head (see Code of Conduct HR-POL-02, Section 12).",
+          "score": 0.0306,
+          "dense": 0.2421,
+          "page": 1
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#13",
+          "source": "code_of_conduct.pdf",
+          "text": " Confirmed staff: 60 days.  Managers at grade M3 and above: 90 days. Annual leave may not be used to shorten the notice period unless the Department Head approves it in writing; unused leave is otherwise encashed as described in the Leave Policy (HR-POL-01, Section 3). Company property, including laptops and access cards, must be returned on the last working day. Synthetic document for demonstration purposes.",
+          "score": 0.0164,
+          "dense": 0.267,
+          "page": 3
+        },
+        {
+          "chunk_id": "code_of_conduct.pdf#5",
+          "source": "code_of_conduct.pdf",
+          "text": "Employees must declare any actual or potential conflict of interest (for example a family member working for a supplier, or a personal investment in a competitor) within 30 days of it arising, using the Conflict of Interest form in PeoplePort. In addition, every employee must submit an annual declaration by 31 January each year, even if they have nothing to declare.",
+          "score": 0.0156,
+          "dense": 0.237,
+          "page": 1
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 0.0,
+      "rewritten_query": ""
+    }
+  ]
+}

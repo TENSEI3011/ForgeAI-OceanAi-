@@ -1,0 +1,1890 @@
+{
+  "scorecard": {
+    "iteration": 2,
+    "definition_version": 3,
+    "n_cases": 20,
+    "pass_rate": 0.9,
+    "dev_pass_rate": 0.867,
+    "holdout_pass_rate": 1.0,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.867,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 2
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 15.98,
+    "judge_vetoes": 0,
+    "judge_disagreements": 3,
+    "results": [
+      {
+        "case_id": "A01",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How often must a man overboard drill be conducted?",
+        "answer": "A man overboard drill must be conducted every 3 months [source: drills_and_emergency_preparedness.md].  \n\n- The frequency is explicitly stated as every 3 months in the document.  \n- No additional details such as location, scenario, or record form are provided for this specific drill.  \n- The drill is not linked to crew changes, weather, or other conditions in the current documentation.  \n\nThis information is fully covered in the provided context.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 67,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Man overboard drill: every 3 months.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 18.66
+      },
+      {
+        "case_id": "A02",
+        "type": "answerable",
+        "split": "dev",
+        "question": "What voltage level triggers a permit for live electrical work?",
+        "answer": "A permit is required for electrical work on live equipment above 50 volts [source: permit_to_work_and_incident_reporting.txt]. This voltage level triggers the need for a permit to work. No other voltage thresholds are specified in the provided documents. The requirement applies to live electrical work, as outlined in the permit-to-work policy. \n\n- Voltage threshold: 50 volts [source: permit_to_work_and_incident_reporting.txt].  \n- Applies to: electrical work on live equipment [source: permit_to_work_and_incident_reporting.txt].  \n\nNo information is provided about lower or higher voltage levels, or about specific equipment types. The documents do not specify whether this applies to all electrical work or only certain types.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 94,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "a permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 18.61
+      },
+      {
+        "case_id": "A03",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "How often must lifeboats be lowered to the water?",
+        "answer": "Lifeboats must be lowered to the water at least once every 3 months [source: drills_and_emergency_preparedness.md].  \n\n- This requirement is part of the regular drills for emergency preparedness.  \n- The drill must involve realistic scenarios and include manoeuvring of lifeboats in water.  \n- No other frequency or condition is specified in the documents for lifeboat lowering.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a refusal due to a contradiction in the initial instruction — the correct answer is already provided in the context. The refusal is therefore incorrect and is being corrected here based on the actual content.)  \n\nFinal answer: Lifeboats must be lowered to the water at least once every 3 months [source: drills_and_emergency_preparedness.md].",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 121,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Lifeboats must be lowered to the water and manoeuvred at least once every 3 months.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 21.27
+      },
+      {
+        "case_id": "A04",
+        "type": "answerable",
+        "split": "dev",
+        "question": "Can crew report incidents anonymously using speakup@coralis-shipping.example?",
+        "answer": "Yes, crew may report incidents anonymously through the Speak-Up box on board or via speakup@coralis-shipping.example [source: permit_to_work_and_incident_reporting.txt].  \n\n- Anonymous reporting is permitted through the Speak-Up box or email.  \n- The email address provided is speakup@coralis-shipping.example.  \n\nNo other details about anonymity or reporting methods are provided in the documents.  \n\nNote: The question asks about anonymous reporting via speakup@coralis-shipping.example, which is explicitly supported in the context. All facts are directly cited from the provided passages.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 72,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 16.02
+      },
+      {
+        "case_id": "A05",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How many hours after a lost time injury must SMS-F-071 be submitted?",
+        "answer": "SMS-F-071 must be submitted within 48 hours of a lost time injury [source: permit_to_work_and_incident_reporting.txt].  \n\n- The time limit for submitting SMS-F-071 after a lost time injury is 48 hours.  \n- This requirement is specified in the incident reporting policy.  \n- No further details on hours after the injury are provided in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The question asks for \"how many hours,\" but the document states \"within 48 hours,\" which is a duration, not a specific number of hours after the injury. The exact time after the injury is not defined.)",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 102,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "submit form SMS-F-071 within 48 hours.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 21.11
+      },
+      {
+        "case_id": "A06",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "What is the maximum flammable gas limit for enclosed space entry?",
+        "answer": "The maximum flammable gas limit for enclosed space entry is below 1% of the lower flammable limit. [source: permit_to_work_and_incident_reporting.txt]  \n\n- This limit applies to flammable gases during enclosed space entry.  \n- The oxygen level must be between 20.8% and 21% by volume. [source: permit_to_work_and_incident_reporting.txt]  \n- No other flammable gas limit is specified in the documents for enclosed space entry.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The flammable gas limit is stated, but the exact value of \"1% of the lower flammable limit\" is not numerically defined in the text.)",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 93,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 24.19
+      },
+      {
+        "case_id": "A07",
+        "type": "answerable",
+        "split": "dev",
+        "question": "If over 25% of crew didn't do abandon ship or fire drills in the last month, how long do we have to hold both drills after leaving port?",
+        "answer": "If over 25% of the crew did not participate in abandon ship or fire drills in the previous month, both drills must be held within 24 hours of the ship leaving port [source: drills_and_emergency_preparedness.md].  \n\n- The requirement applies only when more than 25% of crew missed participation in either abandon ship or fire drills.  \n- The drills must be conducted together within 24 hours of departure.  \n- No other timeframes or conditions are specified in the documents for this scenario.  \n\nThis response is fully supported by the provided context. No additional information or assumptions are made.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 95,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 21.39
+      },
+      {
+        "case_id": "A08",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How many hours is a hot work permit valid for?",
+        "answer": "A hot work permit is valid for a maximum of 8 hours [source: permit_to_work_and_incident_reporting.txt].",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": false,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 0.5,
+        "missing_facts": [
+          "12 hours"
+        ],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "deterministic checks failed but the judge found the answer correct and supported (possible fact-matching false negative, or an over-specific expected fact; NOT rescued)",
+        "judge_notes": "missing facts: ['12 hours']",
+        "failure_category": "prompt_defect",
+        "diagnosis": "context had the facts but the answer missed ['12 hours']",
+        "passed": false,
+        "latency_s": 8.4
+      },
+      {
+        "case_id": "A09",
+        "type": "answerable",
+        "split": "holdout",
+        "question": "How many days after a serious incident is the investigation team appointed?",
+        "answer": "The investigation team is appointed within 24 hours of a serious incident [source: permit_to_work_and_incident_reporting.txt].  \n\n- The Master appoints the investigation team within 24 hours of a serious incident [source: permit_to_work_and_incident_reporting.txt].  \n- No other details about the timeline or process are provided in the documents.  \n\nThis answer covers the appointment timeframe but does not include information about the team's composition or subsequent actions.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 60,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "The Master appoints an investigation team within 24 hours of a serious incident.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 16.1
+      },
+      {
+        "case_id": "A10",
+        "type": "answerable",
+        "split": "dev",
+        "question": "How often are EEBDs inspected?",
+        "answer": "EEBDs are inspected monthly [source: drills_and_emergency_preparedness.md].  \n- The inspection frequency is explicitly stated as \"monthly\" in the document.  \n- No other details such as specific dates or procedures for the inspection are provided in the context.  \n- The document does not specify whether the inspection is conducted by a particular person or department.  \n\nThis answer is fully supported by the provided text. No additional information is available in the documents regarding the method or responsibility of the inspection.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 77,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 16.86
+      },
+      {
+        "case_id": "E01",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "how often do we check fire extinguishers for a monthly spot?",
+        "answer": "Fire extinguishers are inspected monthly [source: drills_and_emergency_preparedness.md].  \n\n- Monthly inspection is required for fire extinguishers.  \n- No information is provided about the specific method or \"spot\" check for the monthly inspection.  \n\nThis answer covers the frequency of inspection but does not specify the nature of the monthly spot check. The term \"spot\" is not defined or supported in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 72,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": false,
+          "evidence_quote": "",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "Monthly inspection is required for fire extinguishers.",
+          "evidence_verified": false,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": false
+        },
+        "judge_veto": false,
+        "judge_disagreement": "judge said fail but gave no verifiable quote for it (ignored)",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 15.73
+      },
+      {
+        "case_id": "E02",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "What oxygen level lets entry happen?",
+        "answer": "Entry is allowed only if oxygen is between 20.8% and 21% by volume [source: permit_to_work_and_incident_reporting.txt].",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 14,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Entry is allowed only if oxygen is between 20.8% and 21% by volume",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 7.26
+      },
+      {
+        "case_id": "E03",
+        "type": "edge_ambiguous",
+        "split": "holdout",
+        "question": "I just completed a drill involving a rescue boat operation—what must I have done to ensure compliance with the required frequency?",
+        "answer": "To ensure compliance, you must have launched and manoeuvred the rescue boat in the water, as this is required every month where reasonable and practicable [source: drills_and_emergency_preparedness.md]. This action satisfies the required frequency for rescue boat operations.  \n\n- The drill must be conducted monthly, as per the frequency requirement in the document [source: drills_and_emergency_preparedness.md].  \n- No additional details about specific forms or records are provided for this drill.  \n\nNote: The requirement for a debrief within 2 hours and lessons learned on form SMS-F-043 applies to all drills, including this one [source: drills_and_emergency_preparedness.md].  \n\nThis answer covers the frequency and action required; it does not include details about record-keeping or reporting obligations beyond what is stated.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 111,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 22.63
+      },
+      {
+        "case_id": "E04",
+        "type": "edge_ambiguous",
+        "split": "dev",
+        "question": "how long can a hot work permit last max?",
+        "answer": "A hot work permit is valid for a maximum of 8 hours [source: permit_to_work_and_incident_reporting.txt].  \n\n- The validity expires at the end of its 8-hour period or at a change of watch, whichever comes first [source: permit_to_work_and_incident_reporting.txt].  \n- A new permit is required if the work is handed over during the validity period [source: permit_to_work_and_incident_reporting.txt].  \n\nThis information is specific to hot work permits and does not cover enclosed space entry or other types of work.  \n\nNote: The maximum duration of 8 hours is explicitly stated in the document and applies only to hot work. No other durations or conditions are provided for hot work permits in the current documentation.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": false,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 0.5,
+        "missing_facts": [
+          "12 hours"
+        ],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 105,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "deterministic checks failed but the judge found the answer correct and supported (possible fact-matching false negative, or an over-specific expected fact; NOT rescued)",
+        "judge_notes": "missing facts: ['12 hours']",
+        "failure_category": "prompt_defect",
+        "diagnosis": "context had the facts but the answer missed ['12 hours']",
+        "passed": false,
+        "latency_s": 19.72
+      },
+      {
+        "case_id": "M01",
+        "type": "edge_multi_doc",
+        "split": "dev",
+        "question": "If a drill is missed, when must the DPA be notified about the incident and what form must be submitted for a lost time injury?",
+        "answer": "If a drill is missed, the DPA must be notified within 48 hours with the reason and rescheduled date [source: drills_and_emergency_preparedness.md]. For a lost time injury, form SMS-F-071 must be submitted within 48 hours [source: permit_to_work_and_incident_reporting.txt].  \n\n- Notification to DPA: within 48 hours after the drill is missed [source: drills_and_emergency_preparedness.md].  \n- Form for lost time injury: SMS-F-071, submitted within 48 hours [source: permit_to_work_and_incident_reporting.txt].  \n\nNote: The question asks about a \"lost time injury\" incident, not a drill miss. The drill miss notification requirement is separate and does not apply to injury reporting. The form and time limit for lost time injuries are explicitly stated in the incident reporting policy.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "tools_called": [],
+        "refused": false,
+        "should_refuse": false,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 1.0,
+        "novel_numbers": [],
+        "word_count": 104,
+        "over_length": false,
+        "judge": {
+          "answers_question": true,
+          "supported_by_context": true,
+          "evidence_quote": "A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "contradicts_reference": false,
+          "contradiction_quote": "",
+          "unsupported_claim": "",
+          "evidence_verified": true,
+          "contradiction_verified": false,
+          "unsupported_claim_verified": false,
+          "judge_pass": true
+        },
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 23.83
+      },
+      {
+        "case_id": "O01",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "What's the best way to check if the rudder is working properly before heading out in rough seas?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 8.16
+      },
+      {
+        "case_id": "O02",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "Can you walk me through the steps for loading containers onto the deck without shifting the cargo center of gravity?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 4.84
+      },
+      {
+        "case_id": "O03",
+        "type": "out_of_scope",
+        "split": "holdout",
+        "question": "I’ve been hearing about a new type of lubricant for the engine—how often should I apply it during routine maintenance?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 8.21
+      },
+      {
+        "case_id": "O04",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "I'm new to the crew, what should I do if I notice a leak in the main engine room?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "drills_and_emergency_preparedness.md",
+          "permit_to_work_and_incident_reporting.txt"
+        ],
+        "cited_sources": [],
+        "tools_called": [
+          "current_date"
+        ],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 19.37
+      },
+      {
+        "case_id": "O05",
+        "type": "out_of_scope",
+        "split": "dev",
+        "question": "How do I know if my personal fitness routine is helping me stay alert during long shifts?",
+        "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+        "retrieved_sources": [
+          "permit_to_work_and_incident_reporting.txt",
+          "drills_and_emergency_preparedness.md"
+        ],
+        "cited_sources": [],
+        "tools_called": [],
+        "refused": true,
+        "should_refuse": true,
+        "grounded": true,
+        "correct": true,
+        "refused_correctly": true,
+        "citation_ok": true,
+        "fact_recall": 1.0,
+        "missing_facts": [],
+        "context_fact_recall": 0.0,
+        "novel_numbers": [],
+        "word_count": 13,
+        "over_length": false,
+        "judge": null,
+        "judge_veto": false,
+        "judge_disagreement": "",
+        "judge_notes": "refused as required",
+        "failure_category": null,
+        "diagnosis": "",
+        "passed": true,
+        "latency_s": 7.21
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question": "How often must a man overboard drill be conducted?",
+      "answer": "A man overboard drill must be conducted every 3 months [source: drills_and_emergency_preparedness.md].  \n\n- The frequency is explicitly stated as every 3 months in the document.  \n- No additional details such as location, scenario, or record form are provided for this specific drill.  \n- The drill is not linked to crew changes, weather, or other conditions in the current documentation.  \n\nThis information is fully covered in the provided context.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0325,
+          "dense": 0.6875,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0325,
+          "dense": 0.6901,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0315,
+          "dense": 0.6523,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#1",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "The Master is responsible for ensuring that all drills are carried out at the required frequency and recorded. The Chief Officer plans the monthly drill schedule and the Safety Officer keeps the drill records in the Official Log Book and in the electronic Drill Register (form SMS-F-041).",
+          "score": 0.0313,
+          "dense": 0.4831,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.031,
+          "dense": 0.5513,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 18.66,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What voltage level triggers a permit for live electrical work?",
+      "answer": "A permit is required for electrical work on live equipment above 50 volts [source: permit_to_work_and_incident_reporting.txt]. This voltage level triggers the need for a permit to work. No other voltage thresholds are specified in the provided documents. The requirement applies to live electrical work, as outlined in the permit-to-work policy. \n\n- Voltage threshold: 50 volts [source: permit_to_work_and_incident_reporting.txt].  \n- Applies to: electrical work on live equipment [source: permit_to_work_and_incident_reporting.txt].  \n\nNo information is provided about lower or higher voltage levels, or about specific equipment types. The documents do not specify whether this applies to all electrical work or only certain types.",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#1",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "A permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.",
+          "score": 0.0328,
+          "dense": 0.6227,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#2",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.",
+          "score": 0.0323,
+          "dense": 0.4388,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#0",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.",
+          "score": 0.0317,
+          "dense": 0.3543,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.0312,
+          "dense": 0.3193,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0303,
+          "dense": 0.3109,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 18.61,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How often must lifeboats be lowered to the water?",
+      "answer": "Lifeboats must be lowered to the water at least once every 3 months [source: drills_and_emergency_preparedness.md].  \n\n- This requirement is part of the regular drills for emergency preparedness.  \n- The drill must involve realistic scenarios and include manoeuvring of lifeboats in water.  \n- No other frequency or condition is specified in the documents for lifeboat lowering.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: This is a refusal due to a contradiction in the initial instruction — the correct answer is already provided in the context. The refusal is therefore incorrect and is being corrected here based on the actual content.)  \n\nFinal answer: Lifeboats must be lowered to the water at least once every 3 months [source: drills_and_emergency_preparedness.md].",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0328,
+          "dense": 0.5436,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0304,
+          "dense": 0.2345,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0161,
+          "dense": 0.4219,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0159,
+          "dense": 0.3695,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#0",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Document SMS-04 | Revision 6 | Applies to all Coralis Shipping managed vessels",
+          "score": 0.0156,
+          "dense": 0.322,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 21.27,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Can crew report incidents anonymously using speakup@coralis-shipping.example?",
+      "answer": "Yes, crew may report incidents anonymously through the Speak-Up box on board or via speakup@coralis-shipping.example [source: permit_to_work_and_incident_reporting.txt].  \n\n- Anonymous reporting is permitted through the Speak-Up box or email.  \n- The email address provided is speakup@coralis-shipping.example.  \n\nNo other details about anonymity or reporting methods are provided in the documents.  \n\nNote: The question asks about anonymous reporting via speakup@coralis-shipping.example, which is explicitly supported in the context. All facts are directly cited from the provided passages.",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#7",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Reports made in good faith are never used for disciplinary action against the reporter. Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example. Synthetic document for demonstration purposes.",
+          "score": 0.0328,
+          "dense": 0.6907,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#8",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Designated Person Ashore (DPA): dpa@coralis-shipping.example, emergency line +91 22 5550 9000 (24 hours). Synthetic document for demonstration purposes.",
+          "score": 0.032,
+          "dense": 0.4473,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#0",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.",
+          "score": 0.0318,
+          "dense": 0.4612,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.031,
+          "dense": 0.3904,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.0305,
+          "dense": 0.3918,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 16.02,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many hours after a lost time injury must SMS-F-071 be submitted?",
+      "answer": "SMS-F-071 must be submitted within 48 hours of a lost time injury [source: permit_to_work_and_incident_reporting.txt].  \n\n- The time limit for submitting SMS-F-071 after a lost time injury is 48 hours.  \n- This requirement is specified in the incident reporting policy.  \n- No further details on hours after the injury are provided in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The question asks for \"how many hours,\" but the document states \"within 48 hours,\" which is a duration, not a specific number of hours after the injury. The exact time after the injury is not defined.)",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0328,
+          "dense": 0.5498,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.0313,
+          "dense": 0.3291,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#0",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.",
+          "score": 0.0303,
+          "dense": 0.3606,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.0302,
+          "dense": 0.4091,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0299,
+          "dense": 0.3641,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 21.11,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What is the maximum flammable gas limit for enclosed space entry?",
+      "answer": "The maximum flammable gas limit for enclosed space entry is below 1% of the lower flammable limit. [source: permit_to_work_and_incident_reporting.txt]  \n\n- This limit applies to flammable gases during enclosed space entry.  \n- The oxygen level must be between 20.8% and 21% by volume. [source: permit_to_work_and_incident_reporting.txt]  \n- No other flammable gas limit is specified in the documents for enclosed space entry.  \n\nI'm sorry, I can't answer that from the documents I have access to. (Note: The flammable gas limit is stated, but the exact value of \"1% of the lower flammable limit\" is not numerically defined in the text.)",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0328,
+          "dense": 0.6689,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#2",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.",
+          "score": 0.0323,
+          "dense": 0.3392,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#1",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "A permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.",
+          "score": 0.0315,
+          "dense": 0.3123,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0305,
+          "dense": 0.2229,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.0156,
+          "dense": 0.2833,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 24.19,
+      "rewritten_query": ""
+    },
+    {
+      "question": "If over 25% of crew didn't do abandon ship or fire drills in the last month, how long do we have to hold both drills after leaving port?",
+      "answer": "If over 25% of the crew did not participate in abandon ship or fire drills in the previous month, both drills must be held within 24 hours of the ship leaving port [source: drills_and_emergency_preparedness.md].  \n\n- The requirement applies only when more than 25% of crew missed participation in either abandon ship or fire drills.  \n- The drills must be conducted together within 24 hours of departure.  \n- No other timeframes or conditions are specified in the documents for this scenario.  \n\nThis response is fully supported by the provided context. No additional information or assumptions are made.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0328,
+          "dense": 0.8531,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0323,
+          "dense": 0.7208,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.031,
+          "dense": 0.6353,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.031,
+          "dense": 0.4779,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.031,
+          "dense": 0.5685,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 21.39,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many hours is a hot work permit valid for?",
+      "answer": "A hot work permit is valid for a maximum of 8 hours [source: permit_to_work_and_incident_reporting.txt].",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#2",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.",
+          "score": 0.0328,
+          "dense": 0.8593,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.0323,
+          "dense": 0.655,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#1",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "A permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.",
+          "score": 0.0317,
+          "dense": 0.6125,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#0",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.",
+          "score": 0.0308,
+          "dense": 0.3524,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0305,
+          "dense": 0.3686,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 8.4,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How many days after a serious incident is the investigation team appointed?",
+      "answer": "The investigation team is appointed within 24 hours of a serious incident [source: permit_to_work_and_incident_reporting.txt].  \n\n- The Master appoints the investigation team within 24 hours of a serious incident [source: permit_to_work_and_incident_reporting.txt].  \n- No other details about the timeline or process are provided in the documents.  \n\nThis answer covers the appointment timeframe but does not include information about the team's composition or subsequent actions.",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#6",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The Master appoints an investigation team within 24 hours of a serious incident. The root-cause investigation report is sent to the office within 14 days. Corrective actions are tracked by the DPA and must be closed within 90 days, or an extension approved by the Technical Director.",
+          "score": 0.0328,
+          "dense": 0.6733,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.032,
+          "dense": 0.295,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#7",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Reports made in good faith are never used for disciplinary action against the reporter. Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example. Synthetic document for demonstration purposes.",
+          "score": 0.0308,
+          "dense": 0.2764,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0304,
+          "dense": 0.2229,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.029,
+          "dense": 0.2177,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 16.1,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How often are EEBDs inspected?",
+      "answer": "EEBDs are inspected monthly [source: drills_and_emergency_preparedness.md].  \n- The inspection frequency is explicitly stated as \"monthly\" in the document.  \n- No other details such as specific dates or procedures for the inspection are provided in the context.  \n- The document does not specify whether the inspection is conducted by a particular person or department.  \n\nThis answer is fully supported by the provided text. No additional information is available in the documents regarding the method or responsibility of the inspection.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#7",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Lifejackets and immersion suits: inspected monthly by the Safety Officer. - Fixed CO2 system: inspected annually by an approved service provider. - EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life. - Fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years.",
+          "score": 0.0328,
+          "dense": 0.6119,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0161,
+          "dense": 0.389,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#6",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The Master appoints an investigation team within 24 hours of a serious incident. The root-cause investigation report is sent to the office within 14 days. Corrective actions are tracked by the DPA and must be closed within 90 days, or an extension approved by the Technical Director.",
+          "score": 0.0159,
+          "dense": 0.3689,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.0156,
+          "dense": 0.3635,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0154,
+          "dense": 0.3253,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 16.86,
+      "rewritten_query": ""
+    },
+    {
+      "question": "how often do we check fire extinguishers for a monthly spot?",
+      "answer": "Fire extinguishers are inspected monthly [source: drills_and_emergency_preparedness.md].  \n\n- Monthly inspection is required for fire extinguishers.  \n- No information is provided about the specific method or \"spot\" check for the monthly inspection.  \n\nThis answer covers the frequency of inspection but does not specify the nature of the monthly spot check. The term \"spot\" is not defined or supported in the documents.  \n\nI'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#7",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Lifejackets and immersion suits: inspected monthly by the Safety Officer. - Fixed CO2 system: inspected annually by an approved service provider. - EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life. - Fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years.",
+          "score": 0.0328,
+          "dense": 0.4816,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.032,
+          "dense": 0.418,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.032,
+          "dense": 0.4514,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0312,
+          "dense": 0.3642,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.0301,
+          "dense": 0.34,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 15.73,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What oxygen level lets entry happen?",
+      "answer": "Entry is allowed only if oxygen is between 20.8% and 21% by volume [source: permit_to_work_and_incident_reporting.txt].",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0328,
+          "dense": 0.4442,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#7",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Lifejackets and immersion suits: inspected monthly by the Safety Officer. - Fixed CO2 system: inspected annually by an approved service provider. - EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life. - Fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years.",
+          "score": 0.0161,
+          "dense": 0.2647,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 7.26,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I just completed a drill involving a rescue boat operation—what must I have done to ensure compliance with the required frequency?",
+      "answer": "To ensure compliance, you must have launched and manoeuvred the rescue boat in the water, as this is required every month where reasonable and practicable [source: drills_and_emergency_preparedness.md]. This action satisfies the required frequency for rescue boat operations.  \n\n- The drill must be conducted monthly, as per the frequency requirement in the document [source: drills_and_emergency_preparedness.md].  \n- No additional details about specific forms or records are provided for this drill.  \n\nNote: The requirement for a debrief within 2 hours and lessons learned on form SMS-F-043 applies to all drills, including this one [source: drills_and_emergency_preparedness.md].  \n\nThis answer covers the frequency and action required; it does not include details about record-keeping or reporting obligations beyond what is stated.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0325,
+          "dense": 0.612,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#1",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "The Master is responsible for ensuring that all drills are carried out at the required frequency and recorded. The Chief Officer plans the monthly drill schedule and the Safety Officer keeps the drill records in the Official Log Book and in the electronic Drill Register (form SMS-F-041).",
+          "score": 0.0318,
+          "dense": 0.4791,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0317,
+          "dense": 0.5671,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0311,
+          "dense": 0.6035,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.0303,
+          "dense": 0.5226,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 22.63,
+      "rewritten_query": ""
+    },
+    {
+      "question": "how long can a hot work permit last max?",
+      "answer": "A hot work permit is valid for a maximum of 8 hours [source: permit_to_work_and_incident_reporting.txt].  \n\n- The validity expires at the end of its 8-hour period or at a change of watch, whichever comes first [source: permit_to_work_and_incident_reporting.txt].  \n- A new permit is required if the work is handed over during the validity period [source: permit_to_work_and_incident_reporting.txt].  \n\nThis information is specific to hot work permits and does not cover enclosed space entry or other types of work.  \n\nNote: The maximum duration of 8 hours is explicitly stated in the document and applies only to hot work. No other durations or conditions are provided for hot work permits in the current documentation.",
+      "cited_sources": [
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.0325,
+          "dense": 0.6331,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#2",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.",
+          "score": 0.0323,
+          "dense": 0.8046,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#1",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "A permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.",
+          "score": 0.032,
+          "dense": 0.5517,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0303,
+          "dense": 0.3882,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#0",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.",
+          "score": 0.0299,
+          "dense": 0.3073,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 19.72,
+      "rewritten_query": ""
+    },
+    {
+      "question": "If a drill is missed, when must the DPA be notified about the incident and what form must be submitted for a lost time injury?",
+      "answer": "If a drill is missed, the DPA must be notified within 48 hours with the reason and rescheduled date [source: drills_and_emergency_preparedness.md]. For a lost time injury, form SMS-F-071 must be submitted within 48 hours [source: permit_to_work_and_incident_reporting.txt].  \n\n- Notification to DPA: within 48 hours after the drill is missed [source: drills_and_emergency_preparedness.md].  \n- Form for lost time injury: SMS-F-071, submitted within 48 hours [source: permit_to_work_and_incident_reporting.txt].  \n\nNote: The question asks about a \"lost time injury\" incident, not a drill miss. The drill miss notification requirement is separate and does not apply to injury reporting. The form and time limit for lost time injuries are explicitly stated in the incident reporting policy.",
+      "cited_sources": [
+        "drills_and_emergency_preparedness.md",
+        "permit_to_work_and_incident_reporting.txt"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#6",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drill records are sent to the DPA (Designated Person Ashore) with the monthly safety report by the 5th day of the following month. A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+          "score": 0.0325,
+          "dense": 0.7741,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0325,
+          "dense": 0.6028,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#8",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Designated Person Ashore (DPA): dpa@coralis-shipping.example, emergency line +91 22 5550 9000 (24 hours). Synthetic document for demonstration purposes.",
+          "score": 0.0315,
+          "dense": 0.4815,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#1",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "The Master is responsible for ensuring that all drills are carried out at the required frequency and recorded. The Chief Officer plans the monthly drill schedule and the Safety Officer keeps the drill records in the Official Log Book and in the electronic Drill Register (form SMS-F-041).",
+          "score": 0.031,
+          "dense": 0.4732,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0305,
+          "dense": 0.4384,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": false,
+      "abstained_no_context": false,
+      "latency_s": 23.83,
+      "rewritten_query": ""
+    },
+    {
+      "question": "What's the best way to check if the rudder is working properly before heading out in rough seas?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0315,
+          "dense": 0.2593,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#7",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Lifejackets and immersion suits: inspected monthly by the Safety Officer. - Fixed CO2 system: inspected annually by an approved service provider. - EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life. - Fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years.",
+          "score": 0.0306,
+          "dense": 0.21,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.0164,
+          "dense": 0.3133,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0161,
+          "dense": 0.3037,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0159,
+          "dense": 0.3022,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 8.16,
+      "rewritten_query": ""
+    },
+    {
+      "question": "Can you walk me through the steps for loading containers onto the deck without shifting the cargo center of gravity?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#8",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Designated Person Ashore (DPA): dpa@coralis-shipping.example, emergency line +91 22 5550 9000 (24 hours). Synthetic document for demonstration purposes.",
+          "score": 0.0164,
+          "dense": 0.2173,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 4.84,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I’ve been hearing about a new type of lubricant for the engine—how often should I apply it during routine maintenance?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#2",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.",
+          "score": 0.0315,
+          "dense": 0.2136,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0164,
+          "dense": 0.4524,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#5",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "Drills should be realistic and varied: the scenario, location and simulated casualty should change from drill to drill. Lifeboats must be lowered to the water and manoeuvred at least once every 3 months. Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable. Each drill ends with a debrief within 2 hours, and lessons learned are entered on form SMS-F-043.",
+          "score": 0.0161,
+          "dense": 0.3116,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#7",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Lifejackets and immersion suits: inspected monthly by the Safety Officer. - Fixed CO2 system: inspected annually by an approved service provider. - EEBDs (emergency escape breathing devices): inspected monthly; replaced at the end of their 10-year service life. - Fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years.",
+          "score": 0.0159,
+          "dense": 0.2799,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0156,
+          "dense": 0.2683,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 8.21,
+      "rewritten_query": ""
+    },
+    {
+      "question": "I'm new to the crew, what should I do if I notice a leak in the main engine room?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.0323,
+          "dense": 0.3153,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#2",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "- Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: every 3 months. - Oil pollution (SOPEP) drill: every 3 months. - Steering gear emergency drill: every 3 months. - Damage control drill (passenger and cargo vessels above 500 GT): every 6 months. - Ship Security drill: every 3 months, and within 1 week of a crew change affecting more than 25% of the crew.",
+          "score": 0.0312,
+          "dense": 0.2092,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#5",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours. - Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours. Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the \"Safety Eye\" award of USD 200 for the crew welfare fund.",
+          "score": 0.0308,
+          "dense": 0.2424,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#3",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "If more than 25% of the crew have not taken part in an abandon ship and fire drill on board that ship in the previous month, both drills must be held within 24 hours of the ship leaving port.",
+          "score": 0.0305,
+          "dense": 0.2046,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0164,
+          "dense": 0.3618,
+          "page": null
+        }
+      ],
+      "tools_called": [
+        {
+          "name": "current_date",
+          "args": {},
+          "result": "Today is Wednesday, 25 November 2026 (ISO 2026-11-25), local time 16:27.",
+          "ok": true
+        }
+      ],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 19.37,
+      "rewritten_query": ""
+    },
+    {
+      "question": "How do I know if my personal fitness routine is helping me stay alert during long shifts?",
+      "answer": "I'm sorry, I can't answer that from the documents I have access to.",
+      "cited_sources": [],
+      "retrieved": [
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#3",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.",
+          "score": 0.0323,
+          "dense": 0.2038,
+          "page": null
+        },
+        {
+          "chunk_id": "permit_to_work_and_incident_reporting.txt#4",
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "text": "Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.",
+          "score": 0.0164,
+          "dense": 0.2491,
+          "page": null
+        },
+        {
+          "chunk_id": "drills_and_emergency_preparedness.md#4",
+          "source": "drills_and_emergency_preparedness.md",
+          "text": "New crew members must receive safety familiarisation before the vessel sails, and in any case within 24 hours of joining. Familiarisation covers muster stations, lifejacket and immersion suit donning, alarm signals and escape routes, and is recorded on form SMS-F-012 signed by the Safety Officer and the crew member.",
+          "score": 0.0161,
+          "dense": 0.2055,
+          "page": null
+        }
+      ],
+      "tools_called": [],
+      "refused": true,
+      "abstained_no_context": false,
+      "latency_s": 7.21,
+      "rewritten_query": ""
+    }
+  ]
+}

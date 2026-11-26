@@ -1,0 +1,379 @@
+[
+  {
+    "id": "A01",
+    "type": "answerable",
+    "question": "How often must a man overboard drill be conducted?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "every 3 months"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "man overboard drill: every 3 months."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "drills_and_emergency_preparedness.md#2",
+    "notes": ""
+  },
+  {
+    "id": "A02",
+    "type": "answerable",
+    "question": "What voltage level triggers a permit for live electrical work?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "50 volts"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "electrical work on live equipment above 50 volts"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#1",
+    "notes": ""
+  },
+  {
+    "id": "A03",
+    "type": "answerable",
+    "question": "How often must lifeboats be lowered to the water?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "every 3 months"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Lifeboats must be lowered to the water and manoeuvred at least once every 3 months."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "drills_and_emergency_preparedness.md#5",
+    "notes": ""
+  },
+  {
+    "id": "A04",
+    "type": "answerable",
+    "question": "Can crew report incidents anonymously using speakup@coralis-shipping.example?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example."
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#7",
+    "notes": ""
+  },
+  {
+    "id": "A05",
+    "type": "answerable",
+    "question": "How many hours after a lost time injury must SMS-F-071 be submitted?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "within 48 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#5",
+    "notes": ""
+  },
+  {
+    "id": "A06",
+    "type": "answerable",
+    "question": "What is the maximum flammable gas limit for enclosed space entry?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "below 1% of the lower flammable limit"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "flammable gas is below 1% of the lower flammable limit"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "permit_to_work_and_incident_reporting.txt#3",
+    "notes": ""
+  },
+  {
+    "id": "A07",
+    "type": "answerable",
+    "question": "If over 25% of crew didn't do abandon ship or fire drills in the last month, how long do we have to hold both drills after leaving port?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "24 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "both drills must be held within 24 hours of the ship leaving port."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "drills_and_emergency_preparedness.md#3",
+    "notes": ""
+  },
+  {
+    "id": "A08",
+    "type": "answerable",
+    "question": "How many hours is a hot work permit valid for?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "8 hours",
+      "12 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Hot work permits are valid for a maximum of 8 hours",
+      "enclosed space entry permits for a maximum of 12 hours"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#2",
+    "notes": ""
+  },
+  {
+    "id": "A09",
+    "type": "answerable",
+    "question": "How many days after a serious incident is the investigation team appointed?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "24 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "The Master appoints an investigation team within 24 hours of a serious incident."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "permit_to_work_and_incident_reporting.txt#6",
+    "notes": ""
+  },
+  {
+    "id": "A10",
+    "type": "answerable",
+    "question": "How often are EEBDs inspected?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "monthly"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "EEBDs (emergency escape breathing devices): inspected monthly;"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "drills_and_emergency_preparedness.md#7",
+    "notes": ""
+  },
+  {
+    "id": "E01",
+    "type": "edge_ambiguous",
+    "question": "how often do we check fire extinguishers for a monthly spot?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "inspected monthly"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "fire extinguishers: inspected monthly; serviced annually; hydrostatically tested every 10 years."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "drills_and_emergency_preparedness.md#7",
+    "notes": "style: informal and typed in a hurry, with one or two spelling mistakes and no formal terms. "
+  },
+  {
+    "id": "E02",
+    "type": "edge_ambiguous",
+    "question": "What oxygen level lets entry happen?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "20.8% to 21% by volume"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "oxygen is between 20.8% and 21% by volume"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#3",
+    "notes": "style: very short and underspecified (4-8 words), using everyday words instead of the document's terms. removed 1 fact(s): 1 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "E03",
+    "type": "edge_ambiguous",
+    "question": "I just completed a drill involving a rescue boat operation—what must I have done to ensure compliance with the required frequency?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md"
+    ],
+    "expected_facts": [
+      "Rescue boats must be launched and manoeuvred in the water every month"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Rescue boats must be launched and manoeuvred in the water every month where reasonable and practicable."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "drills_and_emergency_preparedness.md#5",
+    "notes": "style: indirect: describe the user's own situation instead of naming the rule, item or section. "
+  },
+  {
+    "id": "E04",
+    "type": "edge_ambiguous",
+    "question": "how long can a hot work permit last max?",
+    "expected_sources": [
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "8 hours",
+      "12 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Hot work permits are valid for a maximum of 8 hours",
+      "enclosed space entry permits for a maximum of 12 hours"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "permit_to_work_and_incident_reporting.txt#2",
+    "notes": "style: informal and typed in a hurry, with one or two spelling mistakes and no formal terms. "
+  },
+  {
+    "id": "M01",
+    "type": "edge_multi_doc",
+    "question": "If a drill is missed, when must the DPA be notified about the incident and what form must be submitted for a lost time injury?",
+    "expected_sources": [
+      "drills_and_emergency_preparedness.md",
+      "permit_to_work_and_incident_reporting.txt"
+    ],
+    "expected_facts": [
+      "within 48 hours",
+      "submit form SMS-F-071 within 48 hours"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "A missed or postponed drill must be reported to the DPA within 48 hours with the reason and the rescheduled date.",
+      "Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "drills_and_emergency_preparedness.md#6 + permit_to_work_and_incident_reporting.txt#5",
+    "notes": ""
+  },
+  {
+    "id": "O01",
+    "type": "out_of_scope",
+    "question": "What's the best way to check if the rudder is working properly before heading out in rough seas?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.26"
+  },
+  {
+    "id": "O02",
+    "type": "out_of_scope",
+    "question": "Can you walk me through the steps for loading containers onto the deck without shifting the cargo center of gravity?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.12"
+  },
+  {
+    "id": "O03",
+    "type": "out_of_scope",
+    "question": "I’ve been hearing about a new type of lubricant for the engine—how often should I apply it during routine maintenance?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.21"
+  },
+  {
+    "id": "O04",
+    "type": "out_of_scope",
+    "question": "I'm new to the crew, what should I do if I notice a leak in the main engine room?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.32"
+  },
+  {
+    "id": "O05",
+    "type": "out_of_scope",
+    "question": "How do I know if my personal fitness routine is helping me stay alert during long shifts?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.20"
+  }
+]

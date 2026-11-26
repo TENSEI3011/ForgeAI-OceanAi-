@@ -1,0 +1,104 @@
+{
+  "stop_reason": "dev pass rate 94% reached the target (90%)",
+  "iterations": [
+    {
+      "iteration": 1,
+      "from_version": 1,
+      "to_version": 2,
+      "categories_targeted": [
+        "prompt_defect"
+      ],
+      "changes": [
+        {
+          "category": "prompt_defect",
+          "what": "added a completeness rule (answer every part, cite each)",
+          "why": "the retrieved context contained the expected facts but answers left some out",
+          "failures_addressed": [
+            "E01",
+            "M02",
+            "M04"
+          ],
+          "diff": "--- domain rules (before)\n+++ domain rules (after)\n@@ -6 +6,2 @@\n If a supplier's terms require approval or involve a specific department, mention that requirement in your response.\n+If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part."
+        },
+        {
+          "category": "(rendered)",
+          "what": "system prompt re-rendered from the patched spec",
+          "why": "see the changes above",
+          "failures_addressed": [],
+          "diff": "--- system prompt (before)\n+++ system prompt (after)\n@@ -36,2 +36,3 @@\n 6. If a supplier's terms require approval or involve a specific department, mention that requirement in your response.\n+7. If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part.\n "
+        }
+      ],
+      "before_score": 0.833,
+      "after_score": 0.875,
+      "before_dev": 0.833,
+      "after_dev": 0.889,
+      "flipped_to_pass": [
+        "E01",
+        "M02",
+        "M04"
+      ],
+      "flipped_to_fail": [
+        "E02",
+        "M01"
+      ],
+      "decision": "kept",
+      "note": "holdout 83% -> 83%"
+    },
+    {
+      "iteration": 2,
+      "from_version": 2,
+      "to_version": 3,
+      "categories_targeted": [
+        "hallucination",
+        "prompt_defect"
+      ],
+      "changes": [
+        {
+          "category": "hallucination",
+          "what": "added strict number-grounding rule; temperature 0.2 -> 0.0",
+          "why": "answers contained figures or claims that are not in the retrieved context",
+          "failures_addressed": [
+            "E02"
+          ],
+          "diff": "--- rules/config (before)\n+++ rules/config (after)\n@@ -7,2 +7,3 @@\n If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part.\n-temperature=0.2 min_score=0.2\n+Before writing any number, amount, date or code, find it in the context passages or tool results; if it is not there, do not write it.\n+temperature=0.0 min_score=0.2"
+        },
+        {
+          "category": "prompt_defect",
+          "what": "added rule; rejected 1 leaking/invalid rule(s)",
+          "why": "This ensures that when a threshold definition exists in the context, the associated consequence is captured and reported, preventing omissions in comparative responses even when the query structure is indirect.",
+          "failures_addressed": [
+            "M01"
+          ],
+          "diff": "--- domain rules (before)\n+++ domain rules (after)\n@@ -8 +8,2 @@\n Before writing any number, amount, date or code, find it in the context passages or tool results; if it is not there, do not write it.\n+When comparing categories defined by thresholds (e.g., lead time, packaging status), explicitly state the definition and example from the source if provided, even if the full policy is not cited."
+        },
+        {
+          "category": "(rendered)",
+          "what": "system prompt re-rendered from the patched spec",
+          "why": "see the changes above",
+          "failures_addressed": [],
+          "diff": "--- system prompt (before)\n+++ system prompt (after)\n@@ -37,2 +37,4 @@\n 7. If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part.\n+8. Before writing any number, amount, date or code, find it in the context passages or tool results; if it is not there, do not write it.\n+9. When comparing categories defined by thresholds (e.g., lead time, packaging status), explicitly state the definition and example from the source if provided, even if the full policy is not cited.\n "
+        }
+      ],
+      "before_score": 0.875,
+      "after_score": 0.917,
+      "before_dev": 0.889,
+      "after_dev": 0.944,
+      "flipped_to_pass": [
+        "E02",
+        "M01"
+      ],
+      "flipped_to_fail": [
+        "E04"
+      ],
+      "decision": "kept",
+      "note": "holdout 83% -> 83%"
+    }
+  ],
+  "rejected_patches": [
+    {
+      "rule": "If a condition or threshold is defined in a document (e.g., lead time over 30 days, opened packaging), and the consequence (e.g., no return, restocking fee) is stated, include that consequence in the response, even if it is not directly linked to the original query's phrasing.",
+      "reason": "may not rewrite an optimizer safety rule",
+      "category": "prompt_defect"
+    }
+  ]
+}

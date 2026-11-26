@@ -1,0 +1,214 @@
+{
+  "brief": "I need an assistant that answers HR policy questions for our shore staff: leave, code of conduct, travel and expense claims, and payroll questions such as when salaries are credited and what the deductions on a payslip mean.",
+  "agent_name": "ShoreHR Helper",
+  "scope": "An AI assistant that answers factual policy questions about leave, code of conduct, travel and expense claims, and payroll for shore-based employees at Coralis Shipping Pvt. Ltd. in Mumbai and Singapore.",
+  "audience": "Shore-based office employees in the Mumbai head office and Singapore branch.",
+  "tone": "Friendly, plain English, concise. Mentions the policy name and section when possible so staff can check it themselves.",
+  "must_answer_topics": [
+    "Annual Leave Entitlement",
+    "Code of Conduct Rules",
+    "Travel Approval Process",
+    "Expense Claim Procedure"
+  ],
+  "must_refuse_topics": [
+    "Personal Salary Changes",
+    "Individual Disciplinary Cases",
+    "Legal or Tax Advice",
+    "Employee Personal Conflicts",
+    "Other Employees' Pay Details",
+    "Offshore Staff Queries",
+    "Payroll Credit Dates (requested, but not covered by the documents)",
+    "Payslip Deduction Explanations (requested, but not covered by the documents)"
+  ],
+  "brief_demands": [
+    "leave",
+    "code of conduct",
+    "travel and expense claims",
+    "payroll questions such as when salaries are credited and what the deductions on a payslip mean"
+  ],
+  "clarifying_qa": [
+    {
+      "question": "Who specifically will use this assistant—e.g., shore staff members, managers, HR officers, or a specific role like operations or finance?",
+      "answer": "The users are shore-based office employees in our Mumbai head office and Singapore branch. Seafarers on our vessels are NOT users of this assistant.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Should the assistant provide step-by-step guidance on how to claim expenses or apply for leave, or only answer factual policy questions?",
+      "answer": "Staff ask both about entitlements and limits (how many days, how much) and about procedures (how to apply for leave, how to submit an expense claim, who approves). Both are in scope.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Are there any policy areas or questions that should be redirected to HR or a manager (e.g., personal conflicts, salary changes, or sensitive topics)?",
+      "answer": "The assistant must not give legal or tax advice and must never discuss individual disciplinary cases, other employees, or anyone's personal salary.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Should the assistant calculate leave entitlements or per diem amounts based on service length or travel duration, or only state fixed values from the documents?",
+      "answer": "Payroll questions (salary credit dates, payslip deductions) come up a lot and we would like them answered.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Should the assistant use a formal, professional tone, or a more conversational, friendly tone for shore staff?",
+      "answer": "Tone: friendly, plain English, concise. Mention the policy name and section when possible so staff can check it.",
+      "answered_by": "requester_file"
+    }
+  ],
+  "groundability": [
+    {
+      "topic": "Annual Leave Entitlement",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "leave_policy.pdf",
+          "snippet": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day en..."
+        }
+      ],
+      "note": "The excerpts provide clear, concrete rules about annual leave entitlement based on service length and accrual, directly answering typical user questions about annual leave entitlement.",
+      "top_similarity": 0.612,
+      "keyword_overlap": 1.0,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Code of Conduct Rules",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "code_of_conduct.pdf",
+          "snippet": "The company does not tolerate harassment of any kind. Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident. The Internal Committee completes its inquiry within 90 days of receiving a complaint."
+        }
+      ],
+      "note": "The excerpts provide specific rules and procedures related to harassment, which is a key component of a code of conduct, including timelines and responsible bodies.",
+      "top_similarity": 0.703,
+      "keyword_overlap": 1.0,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Travel Approval Process",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "travel_and_expenses_policy.pdf",
+          "snippet": "All business travel must be pre-approved in the PeoplePort Travel module before any booking is made: ～ Domestic travel is approved by the line manager. ～ International travel is approved by the Department Head. ～ Any trip longer than 10 days, or with an estimated total cost above USD"
+        }
+      ],
+      "note": "The excerpts provide clear, concrete rules about who approves travel requests and under what conditions, directly addressing the travel approval process.",
+      "top_similarity": 0.662,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Expense Claim Procedure",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "travel_and_expenses_policy.pdf",
+          "snippet": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed..."
+        }
+      ],
+      "note": "The excerpt provides clear, concrete procedures for submitting, timing, and processing expense claims, including thresholds, deadlines, and reimbursement timelines, directly addressing typical user questions about the expense claim procedure.",
+      "top_similarity": 0.632,
+      "keyword_overlap": 1.0,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Payroll Credit Dates",
+      "status": "unsupported",
+      "evidence": [],
+      "note": "The excerpts do not contain any information about payroll credit dates, salary crediting, or payslip deductions.",
+      "top_similarity": 0.329,
+      "keyword_overlap": 0.67,
+      "llm_status": "unsupported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Payslip Deduction Explanations",
+      "status": "unsupported",
+      "evidence": [],
+      "note": "The excerpts do not contain any information about payslip deductions or what they mean, even though they mention payroll-related topics like expense claims and reimbursements, which are distinct from payslip deductions.",
+      "top_similarity": 0.388,
+      "keyword_overlap": 0.0,
+      "llm_status": "unsupported",
+      "served_by_tool": ""
+    }
+  ],
+  "warnings": [
+    "UNSUPPORTED: the brief asks for 'Payroll Credit Dates' but the documents do not cover it. It was moved to must-refuse; the agent will decline instead of guessing.",
+    "UNSUPPORTED: the brief asks for 'Payslip Deduction Explanations' but the documents do not cover it. It was moved to must-refuse; the agent will decline instead of guessing."
+  ],
+  "documents": [
+    {
+      "source": "code_of_conduct.pdf",
+      "type": "pdf",
+      "chars": 5844,
+      "pages": 3,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "1. Purpose and Scope",
+        "2. Working Hours and Hybrid Work",
+        "3. Dress Code and Site Safety",
+        "4. Gifts and Hospitality",
+        "5. Conflicts of Interest",
+        "6. Confidentiality and Data Protection",
+        "7. Use of IT and Social Media",
+        "8. Anti-Bribery and Corruption",
+        "9. Disciplinary Procedure",
+        "10. Grievances and Speak-Up",
+        "11. Prevention of Harassment",
+        "12. Resignation and Notice Periods"
+      ],
+      "summary": "This document is a Code of Conduct for shore-based employees at Coralis Shipping Pvt. Ltd., covering standards of behaviour in Mumbai and Singapore offices. It includes concrete rules such as working hours (9 hours/day, 10:00–16:00 core hours), dress code (business casual Monday–Thursday, smart casual Friday), port visits requiring a permit at least 2 days in advance, gift limits (USD 50 per occasion, USD 100 per meal with business purpose), and mandatory declaration of conflicts of interest within 30 days of arising. It is written for all shore-based staff, including fixed-term employees and interns."
+    },
+    {
+      "source": "leave_policy.pdf",
+      "type": "pdf",
+      "chars": 5929,
+      "pages": 3,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "1. Purpose and Scope",
+        "2. General Principles",
+        "3. Annual Leave",
+        "4. Sick Leave",
+        "5. Casual Leave",
+        "6. Maternity and Paternity Leave",
+        "7. Bereavement and Marriage Leave",
+        "8. Public Holidays",
+        "9. Leave Without Pay and Sabbatical",
+        "10. Compensatory Time Off",
+        "11. Unauthorised Absence",
+        "12. Contacts"
+      ],
+      "summary": "The document outlines leave entitlements and procedures for shore-based employees at Coralis Shipping Pvt. Ltd., covering types of leave such as annual, sick, casual, maternity, paternity, bereavement, and public holidays. It specifies concrete facts including leave accrual rates (1.75 days per month), maximum annual leave (24 days for 5+ years service), notice periods (14 calendar days for 3+ days, 2 working days for 1–2 days), carry-forward limits (10 days, must be used by 31 March), and encashment (up to 30 days on resignation). The policy applies to permanent and fixed-term shore employees at the Mumbai and Singapore offices, and is managed through the PeoplePort HR system with manager approval and business justification requirements."
+    },
+    {
+      "source": "travel_and_expenses_policy.pdf",
+      "type": "pdf",
+      "chars": 4818,
+      "pages": 3,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "1. Purpose and Scope",
+        "2. Travel Approval",
+        "3. Booking and Air Travel",
+        "4. Accommodation",
+        "5. Per Diem",
+        "6. Weekend Travel and Compensatory Time Off",
+        "7. Ground Transport",
+        "8. Expense Claims and Advances",
+        "9. Client Hospitality While Travelling",
+        "10. Non-Reimbursable Expenses",
+        "11. Corporate Cards",
+        "12. Travel Insurance and Emergencies",
+        "13. Contacts"
+      ],
+      "summary": "This document outlines the travel and expenses policy for shore-based employees at Coralis Shipping Pvt. Ltd. in Mumbai and Singapore, covering rules on travel approval, booking procedures, accommodation limits, per diem amounts, weekend travel compensation, and expense claims. It specifies concrete facts such as approval hierarchies (line manager for domestic, department head for international, director for trips over 10 days or USD 5,000), booking requirements (via Orbit Travels, with private bookings only reimbursed at or below travel desk quotes), class of travel (economy for under 6 hours, premium economy for 6–9 hours, business class for over 9 hours for M3+ managers), accommodation limits (USD 220 for Tier A cities, USD 150 for Tier B, USD 110 elsewhere), per diem (USD 60 for international, INR 2,500 for domestic), and weekend travel rules (1 compensatory day per weekend or public holiday, must be recorded and availed within 60 days). The policy is written for shore-based employees in the Mumbai and Singapore offices."
+    }
+  ]
+}

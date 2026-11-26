@@ -1,0 +1,126 @@
+{
+  "stop_reason": "reached the maximum of 3 iterations",
+  "iterations": [
+    {
+      "iteration": 1,
+      "from_version": 1,
+      "to_version": 2,
+      "categories_targeted": [
+        "prompt_defect",
+        "wrong_refusal"
+      ],
+      "changes": [
+        {
+          "category": "prompt_defect",
+          "what": "added a completeness rule (answer every part, cite each)",
+          "why": "the retrieved context contained the expected facts but answers left some out",
+          "failures_addressed": [
+            "A08"
+          ],
+          "diff": "--- domain rules (before)\n+++ domain rules (after)\n@@ -6 +6,2 @@\n Do not infer or assume values not explicitly stated in the documents\n+If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part."
+        },
+        {
+          "category": "wrong_refusal",
+          "what": "added 1 generalised refuse topic(s) and an explicit scope rule",
+          "why": "the agent answered questions it should have declined (over-answering)",
+          "failures_addressed": [
+            "O04"
+          ],
+          "diff": "--- refuse topics (before)\n+++ refuse topics (after)\n@@ -6 +6,2 @@\n Non-Safety System Queries\n+emergency procedure response"
+        },
+        {
+          "category": "(rendered)",
+          "what": "system prompt re-rendered from the patched spec",
+          "why": "see the changes above",
+          "failures_addressed": [],
+          "diff": "--- system prompt (before)\n+++ system prompt (after)\n@@ -22,2 +22,3 @@\n - Non-Safety System Queries\n+- emergency procedure response\n - Anything the provided documents do not support.\n@@ -39,2 +40,4 @@\n 6. Do not infer or assume values not explicitly stated in the documents\n+7. If the question has several parts or conditions, answer every part separately, giving the specific value, person or deadline the context states for each, and cite each part.\n+8. Decline any question whose subject is not listed under 'What you answer', even if the context contains loosely related words.\n "
+        }
+      ],
+      "before_score": 0.9,
+      "after_score": 0.9,
+      "before_dev": 0.867,
+      "after_dev": 0.867,
+      "flipped_to_pass": [
+        "O04"
+      ],
+      "flipped_to_fail": [
+        "E04"
+      ],
+      "decision": "reverted: no improvement",
+      "note": "holdout 100% -> 100%"
+    },
+    {
+      "iteration": 2,
+      "from_version": 1,
+      "to_version": 3,
+      "categories_targeted": [
+        "prompt_defect"
+      ],
+      "changes": [
+        {
+          "category": "prompt_defect",
+          "what": "modified rule 2, added rule",
+          "why": "This ensures that when multiple values exist for the same category in different documents, all are captured and presented, preventing omission of required facts even when the context is present.",
+          "failures_addressed": [
+            "A08"
+          ],
+          "diff": "--- domain rules (before)\n+++ domain rules (after)\n@@ -2,3 +2,3 @@\n Combine relevant facts from multiple documents when answering complex questions\n-Include all required details such as deadlines, forms, and responsibilities as stated in the documents\n+Include all required details such as deadlines, forms, and responsibilities as stated in the documents, and if multiple values are provided for the same category (e.g., different permit types), list all of them explicitly.\n If a document does not specify a value, state that the information is not available in the current documentation\n@@ -6 +6,2 @@\n Do not infer or assume values not explicitly stated in the documents\n+When a question asks for a value that is explicitly stated in multiple documents, combine the values from all relevant documents and list them all, even if they pertain to different types of permits or procedures."
+        },
+        {
+          "category": "(rendered)",
+          "what": "system prompt re-rendered from the patched spec",
+          "why": "see the changes above",
+          "failures_addressed": [],
+          "diff": "--- system prompt (before)\n+++ system prompt (after)\n@@ -35,3 +35,3 @@\n 2. Combine relevant facts from multiple documents when answering complex questions\n-3. Include all required details such as deadlines, forms, and responsibilities as stated in the documents\n+3. Include all required details such as deadlines, forms, and responsibilities as stated in the documents, and if multiple values are provided for the same category (e.g., different permit types), list all of them explicitly.\n 4. If a document does not specify a value, state that the information is not available in the current documentation\n@@ -39,2 +39,3 @@\n 6. Do not infer or assume values not explicitly stated in the documents\n+7. When a question asks for a value that is explicitly stated in multiple documents, combine the values from all relevant documents and list them all, even if they pertain to different types of permits or procedures.\n "
+        }
+      ],
+      "before_score": 0.9,
+      "after_score": 0.9,
+      "before_dev": 0.867,
+      "after_dev": 0.867,
+      "flipped_to_pass": [],
+      "flipped_to_fail": [
+        "E04"
+      ],
+      "decision": "reverted: no improvement",
+      "note": "holdout 100% -> 100%"
+    },
+    {
+      "iteration": 3,
+      "from_version": 1,
+      "to_version": 4,
+      "categories_targeted": [
+        "prompt_defect"
+      ],
+      "changes": [
+        {
+          "category": "prompt_defect",
+          "what": "modified rule 2, added rule",
+          "why": "This ensures that when multiple values exist for the same category in a single document, they are all captured and cited, preventing omission of required facts even when the context is present.",
+          "failures_addressed": [
+            "A08"
+          ],
+          "diff": "--- domain rules (before)\n+++ domain rules (after)\n@@ -2,3 +2,3 @@\n Combine relevant facts from multiple documents when answering complex questions\n-Include all required details such as deadlines, forms, and responsibilities as stated in the documents\n+Include all required details such as deadlines, forms, and responsibilities as stated in the documents, and if multiple values are provided for the same category (e.g., different permit types), list all of them explicitly and cite each with its specific context.\n If a document does not specify a value, state that the information is not available in the current documentation\n@@ -6 +6,2 @@\n Do not infer or assume values not explicitly stated in the documents\n+When a question asks for a value that is explicitly stated in multiple related sections of the same document, list all such values even if they pertain to different permit types or procedures, and cite each value with its specific context."
+        },
+        {
+          "category": "(rendered)",
+          "what": "system prompt re-rendered from the patched spec",
+          "why": "see the changes above",
+          "failures_addressed": [],
+          "diff": "--- system prompt (before)\n+++ system prompt (after)\n@@ -35,3 +35,3 @@\n 2. Combine relevant facts from multiple documents when answering complex questions\n-3. Include all required details such as deadlines, forms, and responsibilities as stated in the documents\n+3. Include all required details such as deadlines, forms, and responsibilities as stated in the documents, and if multiple values are provided for the same category (e.g., different permit types), list all of them explicitly and cite each with its specific context.\n 4. If a document does not specify a value, state that the information is not available in the current documentation\n@@ -39,2 +39,3 @@\n 6. Do not infer or assume values not explicitly stated in the documents\n+7. When a question asks for a value that is explicitly stated in multiple related sections of the same document, list all such values even if they pertain to different permit types or procedures, and cite each value with its specific context.\n "
+        }
+      ],
+      "before_score": 0.9,
+      "after_score": 0.9,
+      "before_dev": 0.867,
+      "after_dev": 0.867,
+      "flipped_to_pass": [],
+      "flipped_to_fail": [
+        "E04"
+      ],
+      "decision": "reverted: no improvement",
+      "note": "holdout 100% -> 100%"
+    }
+  ],
+  "rejected_patches": []
+}

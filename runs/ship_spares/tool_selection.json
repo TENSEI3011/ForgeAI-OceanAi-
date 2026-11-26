@@ -1,0 +1,27 @@
+{
+  "tool_decisions": [
+    {
+      "tool": "weather",
+      "attached": false,
+      "reason": "There is no mention of weather, sea conditions, or forecasts in the request. Weather is not required for any of the procurement tasks described."
+    },
+    {
+      "tool": "current_date",
+      "attached": false,
+      "reason": "While some terms mention expiry or lead times, the requester does not ask about deadlines, due dates, or time-based aging of items. No explicit need for today's date is stated."
+    },
+    {
+      "tool": "csv_lookup",
+      "attached": true,
+      "reason": "The requester explicitly asks to 'find spares' and 'check prices and stock', which requires lookup of part numbers and inventory data in the spares_catalogue.csv.",
+      "brief_quote": "I need an assistant that helps procurement officers find spares, check prices and stock, compare supplier terms and estimate order costs."
+    },
+    {
+      "tool": "calculator",
+      "attached": true,
+      "reason": "The requester explicitly requires the assistant to compute order costs by multiplying quantity by unit price and applying supplier-specific discounts and fees, which is a core arithmetic operation.",
+      "brief_quote": "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms."
+    }
+  ],
+  "dropped_rules": []
+}

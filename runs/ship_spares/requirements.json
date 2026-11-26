@@ -1,0 +1,185 @@
+{
+  "brief": "I need an assistant that helps procurement officers find spares, check prices and stock, compare supplier terms and estimate order costs.",
+  "agent_name": "SparesCostAssistant",
+  "scope": "The assistant helps procurement officers find spares for container vessels, checks current prices and stock levels, compares supplier terms including discounts, freight, and warranty, and estimates total order costs based on quantity, unit price, and supplier-specific terms.",
+  "audience": "Procurement officers responsible for marine vessel maintenance spares in container vessel operations.",
+  "tone": "Professional, clear, and precise, with a focus on factual accuracy and actionable procurement support.",
+  "must_answer_topics": [
+    "Find Container Spares",
+    "Check Prices and Stock",
+    "Compare Supplier Terms",
+    "Estimate Order Costs"
+  ],
+  "must_refuse_topics": [
+    "Personal Financial Advice",
+    "Health or Wellness Recommendations",
+    "Travel Itinerary Planning",
+    "Non-Marine Part Sourcing",
+    "Legal Contract Drafting",
+    "Inventory Management for Non-Vessels"
+  ],
+  "brief_demands": [
+    "help procurement officers find spares",
+    "check prices and stock",
+    "compare supplier terms",
+    "estimate order costs"
+  ],
+  "clarifying_qa": [
+    {
+      "question": "What specific vessel class or type does the procurement officer primarily serve (e.g., container, tanker, offshore platform), and is there a preference for parts from certain categories (e.g., engine, electrical)?",
+      "answer": "Container vessel (general maintenance spares)",
+      "answered_by": "assumed_default"
+    },
+    {
+      "question": "Should the assistant compare supplier terms only for the same part, or also consider overall cost including freight, lead time, and warranty when evaluating supplier options?",
+      "answer": "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Does the procurement officer need to generate a full purchase order with supplier-specific terms (e.g., payment terms, minimum order value) or just a cost estimate and part list?",
+      "answer": "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Are there any parts or categories that should be excluded from consideration (e.g., due to high lead time, low stock, or made-to-order nature), or should the assistant flag them automatically?",
+      "answer": "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms.",
+      "answered_by": "requester_file"
+    },
+    {
+      "question": "Should the assistant consider future pricing validity (e.g., supplier terms valid until 31 March 2026) when recommending parts, or only use current prices?",
+      "answer": "Order cost estimates should multiply quantity by unit price and apply the discounts and fees written in the supplier terms.",
+      "answered_by": "requester_file"
+    }
+  ],
+  "groundability": [
+    {
+      "topic": "Find Container Spares",
+      "status": "partial",
+      "evidence": [
+        {
+          "source": "spares_catalogue.csv",
+          "snippet": "category: Valves"
+        }
+      ],
+      "note": "The excerpts include items related to spares, but none specifically mention container spares or are categorized under container-related equipment, so the topic 'Find Container Spares' is only partially addressed.",
+      "top_similarity": 0.643,
+      "keyword_overlap": 0.33,
+      "llm_status": "partial",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Check Prices and Stock",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "supplier_terms_b.pdf",
+          "snippet": "Prices are in US dollars, ex-warehouse. Quotations and catalogue prices are valid for 60 days from the quotation date. A volume discount of 8% applies to the whole order when the order value before discount exceeds USD 10,000. There is no discount for quantities of a single part number."
+        }
+      ],
+      "note": "The excerpts provide clear pricing rules, validity periods, and discount conditions, which directly support answering questions about checking prices and stock.",
+      "top_similarity": 0.324,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Compare Supplier Terms",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "supplier_terms_a.pdf",
+          "snippet": "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue. Where a purchase order and these terms conflict, these terms prevail unless Anchorline confirms..."
+        }
+      ],
+      "note": "The excerpt explicitly outlines the terms governing supplier agreements, including how they apply to purchase orders and resolve conflicts, directly supporting the topic of comparing supplier terms.",
+      "top_similarity": 0.527,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Estimate Order Costs",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "supplier_terms_b.pdf",
+          "snippet": "A volume discount of 8% applies to the whole order when the order value before discount exceeds USD 10,000."
+        }
+      ],
+      "note": "The excerpt provides a clear rule about when a discount applies to order costs, directly addressing the estimation of order costs based on order value.",
+      "top_similarity": 0.524,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    }
+  ],
+  "warnings": [
+    "PARTIAL: documents only partly cover 'Find Container Spares'. The agent must say which parts are not covered."
+  ],
+  "documents": [
+    {
+      "source": "spares_catalogue.csv",
+      "type": "table",
+      "chars": 29527,
+      "pages": 0,
+      "rows": 152,
+      "columns": [
+        "part_no",
+        "description",
+        "category",
+        "unit_price_usd",
+        "stock",
+        "lead_time_days",
+        "supplier_id",
+        "vessel_class"
+      ],
+      "headings": [],
+      "summary": "The document is a CSV file containing 152 rows of spare parts data for vessels, including part numbers, descriptions, categories, unit prices in USD, stock levels, lead times in days, supplier IDs, and vessel class. It provides concrete facts such as specific prices (e.g., $470.42), stock quantities (e.g., 1), lead times (e.g., 2 days), and supplier assignments (e.g., SUP-A), all tied to specific vessel types. This data is intended for engineers building an assistant system that supports inventory and procurement decisions for vessel maintenance."
+    },
+    {
+      "source": "supplier_terms_a.pdf",
+      "type": "pdf",
+      "chars": 3758,
+      "pages": 2,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "1. Application",
+        "2. Prices and Price Validity",
+        "3. Payment Terms",
+        "4. Minimum Order Value",
+        "5. Dispatch and Delivery",
+        "6. Freight",
+        "7. Warranty",
+        "8. Returns",
+        "9. Certificates and Documentation",
+        "10. Part-Specific Notes",
+        "11. Late Delivery",
+        "12. Contacts"
+      ],
+      "summary": "This document outlines the general terms of supply between Anchorline Marine Supplies (SUP-A) and Coralis Shipping, covering key operational rules such as pricing validity (until 31 March 2026), volume discounts (5% for 10+ units), payment terms (net 30 days, 2% early payment discount, 1.5% monthly interest for overdue invoices), minimum order value (USD 500, with a USD 45 fee for orders below this), dispatch timelines (2 working days for in-stock items, 5–10 working days for delivery), freight charges (USD 85 per order for destinations below USD 2,500, or separately quoted for items over 150 kg), warranty periods (12 months or 6,000 hours, 18 months for pumps), and return policy (30 days for unused items in original packaging). It is written for engineers and procurement personnel involved in placing purchase orders for marine spares from Anchorline, specifying clear, numerical rules and procedures to guide order execution and compliance."
+    },
+    {
+      "source": "supplier_terms_b.pdf",
+      "type": "pdf",
+      "chars": 3161,
+      "pages": 2,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "1. Scope",
+        "2. Quotations, Prices and Discounts",
+        "3. Payment Terms",
+        "4. Minimum Order",
+        "5. Dispatch and Delivery",
+        "6. Freight and Handling",
+        "7. Warranty",
+        "8. Returns",
+        "9. Late-Delivery Penalty",
+        "10. Part-Specific Notes",
+        "11. Contacts"
+      ],
+      "summary": "This document outlines the sales terms and conditions between Bluefin Ship Spares (SUP-B) and Coralis Shipping, covering key operational rules such as pricing, payment, dispatch, and returns. It includes concrete facts like price validity (60 days), volume discount (8% for orders over $10,000), payment terms (net 45 days, 50% advance for orders over $20,000), minimum order value ($300), dispatch timelines (3 working days for in-stock, 4 days to Piraeus/Fujairah, 10–14 days worldwide), freight charges (carrier cost + 8% handling fee), warranty periods (6 months standard, 12 months for main engine parts, extendable to 24 months at 4% per 6 months), and return policy (14 days with 15% restocking fee, no return for made-to-order items with lead time >30 days). The document is written for engineers building an assistant to manage procurement and logistics, providing clear, rule-based inputs for order processing and compliance."
+    }
+  ]
+}

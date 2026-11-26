@@ -1,0 +1,139 @@
+{
+  "n_cases": 20,
+  "by_type": {
+    "answerable": 10,
+    "edge_ambiguous": 4,
+    "edge_multi_doc": 1,
+    "out_of_scope": 5
+  },
+  "by_split": {
+    "dev": 15,
+    "holdout": 5
+  },
+  "generation_attempts": 35,
+  "n_dropped": 18,
+  "notes": [
+    "round 2+: passages may be reused by a different case type (small corpus)",
+    "edge_multi_doc: generated 1 of 5 wanted after 3 rounds"
+  ],
+  "prompt_templates": [
+    "evalgen_ambiguous.md",
+    "evalgen_answerability.md",
+    "evalgen_answerable.md",
+    "evalgen_fact_check.md",
+    "evalgen_multidoc.md",
+    "evalgen_oos_absent.md",
+    "evalgen_oos_refuse.md",
+    "evalgen_tool.md"
+  ],
+  "dropped_cases": [
+    {
+      "type": "edge_multi_doc",
+      "question": "How long must a manager at grade M3 or above stay with the company before leaving, and what happens to unused annual leave if they resign?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#13 + leave_policy.pdf#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum value for a business gift from a supplier and how does it relate to hosting clients for a meal while travelling?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#4 + travel_and_expenses_policy.pdf#10"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "How many days of compensatory time off can an employee earn for traveling on a public holiday, and what is the deadline to use that time?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#3 + travel_and_expenses_policy.pdf#7"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the consequence for an employee with unauthorised absence of three or more consecutive days, and how is this handled in a disciplinary process?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#9 + leave_policy.pdf#13"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If an employee requests leave for a 15-day international trip, what approvals are needed and what must be done regarding leave planning and travel requests?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#2 + travel_and_expenses_policy.pdf#2"
+    },
+    {
+      "type": "edge_ambiguous",
+      "question": "can i get 30 days off without pay if i use all my leave?",
+      "reason": "question leaks its own answer",
+      "origin": "leave_policy.pdf#11"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "How long must a manager at grade M3 or above stay with the company before leaving, and what happens to unused annual leave if they resign?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#13 + leave_policy.pdf#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum value for a business gift from a supplier and how does it relate to hosting clients for a meal while travelling?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#4 + travel_and_expenses_policy.pdf#10"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "How many days of compensatory time off can an employee earn for traveling on a public holiday, and what is the deadline to use that time?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#3 + travel_and_expenses_policy.pdf#7"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "Do shore-based employees in Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "leave_policy.pdf#1 + travel_and_expenses_policy.pdf#1"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the consequence for an employee with unauthorised absence of three or more consecutive days, and how is this handled in a disciplinary process?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#9 + leave_policy.pdf#13"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If an employee requests leave for a 15-day international trip, what approvals are needed and what must be done regarding leave planning and travel requests?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#2 + travel_and_expenses_policy.pdf#2"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "How long must a manager at grade M3 or above stay with the company before leaving, and what happens to unused annual leave if they resign?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#13 + leave_policy.pdf#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum value for a business gift from a supplier and how does it relate to hosting clients for a meal while travelling?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#4 + travel_and_expenses_policy.pdf#10"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "How many days of compensatory time off can an employee earn for traveling on a public holiday, and what is the deadline to use that time?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#3 + travel_and_expenses_policy.pdf#7"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "Do shore-based employees in Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "leave_policy.pdf#1 + travel_and_expenses_policy.pdf#1"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the consequence for an employee with unauthorised absence of three or more consecutive days, and how is this handled in a disciplinary process?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "code_of_conduct.pdf#9 + leave_policy.pdf#13"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If an employee requests leave for a 15-day international trip, what approvals are needed and what must be done regarding leave planning and travel requests?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "leave_policy.pdf#2 + travel_and_expenses_policy.pdf#2"
+    }
+  ]
+}

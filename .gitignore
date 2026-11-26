@@ -1,0 +1,17 @@
+.env
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+runs/_scratch*/
+# the assignment brief and private planning notes must not be published
+*Assignment*.pdf
+*Build Spec*.pdf
+# no PDFs in the repository: the demo PDFs are rebuilt from demos/*/source/*.md by demos/synthesize.py
+*.pdf
+# demo video and voiceover notes are shared separately
+*.mp4
+*voiceover*

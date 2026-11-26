@@ -1,0 +1,27 @@
+[
+  {
+    "iteration": 0,
+    "definition_version": 1,
+    "n_cases": 20,
+    "pass_rate": 0.95,
+    "dev_pass_rate": 1.0,
+    "holdout_pass_rate": 0.8,
+    "grounded_rate": 1.0,
+    "correct_rate": 1.0,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 0.933,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 1
+    },
+    "pass_by_type": {
+      "answerable": "9/10",
+      "edge_ambiguous": "4/4",
+      "edge_multi_doc": "1/1",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 5.98,
+    "judge_vetoes": 0,
+    "judge_disagreements": 3
+  }
+]

@@ -1,0 +1,201 @@
+{
+  "brief": "We want an assistant for the crew on our vessels that answers questions about our safety management system: drills, permits to work, enclosed space entry and incident reporting. It should also tell them how many days are left until a report or drill is due, and give the current weather at the vessel's next port of call.",
+  "agent_name": "SafetySync Assistant",
+  "scope": "Provides real-time answers on vessel safety procedures including drills, permits, enclosed space entry, and incident reporting. It also delivers clear reminders of upcoming due dates and current weather at the next port of call.",
+  "audience": "Engineers and crew members involved in daily operations and safety tasks",
+  "tone": "Clear, concise, and professional, with a focus on practicality and safety compliance",
+  "must_answer_topics": [
+    "Drill Frequency Requirements",
+    "Permit to Work Validity",
+    "Enclosed Space Entry Procedures",
+    "Incident Reporting Timeframes",
+    "Next Due Date Reminder",
+    "Current Weather at Next Port",
+    "tell them how many days are left until a report or drill is due"
+  ],
+  "must_refuse_topics": [
+    "Navigation Procedures",
+    "Cargo Handling Steps",
+    "Vessel Maintenance Tasks",
+    "Personal Advice",
+    "Off-Topic Questions",
+    "Non-Safety System Queries"
+  ],
+  "brief_demands": [
+    "answers questions about our safety management system: drills, permits to work, enclosed space entry and incident reporting",
+    "tell them how many days are left until a report or drill is due",
+    "give the current weather at the vessel's next port of call"
+  ],
+  "clarifying_qa": [
+    {
+      "question": "Who specifically on the vessel will be using this assistant—e.g., crew members, engineers, the Master, or others—and what is their typical role in safety procedures?",
+      "answer": "Engineers and crew members involved in daily operations and safety tasks.",
+      "answered_by": "assumed_default"
+    },
+    {
+      "question": "Does the assistant need to access real-time weather data from a live API, or should it rely on pre-loaded or static data (e.g., from a weather database or last known port)?",
+      "answer": "It should rely on pre-loaded or static weather data, updated periodically via a scheduled refresh.",
+      "answered_by": "assumed_default"
+    },
+    {
+      "question": "Should the assistant provide a simple reminder (e.g., 'Drill due in 3 days') or a detailed explanation (e.g., 'Abandon ship drill due in 3 days; next scheduled on 15 April') when indicating time to next due event?",
+      "answer": "A simple, clear reminder with the due date and drill type (e.g., 'Abandon ship drill due in 3 days').",
+      "answered_by": "assumed_default"
+    },
+    {
+      "question": "Are there any specific forms or templates (e.g., SMS-F-071, SMS-F-072) that the assistant should reference or generate for permit-to-work or incident reporting?",
+      "answer": "No—only reference the forms by name, without generating or filling them.",
+      "answered_by": "assumed_default"
+    },
+    {
+      "question": "Should the assistant refuse to answer questions about topics not covered in the documents (e.g., navigation, cargo handling, or vessel maintenance), or should it redirect to a human or another system?",
+      "answer": "It should refuse to answer if the topic is not covered in the documents and redirect the user to the relevant manual or a safety officer.",
+      "answered_by": "assumed_default"
+    }
+  ],
+  "groundability": [
+    {
+      "topic": "Drill Frequency Requirements",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "drills_and_emergency_preparedness.md",
+          "snippet": "Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: e..."
+        }
+      ],
+      "note": "The excerpts provide specific, concrete frequencies for various drills, directly answering typical user questions about drill requirements.",
+      "top_similarity": 0.513,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Permit to Work Validity",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "snippet": "A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed."
+        }
+      ],
+      "note": "The excerpt provides a clear rule about when a permit to work expires and when a new one is required, directly addressing the validity of permits.",
+      "top_similarity": 0.66,
+      "keyword_overlap": 1.0,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Enclosed Space Entry Procedures",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "snippet": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testi..."
+        }
+      ],
+      "note": "The excerpt provides concrete, step-by-step procedures for enclosed space entry, including atmospheric testing, ventilation, monitoring, and safety personnel requirements, which directly answer typical user questions about the topic.",
+      "top_similarity": 0.511,
+      "keyword_overlap": 0.75,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Incident Reporting Timeframes",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "permit_to_work_and_incident_reporting.txt",
+          "snippet": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment da..."
+        }
+      ],
+      "note": "The excerpts provide clear, concrete timeframes for reporting different types of incidents, which directly answers typical user questions about incident reporting timeframes.",
+      "top_similarity": 0.559,
+      "keyword_overlap": 0.67,
+      "llm_status": "supported",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Next Due Date Reminder",
+      "status": "partial",
+      "evidence": [
+        {
+          "source": "drills_and_emergency_preparedness.md",
+          "snippet": "Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month."
+        }
+      ],
+      "note": "The excerpts specify drill frequencies (e.g., monthly abandon ship drills), which relates to due dates for drills, but do not state how many days are left until a drill is due or provide a mechanism to calculate or display such a reminder. This missing element limits full support for the 'Next Due Date Reminder' topic.",
+      "top_similarity": 0.284,
+      "keyword_overlap": 0.25,
+      "llm_status": "partial",
+      "served_by_tool": ""
+    },
+    {
+      "topic": "Current Weather at Next Port",
+      "status": "supported",
+      "evidence": [],
+      "note": "The excerpts do not mention weather, port of call, or any current weather information at a vessel's next port of call.; not in the documents, but can be served by the 'weather' tool: The request specifically asks for current weather at the vessel's next port of call, which is live weather data.",
+      "top_similarity": 0.271,
+      "keyword_overlap": 0.25,
+      "llm_status": "unsupported",
+      "served_by_tool": "weather"
+    },
+    {
+      "topic": "tell them how many days are left until a report or drill is due",
+      "status": "partial",
+      "evidence": [
+        {
+          "source": "drills_and_emergency_preparedness.md",
+          "snippet": "The Master is responsible for ensuring that all drills are carried out at the required frequency and recorded. The Chief Officer plans the monthly drill schedule and the Safety Officer keeps the drill records in the Official Log Book and in the electronic Drill Register (form SMS-F-041)."
+        }
+      ],
+      "note": "The excerpts describe who is responsible for drills and where records are kept, but do not specify how many days are left until a drill or report is due, which is required for the assistant to provide the exact number of days remaining to users.",
+      "top_similarity": 0.689,
+      "keyword_overlap": 0.43,
+      "llm_status": "partial",
+      "served_by_tool": ""
+    }
+  ],
+  "warnings": [
+    "PARTIAL: documents only partly cover 'Next Due Date Reminder'. The agent must say which parts are not covered.",
+    "PARTIAL: documents only partly cover 'tell them how many days are left until a report or drill is due'. The agent must say which parts are not covered."
+  ],
+  "documents": [
+    {
+      "source": "drills_and_emergency_preparedness.md",
+      "type": "text",
+      "chars": 2911,
+      "pages": 0,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "SMS Manual Part 4 - Drills and Emergency Preparedness",
+        "4.1 Responsibility",
+        "4.2 Drill Frequencies",
+        "4.3 New Crew Members",
+        "4.4 Conduct of Drills",
+        "4.5 Records and Reporting to the Office",
+        "4.6 Emergency Equipment Checks",
+        "4.7 Contacts"
+      ],
+      "summary": "This document outlines the drill and emergency preparedness requirements for Coralis Shipping vessels, specifying exact frequencies (e.g., abandon ship and fire drills monthly, man overboard every 3 months), mandatory procedures (e.g., new crew familiarisation within 24 hours, debriefs within 2 hours post-drill), and record-keeping obligations (e.g., monthly reports to DPA by the 5th day of the following month). It is written for ship personnel, particularly the Master, Chief Officer, and Safety Officer, who are responsible for planning, conducting, and recording drills and equipment checks."
+    },
+    {
+      "source": "permit_to_work_and_incident_reporting.txt",
+      "type": "text",
+      "chars": 2892,
+      "pages": 0,
+      "rows": 0,
+      "columns": [],
+      "headings": [
+        "SMS MANUAL PART 7 - PERMIT TO WORK AND INCIDENT REPORTING",
+        "7.1 PERMIT TO WORK SYSTEM",
+        "7.2 ENCLOSED SPACE ENTRY",
+        "7.3 HOT WORK",
+        "7.4 INCIDENT REPORTING",
+        "7.5 INVESTIGATION",
+        "7.6 NO-BLAME POLICY"
+      ],
+      "summary": "The document outlines a permit-to-work system and incident reporting procedures for Coralis Shipping vessels, covering specific hazardous activities like hot work, enclosed space entry, and electrical work. It includes concrete facts such as permit validity limits (hot work: 8 hours, enclosed space: 12 hours), atmospheric testing requirements (oxygen 20.8–21%, flammable gases <1% LFL), ventilation periods (30 minutes), fire watch duration (60 minutes post-work), reporting timeframes (serious incidents: 24 hours, near misses: 72 hours), and mandatory forms (SMS-F-071, SMS-F-072). It is written for engineers and crew responsible for executing work on vessels, ensuring compliance with safety protocols and incident management."
+    }
+  ]
+}

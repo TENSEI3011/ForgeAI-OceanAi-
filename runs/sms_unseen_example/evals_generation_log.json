@@ -1,0 +1,127 @@
+{
+  "n_cases": 20,
+  "by_type": {
+    "answerable": 10,
+    "edge_ambiguous": 4,
+    "edge_multi_doc": 1,
+    "out_of_scope": 5
+  },
+  "by_split": {
+    "dev": 15,
+    "holdout": 5
+  },
+  "generation_attempts": 33,
+  "n_dropped": 16,
+  "notes": [
+    "round 2+: passages may be reused by a different case type (small corpus)",
+    "edge_multi_doc: generated 1 of 5 wanted after 3 rounds"
+  ],
+  "prompt_templates": [
+    "evalgen_ambiguous.md",
+    "evalgen_answerability.md",
+    "evalgen_answerable.md",
+    "evalgen_fact_check.md",
+    "evalgen_multidoc.md",
+    "evalgen_oos_absent.md",
+    "evalgen_oos_refuse.md",
+    "evalgen_tool.md"
+  ],
+  "dropped_cases": [
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the required oxygen level and flammable gas limit for safe entry into a confined space, and how often must fire extinguishers be hydrostatically tested according to safety protocols?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#7 + permit_to_work_and_incident_reporting.txt#3"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If fewer than 25% of crew have done abandon ship or fire drills in the last month, what must happen to hot work on fuel or cargo tanks regarding fire watch and equipment?",
+      "reason": "needs at least one verified fact from EACH passage; quote not found in permit_to_work_and_incident_reporting.txt: 'Hot work requires a fire watch during the work and for at least 6_ minutes af...'",
+      "origin": "drills_and_emergency_preparedness.md#3 + permit_to_work_and_incident_reporting.txt#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the timeline for completing corrective actions after a serious incident, and who is responsible for ensuring drills are conducted regularly?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#1 + permit_to_work_and_incident_reporting.txt#6"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum duration for a hot work permit and how must a new crew member be trained before sailing?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#4 + permit_to_work_and_incident_reporting.txt#2"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If a drill is missed, when must the DPA be notified about the incident and what form must be submitted for a lost time injury?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "drills_and_emergency_preparedness.md#6 + permit_to_work_and_incident_reporting.txt#5"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the required oxygen level and flammable gas limit for safe entry into a confined space, and how often must fire extinguishers be hydrostatically tested according to safety protocols?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#7 + permit_to_work_and_incident_reporting.txt#3"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If fewer than 25% of crew have done abandon ship or fire drills in the last month, what must happen to hot work on fuel or cargo tanks regarding fire watch and equipment?",
+      "reason": "needs at least one verified fact from EACH passage; quote not found in permit_to_work_and_incident_reporting.txt: 'Hot work requires a fire watch during the work and for at least 6_ minutes af...'",
+      "origin": "drills_and_emergency_preparedness.md#3 + permit_to_work_and_incident_reporting.txt#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the timeline for completing corrective actions after a serious incident, and who is responsible for ensuring drills are conducted regularly?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#1 + permit_to_work_and_incident_reporting.txt#6"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum duration for a hot work permit and how must a new crew member be trained before sailing?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#4 + permit_to_work_and_incident_reporting.txt#2"
+    },
+    {
+      "type": "answerable",
+      "question": "How often must a man overboard drill be conducted?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "drills_and_emergency_preparedness.md#2"
+    },
+    {
+      "type": "answerable",
+      "question": "How often must lifeboats be lowered to the water?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "drills_and_emergency_preparedness.md#5"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If a drill is missed, when must the DPA be notified about the incident and what form must be submitted for a lost time injury?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "drills_and_emergency_preparedness.md#6 + permit_to_work_and_incident_reporting.txt#5"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the required oxygen level and flammable gas limit for safe entry into a confined space, and how often must fire extinguishers be hydrostatically tested according to safety protocols?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#7 + permit_to_work_and_incident_reporting.txt#3"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "If fewer than 25% of crew have done abandon ship or fire drills in the last month, what must happen to hot work on fuel or cargo tanks regarding fire watch and equipment?",
+      "reason": "needs at least one verified fact from EACH passage; quote not found in permit_to_work_and_incident_reporting.txt: 'Hot work requires a fire watch during the work and for at least 6_ minutes af...'",
+      "origin": "drills_and_emergency_preparedness.md#3 + permit_to_work_and_incident_reporting.txt#4"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the timeline for completing corrective actions after a serious incident, and who is responsible for ensuring drills are conducted regularly?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#1 + permit_to_work_and_incident_reporting.txt#6"
+    },
+    {
+      "type": "edge_multi_doc",
+      "question": "What is the maximum duration for a hot work permit and how must a new crew member be trained before sailing?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "drills_and_emergency_preparedness.md#4 + permit_to_work_and_incident_reporting.txt#2"
+    }
+  ]
+}

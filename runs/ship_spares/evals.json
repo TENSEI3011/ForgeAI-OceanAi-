@@ -1,0 +1,485 @@
+[
+  {
+    "id": "A01",
+    "type": "answerable",
+    "question": "What is the stock level for the VL-3120 globe valve?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "0"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "stock: 0"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#65",
+    "notes": ""
+  },
+  {
+    "id": "A02",
+    "type": "answerable",
+    "question": "What is the temperature limit for storing ME-1120 cylinder liner O-ring kits?",
+    "expected_sources": [
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "below 25 C"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "ME-1120 cylinder liner O-ring kits must be stored below 25 C; storage instructions are included in each box."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_b.pdf#10",
+    "notes": ""
+  },
+  {
+    "id": "A03",
+    "type": "answerable",
+    "question": "What is the email address for placing orders with Anchorline Marine?",
+    "expected_sources": [
+      "supplier_terms_a.pdf"
+    ],
+    "expected_facts": [
+      "orders@anchorline-marine.example"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Orders: orders@anchorline-marine.example"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "supplier_terms_a.pdf#13",
+    "notes": ""
+  },
+  {
+    "id": "A04",
+    "type": "answerable",
+    "question": "What is the stock level for CO2 fire extinguisher 6 kg part SF-7040?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "30"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "stock: 30"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#133",
+    "notes": ""
+  },
+  {
+    "id": "A05",
+    "type": "answerable",
+    "question": "What is the 24-hour priority phone number for Bluefin Spares?",
+    "expected_sources": [
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "+971 9 555 0110"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "VNO priority line (24 hours): +971 9 补齐 0110"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_b.pdf#11",
+    "notes": ""
+  },
+  {
+    "id": "A06",
+    "type": "answerable",
+    "question": "What is the daily cost for a service engineer visit to NV-8000 series gyro compass sensor modules?",
+    "expected_sources": [
+      "supplier_terms_a.pdf"
+    ],
+    "expected_facts": [
+      "USD 950 per day"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "For NV-8000 series gyro compass sensor modules a service engineer visit can be booked at USD 950 per day plus travel."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "supplier_terms_a.pdf#11",
+    "notes": ""
+  },
+  {
+    "id": "A07",
+    "type": "answerable",
+    "question": "What is the stock level for the bilge pump diaphragm kit PU-2261?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "20"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "stock: 20"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#54",
+    "notes": ""
+  },
+  {
+    "id": "A08",
+    "type": "answerable",
+    "question": "How much does a class approval certificate for SF-series safety equipment cost?",
+    "expected_sources": [
+      "supplier_terms_a.pdf"
+    ],
+    "expected_facts": [
+      "USD 35"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Class approval certificates for safety equipment (SF- series) cost USD 35 per certificate."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#10",
+    "notes": ""
+  },
+  {
+    "id": "A09",
+    "type": "answerable",
+    "question": "What is the total cost of purchasing 4 fuel injector nozzle sets for a marine vessel?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "1,839.04"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "unit_price_usd: 459.76"
+    ],
+    "tools_expected": [
+      "calculator"
+    ],
+    "verified": true,
+    "split": "holdout",
+    "origin": "spares_catalogue.csv#3",
+    "notes": "arithmetic check: 4 * 459.76 = 1,839.04 (recomputed by calculator)"
+  },
+  {
+    "id": "A10",
+    "type": "answerable",
+    "question": "What is the total cost of purchasing 4 piston ring sets for a container feeder vessel?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "4,167.16"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "unit_price_usd: 1041.79"
+    ],
+    "tools_expected": [
+      "calculator"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#10",
+    "notes": "arithmetic check: 4 * 1041.79 = 4,167.16 (recomputed by calculator)"
+  },
+  {
+    "id": "E01",
+    "type": "edge_ambiguous",
+    "question": "If i order less than 2500 usd, how much is freight for a small item?",
+    "expected_sources": [
+      "supplier_terms_a.pdf"
+    ],
+    "expected_facts": [
+      "USD 85"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "a flat freight charge of USD 85 per order applies"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#6",
+    "notes": "style: informal and typed in a hurry, with one or two spelling mistakes and no formal terms. removed 1 fact(s): 1 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "E02",
+    "type": "edge_ambiguous",
+    "question": "What's the part number for the hatch seal kit?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "DK-6021"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "part_no: DK-6021"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#114",
+    "notes": "style: very short and underspecified (4-8 words), using everyday words instead of the document's terms. removed 1 fact(s): 2 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "E03",
+    "type": "edge_ambiguous",
+    "question": "I need to replace a filter on a product tanker that requires a specific intake component—what is the part number for this filter?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "FL-4062"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "part_no: FL-4062"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "holdout",
+    "origin": "spares_catalogue.csv#91",
+    "notes": "style: indirect: describe the user's own situation instead of naming the rule, item or section. removed 1 fact(s): 2 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "E04",
+    "type": "edge_ambiguous",
+    "question": "What's the part no for the turbocharger for aux engine?",
+    "expected_sources": [
+      "spares_catalogue.csv"
+    ],
+    "expected_facts": [
+      "AE-1500",
+      "Turbocharger cartridge for auxiliary engine"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "part_no: AE-1500",
+      "description: Turbocharger cartridge for auxiliary engine"
+    ],
+    "tools_expected": [
+      "csv_lookup"
+    ],
+    "verified": true,
+    "split": "dev",
+    "origin": "spares_catalogue.csv#29",
+    "notes": "style: informal and typed in a hurry, with one or two spelling mistakes and no formal terms. removed 1 fact(s): 1 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "M01",
+    "type": "edge_multi_doc",
+    "question": "For EL-series electrical items, what is the return window and restocking fee if the packaging is opened, and how does this compare to made-to-order items with a lead time over 30 days?",
+    "expected_sources": [
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "Electrical items (EL- series) cannot be returned once the packaging has been opened",
+      "Made-to-order items, defined as items with a catalogue lead time above 30 days (for example the EL-5140 shore connection cable reel), cannot be returned."
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Electrical items (EL- series) cannot be returned once the packaging has been opened.",
+      "Made-to-order items, defined as items with a catalogue lead time above -30 days (for example the EL-5140 shore connection cable reel), cannot be returned."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#9 + supplier_terms_b.pdf#8",
+    "notes": ""
+  },
+  {
+    "id": "M02",
+    "type": "edge_multi_doc",
+    "question": "What is the combined effect of the volume discount and validity period for marine vessel maintenance spares when ordering 10 or more units of the same part number with an order value over USD 10,000?",
+    "expected_sources": [
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "5% volume discount applies when 10 or more units are ordered",
+      "8% volume discount applies when order value exceeds USD 10,000"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "A volume discount of 5% applies when 10 or more units of the same part number are ordered on one purchase order.",
+      "A volume discount of _8%_ applies to the whole order when the order value before discount exceeds USD 10,000."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#2 + supplier_terms_b.pdf#2",
+    "notes": ""
+  },
+  {
+    "id": "M03",
+    "type": "edge_multi_doc",
+    "question": "For a vessel in Piraeus requiring urgent delivery, how long after order confirmation will an in-stock spare part be dispatched if express service is not available, and what is the maximum time for delivery to such a location?",
+    "expected_sources": [
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "in-stock items are dispatched within 2 working days of order confirmation",
+      "delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "In-stock items are dispatched within 2 working days of order confirmation.",
+      "Delivery to vessels or agents in Piraeus or Fujairah takes 4 working days from order confirmation."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "supplier_terms_a.pdf#5 + supplier_terms_b.pdf#5",
+    "notes": ""
+  },
+  {
+    "id": "M04",
+    "type": "edge_multi_doc",
+    "question": "Which supplier provides main engine and deck machinery spares and under what terms do Coralis Shipping's procurement officers govern purchases for those items?",
+    "expected_sources": [
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "Anchorline Marine Supplies",
+      "Bluefin Ship Spares"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "These terms apply to all purchase orders placed by Coralis Shipping fleet procurement with Anchorline Marine Supplies (supplier ID SUP-A) for items listed against SUP-A in the shared spares catalogue.",
+      "Bluefin specialises in main engine, electrical and deck machinery spares."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#1 + supplier_terms_b.pdf#1",
+    "notes": ""
+  },
+  {
+    "id": "M05",
+    "type": "edge_multi_doc",
+    "question": "What is the maximum warranty period for main engine parts and pumps, and how do their warranty extensions differ in terms of duration and cost?",
+    "expected_sources": [
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "expected_facts": [
+      "18 months",
+      "24 months"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Pumps and pump parts (PU- series, for example PU-2200 ballast pump impellers) carry an extended warranty of 18 months.",
+      "An extended warranty can be purchased at 4% of the item price for each additional 6 months, up to a maximum total warranty of 24 months."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "supplier_terms_a.pdf#7 + supplier_terms_b.pdf#7",
+    "notes": ""
+  },
+  {
+    "id": "O01",
+    "type": "out_of_scope",
+    "question": "What's a good budget range for a diesel generator spare part for a 20,000 TEU container ship?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.47"
+  },
+  {
+    "id": "O02",
+    "type": "out_of_scope",
+    "question": "I'm trying to find a reliable source for replacing a failed rudder bearing—any recommendations for suppliers in the Asia-Pacific region?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.39"
+  },
+  {
+    "id": "O03",
+    "type": "out_of_scope",
+    "question": "How do I calculate the optimal stock level for a critical pump seal given the vessel’s operating schedule?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.35"
+  },
+  {
+    "id": "O04",
+    "type": "out_of_scope",
+    "question": "Can you suggest a checklist for verifying the authenticity of a marine spare part before installation?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.51"
+  },
+  {
+    "id": "O05",
+    "type": "out_of_scope",
+    "question": "Should I use a third-party logistics provider for delivering spare parts to remote ports, or stick with direct shipping?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.41"
+  }
+]

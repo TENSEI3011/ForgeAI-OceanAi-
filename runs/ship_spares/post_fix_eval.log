@@ -1,0 +1,21 @@
+﻿  running agent v3 ---------------------------------------- 100% 0:01:10
+  judging ---------------------------------------- 100% 0:00:23
+| Iter | Def | Pass (all) | Dev | Holdout | Correct | Grounded | Refusal acc. |
+Citations | retrieval_miss | prompt_defect | hallucination | wrong_refusal | 
+Avg latency | Decision |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | v3 | 22/24 (92%) | 94% | 83% | 95% | 100% | 100% | 100% | 0 | 1 | 1 | 0 |
+2.9s | baseline |
+# Re-evaluation of the final agent after the exact-identifier retrieval fix
+
+Definition `runs/ship_spares/agent_definition_final.json` on eval set 
+`runs/ship_spares/evals.json`, compared with results 
+`runs/ship_spares/results_iter2.json`.
+
+Pass rate now **92%** (22/24) vs before **92%**. Failures now by category: 
+{'hallucination': 1, 'prompt_defect': 1}.
+
+## Passed before, fails now (0)
+
+## Failed before, passes now (0)
+

@@ -1,0 +1,40 @@
+{
+  "n_cases": 24,
+  "by_type": {
+    "answerable": 10,
+    "edge_ambiguous": 4,
+    "edge_multi_doc": 5,
+    "out_of_scope": 5
+  },
+  "by_split": {
+    "dev": 18,
+    "holdout": 6
+  },
+  "generation_attempts": 23,
+  "n_dropped": 2,
+  "notes": [],
+  "prompt_templates": [
+    "evalgen_ambiguous.md",
+    "evalgen_answerability.md",
+    "evalgen_answerable.md",
+    "evalgen_fact_check.md",
+    "evalgen_multidoc.md",
+    "evalgen_oos_absent.md",
+    "evalgen_oos_refuse.md",
+    "evalgen_tool.md"
+  ],
+  "dropped_cases": [
+    {
+      "type": "edge_multi_doc",
+      "question": "For a container vessel maintenance spare order valued over USD 20,000, what is the total time from invoice date to full payment if an early payment discount is not available and payment is due net 45 days?",
+      "reason": "after the relevance check the answer no longer needs both documents",
+      "origin": "supplier_terms_a.pdf#3 + supplier_terms_b.pdf#3"
+    },
+    {
+      "type": "answerable",
+      "question": "What is the total cost of purchasing 4 piston ring sets for a marine vessel?",
+      "reason": "near-duplicate of an existing question",
+      "origin": "spares_catalogue.csv#9"
+    }
+  ]
+}

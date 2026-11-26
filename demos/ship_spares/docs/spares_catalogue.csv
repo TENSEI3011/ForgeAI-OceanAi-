@@ -1,0 +1,153 @@
+part_no,description,category,unit_price_usd,stock,lead_time_days,supplier_id,vessel_class
+ME-1040,Fuel injector nozzle set (2 pcs),Main Engine,470.42,1,2,SUP-A,Bulk Carrier
+ME-1041,Fuel injector nozzle set (2 pcs),Main Engine,454.10,4,2,SUP-A,Container Feeder
+ME-1042,Fuel injector nozzle set (2 pcs),Main Engine,459.76,20,1,SUP-A,Product Tanker
+ME-1043,Fuel injector nozzle set (2 pcs),Main Engine,436.12,20,1,SUP-A,Offshore Supply Vessel
+ME-1060,Exhaust valve spindle,Main Engine,3013.82,2,7,SUP-A,Bulk Carrier
+ME-1061,Exhaust valve spindle,Main Engine,2729.12,2,10,SUP-A,Container Feeder
+ME-1062,Exhaust valve spindle,Main Engine,2843.01,0,32,SUP-A,Product Tanker
+ME-1063,Exhaust valve spindle,Main Engine,3015.74,5,1,SUP-A,Offshore Supply Vessel
+ME-1080,Piston ring set,Main Engine,1292.49,6,4,SUP-A,Bulk Carrier
+ME-1081,Piston ring set,Main Engine,1041.79,30,1,SUP-A,Container Feeder
+ME-1082,Piston ring set,Main Engine,1118.45,2,2,SUP-A,Product Tanker
+ME-1083,Piston ring set,Main Engine,997.38,2,1,SUP-A,Offshore Supply Vessel
+ME-1100,Main bearing shell,Main Engine,1970.67,2,5,SUP-B,Bulk Carrier
+ME-1101,Main bearing shell,Main Engine,1551.96,15,5,SUP-B,Container Feeder
+ME-1102,Main bearing shell,Main Engine,1959.07,30,4,SUP-B,Product Tanker
+ME-1103,Main bearing shell,Main Engine,1993.43,4,3,SUP-B,Offshore Supply Vessel
+ME-1120,Cylinder liner O-ring kit,Main Engine,202.53,30,2,SUP-B,Bulk Carrier
+ME-1121,Cylinder liner O-ring kit,Main Engine,215.23,20,2,SUP-B,Container Feeder
+ME-1122,Cylinder liner O-ring kit,Main Engine,220.63,0,10,SUP-B,Product Tanker
+ME-1123,Cylinder liner O-ring kit,Main Engine,178.15,15,2,SUP-B,Offshore Supply Vessel
+ME-1140,Fuel pump plunger and barrel,Main Engine,2783.26,4,6,SUP-B,Bulk Carrier
+ME-1141,Fuel pump plunger and barrel,Main Engine,2388.83,10,9,SUP-B,Container Feeder
+ME-1142,Fuel pump plunger and barrel,Main Engine,2633.27,3,5,SUP-B,Product Tanker
+ME-1143,Fuel pump plunger and barrel,Main Engine,2551.18,8,3,SUP-B,Offshore Supply Vessel
+ME-1160,Starting air valve overhaul kit,Main Engine,553.72,0,16,SUP-B,Bulk Carrier
+ME-1161,Starting air valve overhaul kit,Main Engine,653.38,20,2,SUP-B,Container Feeder
+ME-1162,Starting air valve overhaul kit,Main Engine,603.48,10,4,SUP-B,Product Tanker
+ME-1163,Starting air valve overhaul kit,Main Engine,523.20,0,17,SUP-B,Offshore Supply Vessel
+AE-1500,Turbocharger cartridge for auxiliary engine,Auxiliary Engine,4000.79,5,4,SUP-A,Bulk Carrier
+AE-1501,Turbocharger cartridge for auxiliary engine,Auxiliary Engine,4161.84,3,1,SUP-A,Container Feeder
+AE-1502,Turbocharger cartridge for auxiliary engine,Auxiliary Engine,4615.10,2,2,SUP-A,Product Tanker
+AE-1503,Turbocharger cartridge for auxiliary engine,Auxiliary Engine,5128.80,3,7,SUP-A,Offshore Supply Vessel
+AE-1520,Lube oil cooler gasket kit,Auxiliary Engine,163.88,6,2,SUP-A,Bulk Carrier
+AE-1521,Lube oil cooler gasket kit,Auxiliary Engine,163.80,3,2,SUP-A,Container Feeder
+AE-1522,Lube oil cooler gasket kit,Auxiliary Engine,129.03,15,1,SUP-A,Product Tanker
+AE-1523,Lube oil cooler gasket kit,Auxiliary Engine,167.53,30,1,SUP-A,Offshore Supply Vessel
+AE-1540,Auxiliary engine fuel injection pump,Auxiliary Engine,1868.39,3,4,SUP-B,Bulk Carrier
+AE-1541,Auxiliary engine fuel injection pump,Auxiliary Engine,2259.69,12,7,SUP-B,Container Feeder
+AE-1542,Auxiliary engine fuel injection pump,Auxiliary Engine,1706.97,6,7,SUP-B,Product Tanker
+AE-1543,Auxiliary engine fuel injection pump,Auxiliary Engine,2208.18,15,5,SUP-B,Offshore Supply Vessel
+AE-1560,Cylinder head gasket,Auxiliary Engine,108.47,15,2,SUP-B,Bulk Carrier
+AE-1561,Cylinder head gasket,Auxiliary Engine,102.99,12,1,SUP-B,Container Feeder
+AE-1562,Cylinder head gasket,Auxiliary Engine,105.38,3,2,SUP-B,Product Tanker
+AE-1563,Cylinder head gasket,Auxiliary Engine,121.01,24,2,SUP-B,Offshore Supply Vessel
+PU-2200,Ballast pump impeller,Pumps,732.75,12,2,SUP-A,Bulk Carrier
+PU-2201,Ballast pump impeller,Pumps,714.35,3,1,SUP-A,Container Feeder
+PU-2202,Ballast pump impeller,Pumps,707.88,12,2,SUP-A,Product Tanker
+PU-2203,Ballast pump impeller,Pumps,812.86,40,1,SUP-A,Offshore Supply Vessel
+PU-2240,Fuel oil transfer pump mechanical seal,Pumps,305.67,2,2,SUP-A,Bulk Carrier
+PU-2241,Fuel oil transfer pump mechanical seal,Pumps,399.52,0,7,SUP-A,Container Feeder
+PU-2242,Fuel oil transfer pump mechanical seal,Pumps,393.31,2,2,SUP-A,Product Tanker
+PU-2243,Fuel oil transfer pump mechanical seal,Pumps,311.57,10,2,SUP-A,Offshore Supply Vessel
+PU-2260,Bilge pump diaphragm kit,Pumps,121.56,8,1,SUP-B,Bulk Carrier
+PU-2261,Bilge pump diaphragm kit,Pumps,143.41,20,2,SUP-B,Container Feeder
+PU-2262,Bilge pump diaphragm kit,Pumps,143.71,10,2,SUP-B,Product Tanker
+PU-2263,Bilge pump diaphragm kit,Pumps,164.11,5,2,SUP-B,Offshore Supply Vessel
+PU-2280,Fresh water generator pump shaft,Pumps,444.36,0,26,SUP-B,Bulk Carrier
+PU-2281,Fresh water generator pump shaft,Pumps,479.57,30,1,SUP-B,Container Feeder
+PU-2282,Fresh water generator pump shaft,Pumps,451.96,20,3,SUP-B,Product Tanker
+PU-2283,Fresh water generator pump shaft,Pumps,388.81,24,1,SUP-B,Offshore Supply Vessel
+VL-3100,Butterfly valve DN150 with gear operator,Valves,436.77,10,1,SUP-A,Bulk Carrier
+VL-3101,Butterfly valve DN150 with gear operator,Valves,513.40,24,2,SUP-A,Container Feeder
+VL-3102,Butterfly valve DN150 with gear operator,Valves,468.15,1,2,SUP-A,Product Tanker
+VL-3103,Butterfly valve DN150 with gear operator,Valves,594.33,15,3,SUP-A,Offshore Supply Vessel
+VL-3120,Globe valve DN50 bronze,Valves,300.31,0,9,SUP-B,Bulk Carrier
+VL-3121,Globe valve DN50 bronze,Valves,310.55,30,1,SUP-B,Container Feeder
+VL-3122,Globe valve DN50 bronze,Valves,238.34,15,1,SUP-B,Product Tanker
+VL-3123,Globe valve DN50 bronze,Valves,210.13,40,2,SUP-B,Offshore Supply Vessel
+VL-3140,Safety relief valve 10 bar,Valves,430.93,10,1,SUP-B,Bulk Carrier
+VL-3141,Safety relief valve 10 bar,Valves,433.54,0,21,SUP-B,Container Feeder
+VL-3142,Safety relief valve 10 bar,Valves,382.47,10,2,SUP-B,Product Tanker
+VL-3143,Safety relief valve 10 bar,Valves,363.90,0,21,SUP-B,Offshore Supply Vessel
+VL-3160,Quick-closing valve actuator,Valves,1166.00,15,5,SUP-C,Bulk Carrier
+VL-3161,Quick-closing valve actuator,Valves,1072.28,12,6,SUP-C,Container Feeder
+VL-3162,Quick-closing valve actuator,Valves,1150.68,3,2,SUP-C,Product Tanker
+VL-3163,Quick-closing valve actuator,Valves,964.80,6,6,SUP-C,Offshore Supply Vessel
+FL-4000,Fuel oil filter element,Filters,75.99,40,2,SUP-A,Bulk Carrier
+FL-4001,Fuel oil filter element,Filters,52.05,4,1,SUP-A,Container Feeder
+FL-4002,Fuel oil filter element,Filters,70.43,24,2,SUP-A,Product Tanker
+FL-4003,Fuel oil filter element,Filters,49.17,3,2,SUP-A,Offshore Supply Vessel
+FL-4020,Lube oil automatic filter candle set,Filters,345.79,8,2,SUP-A,Bulk Carrier
+FL-4021,Lube oil automatic filter candle set,Filters,366.27,3,3,SUP-A,Container Feeder
+FL-4022,Lube oil automatic filter candle set,Filters,341.29,5,3,SUP-A,Product Tanker
+FL-4023,Lube oil automatic filter candle set,Filters,358.30,2,2,SUP-A,Offshore Supply Vessel
+FL-4040,Sea water strainer basket,Filters,191.29,10,1,SUP-B,Bulk Carrier
+FL-4041,Sea water strainer basket,Filters,170.87,10,1,SUP-B,Container Feeder
+FL-4042,Sea water strainer basket,Filters,230.70,15,2,SUP-B,Product Tanker
+FL-4043,Sea water strainer basket,Filters,225.76,10,1,SUP-B,Offshore Supply Vessel
+FL-4060,Engine air intake filter,Filters,118.60,3,1,SUP-C,Bulk Carrier
+FL-4061,Engine air intake filter,Filters,76.96,0,6,SUP-C,Container Feeder
+FL-4062,Engine air intake filter,Filters,108.05,40,1,SUP-C,Product Tanker
+FL-4063,Engine air intake filter,Filters,97.40,2,1,SUP-C,Offshore Supply Vessel
+EL-5000,Alternator AVR card,Electrical,851.87,3,1,SUP-A,Bulk Carrier
+EL-5001,Alternator AVR card,Electrical,711.22,12,2,SUP-A,Container Feeder
+EL-5002,Alternator AVR card,Electrical,744.16,3,3,SUP-A,Product Tanker
+EL-5003,Alternator AVR card,Electrical,798.88,24,1,SUP-A,Offshore Supply Vessel
+EL-5100,Main switchboard circuit breaker 630A,Electrical,2511.72,12,2,SUP-B,Bulk Carrier
+EL-5101,Main switchboard circuit breaker 630A,Electrical,2113.26,6,2,SUP-B,Container Feeder
+EL-5102,Main switchboard circuit breaker 630A,Electrical,2119.66,10,7,SUP-B,Product Tanker
+EL-5103,Main switchboard circuit breaker 630A,Electrical,2296.62,4,3,SUP-B,Offshore Supply Vessel
+EL-5120,LED floodlight 150W,Electrical,182.67,24,1,SUP-B,Bulk Carrier
+EL-5121,LED floodlight 150W,Electrical,254.90,3,1,SUP-B,Container Feeder
+EL-5122,LED floodlight 150W,Electrical,245.65,0,11,SUP-B,Product Tanker
+EL-5123,LED floodlight 150W,Electrical,225.17,3,1,SUP-B,Offshore Supply Vessel
+EL-5140,Shore connection cable reel,Electrical,2806.44,40,8,SUP-B,Bulk Carrier
+EL-5141,Shore connection cable reel,Electrical,2696.44,2,6,SUP-B,Container Feeder
+EL-5142,Shore connection cable reel,Electrical,2428.21,30,2,SUP-B,Product Tanker
+EL-5143,Shore connection cable reel,Electrical,2472.89,15,2,SUP-B,Offshore Supply Vessel
+DK-6000,Mooring winch brake lining set,Deck Machinery,564.88,12,1,SUP-A,Bulk Carrier
+DK-6001,Mooring winch brake lining set,Deck Machinery,602.60,0,27,SUP-A,Container Feeder
+DK-6002,Mooring winch brake lining set,Deck Machinery,704.91,10,3,SUP-A,Product Tanker
+DK-6003,Mooring winch brake lining set,Deck Machinery,572.72,12,1,SUP-A,Offshore Supply Vessel
+DK-6020,Hatch cover hydraulic cylinder seal kit,Deck Machinery,321.95,30,1,SUP-B,Bulk Carrier
+DK-6021,Hatch cover hydraulic cylinder seal kit,Deck Machinery,331.74,5,3,SUP-B,Container Feeder
+DK-6022,Hatch cover hydraulic cylinder seal kit,Deck Machinery,323.86,3,3,SUP-B,Product Tanker
+DK-6023,Hatch cover hydraulic cylinder seal kit,Deck Machinery,369.54,12,3,SUP-B,Offshore Supply Vessel
+DK-6040,Windlass gearbox bearing,Deck Machinery,887.00,5,1,SUP-B,Bulk Carrier
+DK-6041,Windlass gearbox bearing,Deck Machinery,974.33,2,6,SUP-B,Container Feeder
+DK-6042,Windlass gearbox bearing,Deck Machinery,878.57,4,1,SUP-B,Product Tanker
+DK-6043,Windlass gearbox bearing,Deck Machinery,954.34,10,6,SUP-B,Offshore Supply Vessel
+DK-6060,Crane slewing ring seal,Deck Machinery,1372.00,2,4,SUP-C,Bulk Carrier
+DK-6061,Crane slewing ring seal,Deck Machinery,1391.44,12,9,SUP-C,Container Feeder
+DK-6062,Crane slewing ring seal,Deck Machinery,1715.12,24,7,SUP-C,Product Tanker
+DK-6063,Crane slewing ring seal,Deck Machinery,1360.46,40,4,SUP-C,Offshore Supply Vessel
+SF-7000,SOLAS immersion suit,Safety Equipment,275.34,4,1,SUP-A,Bulk Carrier
+SF-7001,SOLAS immersion suit,Safety Equipment,263.04,24,1,SUP-A,Container Feeder
+SF-7002,SOLAS immersion suit,Safety Equipment,271.45,10,1,SUP-A,Product Tanker
+SF-7003,SOLAS immersion suit,Safety Equipment,320.06,24,2,SUP-A,Offshore Supply Vessel
+SF-7020,Lifejacket with light,Safety Equipment,61.54,40,2,SUP-A,Bulk Carrier
+SF-7021,Lifejacket with light,Safety Equipment,52.32,10,2,SUP-A,Container Feeder
+SF-7022,Lifejacket with light,Safety Equipment,49.54,8,1,SUP-A,Product Tanker
+SF-7023,Lifejacket with light,Safety Equipment,70.52,15,1,SUP-A,Offshore Supply Vessel
+SF-7040,CO2 fire extinguisher 6 kg,Safety Equipment,162.00,30,1,SUP-A,Bulk Carrier
+SF-7041,CO2 fire extinguisher 6 kg,Safety Equipment,181.80,4,1,SUP-A,Container Feeder
+SF-7042,CO2 fire extinguisher 6 kg,Safety Equipment,173.92,5,2,SUP-A,Product Tanker
+SF-7043,CO2 fire extinguisher 6 kg,Safety Equipment,183.24,0,7,SUP-A,Offshore Supply Vessel
+SF-7060,EEBD emergency escape breathing device,Safety Equipment,493.86,0,11,SUP-C,Bulk Carrier
+SF-7061,EEBD emergency escape breathing device,Safety Equipment,443.93,10,1,SUP-C,Container Feeder
+SF-7062,EEBD emergency escape breathing device,Safety Equipment,429.77,0,12,SUP-C,Product Tanker
+SF-7063,EEBD emergency escape breathing device,Safety Equipment,501.23,10,2,SUP-C,Offshore Supply Vessel
+NV-8000,Gyro compass sensor module,Navigation,3347.07,15,8,SUP-A,Bulk Carrier
+NV-8001,Gyro compass sensor module,Navigation,3383.32,4,7,SUP-A,Container Feeder
+NV-8002,Gyro compass sensor module,Navigation,3025.25,1,6,SUP-A,Product Tanker
+NV-8003,Gyro compass sensor module,Navigation,3575.59,2,7,SUP-A,Offshore Supply Vessel
+NV-8020,ECDIS display unit,Navigation,5514.76,15,8,SUP-B,Bulk Carrier
+NV-8021,ECDIS display unit,Navigation,6564.13,6,11,SUP-B,Container Feeder
+NV-8022,ECDIS display unit,Navigation,6076.40,0,38,SUP-B,Product Tanker
+NV-8023,ECDIS display unit,Navigation,6193.94,24,11,SUP-B,Offshore Supply Vessel
+NV-8040,VHF radio handset,Navigation,275.27,0,12,SUP-C,Bulk Carrier
+NV-8041,VHF radio handset,Navigation,298.66,20,2,SUP-C,Container Feeder
+NV-8042,VHF radio handset,Navigation,284.41,30,1,SUP-C,Product Tanker
+NV-8043,VHF radio handset,Navigation,289.33,0,10,SUP-C,Offshore Supply Vessel

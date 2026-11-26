@@ -1,0 +1,102 @@
+[
+  {
+    "topic": "Drill Frequency Requirements",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "drills_and_emergency_preparedness.md",
+        "snippet": "Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month. - Fire drill: every month, held together with or immediately after the abandon ship drill. - Enclosed space entry and rescue drill: at least once every 2 months. - Man overboard drill: e..."
+      }
+    ],
+    "note": "The excerpts provide specific, concrete frequencies for various drills, directly answering typical user questions about drill requirements.",
+    "top_similarity": 0.513,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Permit to Work Validity",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "permit_to_work_and_incident_reporting.txt",
+        "snippet": "A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed."
+      }
+    ],
+    "note": "The excerpt provides a clear rule about when a permit to work expires and when a new one is required, directly addressing the validity of permits.",
+    "top_similarity": 0.66,
+    "keyword_overlap": 1.0,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Enclosed Space Entry Procedures",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "permit_to_work_and_incident_reporting.txt",
+        "snippet": "Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testi..."
+      }
+    ],
+    "note": "The excerpt provides concrete, step-by-step procedures for enclosed space entry, including atmospheric testing, ventilation, monitoring, and safety personnel requirements, which directly answer typical user questions about the topic.",
+    "top_similarity": 0.511,
+    "keyword_overlap": 0.75,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Incident Reporting Timeframes",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "permit_to_work_and_incident_reporting.txt",
+        "snippet": "All incidents, accidents and near misses must be reported. Report categories and time limits: - Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours. - Lost time injuries and equipment da..."
+      }
+    ],
+    "note": "The excerpts provide clear, concrete timeframes for reporting different types of incidents, which directly answers typical user questions about incident reporting timeframes.",
+    "top_similarity": 0.559,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Next Due Date Reminder",
+    "status": "partial",
+    "evidence": [
+      {
+        "source": "drills_and_emergency_preparedness.md",
+        "snippet": "Abandon ship drill: every month. Each crew member must take part in at least one abandon ship drill per month."
+      }
+    ],
+    "note": "The excerpts specify drill frequencies (e.g., monthly abandon ship drills), which relates to due dates for drills, but do not state how many days are left until a drill is due or provide a mechanism to calculate or display such a reminder. This missing element limits full support for the 'Next Due Date Reminder' topic.",
+    "top_similarity": 0.284,
+    "keyword_overlap": 0.25,
+    "llm_status": "partial",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Current Weather at Next Port",
+    "status": "supported",
+    "evidence": [],
+    "note": "The excerpts do not mention weather, port of call, or any current weather information at a vessel's next port of call.; not in the documents, but can be served by the 'weather' tool: The request specifically asks for current weather at the vessel's next port of call, which is live weather data.",
+    "top_similarity": 0.271,
+    "keyword_overlap": 0.25,
+    "llm_status": "unsupported",
+    "served_by_tool": "weather"
+  },
+  {
+    "topic": "tell them how many days are left until a report or drill is due",
+    "status": "partial",
+    "evidence": [
+      {
+        "source": "drills_and_emergency_preparedness.md",
+        "snippet": "The Master is responsible for ensuring that all drills are carried out at the required frequency and recorded. The Chief Officer plans the monthly drill schedule and the Safety Officer keeps the drill records in the Official Log Book and in the electronic Drill Register (form SMS-F-041)."
+      }
+    ],
+    "note": "The excerpts describe who is responsible for drills and where records are kept, but do not specify how many days are left until a drill or report is due, which is required for the assistant to provide the exact number of days remaining to users.",
+    "top_similarity": 0.689,
+    "keyword_overlap": 0.43,
+    "llm_status": "partial",
+    "served_by_tool": ""
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "started": "2026-11-25 11:49:26",
+  "stages": {
+    "intake": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "groundability": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "generate": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "evalgen": {
+      "status": "ok",
+      "seconds": 278.8
+    },
+    "baseline_eval": {
+      "status": "ok",
+      "seconds": 10475.9
+    },
+    "optimize": {
+      "status": "ok",
+      "seconds": 1493.5
+    },
+    "report": {
+      "status": "ok",
+      "seconds": 40.7
+    }
+  },
+  "documents": {
+    "loaded": [
+      "spares_catalogue.csv",
+      "supplier_terms_a.pdf",
+      "supplier_terms_b.pdf"
+    ],
+    "skipped": []
+  },
+  "run_stats": {
+    "backend": "ollama",
+    "model": "qwen3:4b-instruct",
+    "judge_model": "llama3.2:3b",
+    "embed_model": "all-minilm",
+    "wall_seconds": 12291.5,
+    "total_calls": 284,
+    "total_cached_calls": 122,
+    "total_tokens": 290850,
+    "budget": {
+      "max_tokens": null,
+      "max_seconds": null
+    },
+    "by_stage": {
+      "intake": {
+        "calls": 11,
+        "cached_calls": 11,
+        "prompt_tokens": 5928,
+        "completion_tokens": 1426,
+        "seconds": 0.0
+      },
+      "groundability": {
+        "calls": 4,
+        "cached_calls": 4,
+        "prompt_tokens": 2203,
+        "completion_tokens": 401,
+        "seconds": 0.0
+      },
+      "generate": {
+        "calls": 3,
+        "cached_calls": 3,
+        "prompt_tokens": 4404,
+        "completion_tokens": 761,
+        "seconds": 0.0
+      },
+      "evalgen": {
+        "calls": 35,
+        "cached_calls": 7,
+        "prompt_tokens": 11649,
+        "completion_tokens": 2725,
+        "seconds": 278.6
+      },
+      "agent_under_test": {
+        "calls": 171,
+        "cached_calls": 89,
+        "prompt_tokens": 193398,
+        "completion_tokens": 13460,
+        "seconds": 11404.2
+      },
+      "judge": {
+        "calls": 57,
+        "cached_calls": 8,
+        "prompt_tokens": 48225,
+        "completion_tokens": 3676,
+        "seconds": 479.8
+      },
+      "optimizer": {
+        "calls": 1,
+        "cached_calls": 0,
+        "prompt_tokens": 938,
+        "completion_tokens": 179,
+        "seconds": 38.5
+      },
+      "report": {
+        "calls": 2,
+        "cached_calls": 0,
+        "prompt_tokens": 1273,
+        "completion_tokens": 204,
+        "seconds": 40.6
+      }
+    },
+    "warnings": []
+  },
+  "finished": "2026-11-25 15:14:18",
+  "final": {
+    "definition_version": 3,
+    "pass_rate": 0.917,
+    "holdout_pass_rate": 0.833,
+    "stop_reason": "dev pass rate 94% reached the target (90%)"
+  }
+}

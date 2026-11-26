@@ -1,0 +1,79 @@
+[
+  {
+    "iteration": 0,
+    "definition_version": 1,
+    "n_cases": 24,
+    "pass_rate": 0.833,
+    "dev_pass_rate": 0.833,
+    "holdout_pass_rate": 0.833,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.842,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 0.947,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "prompt_defect": 4
+    },
+    "pass_by_type": {
+      "answerable": "10/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "2/5",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 429.81,
+    "judge_vetoes": 0,
+    "judge_disagreements": 4
+  },
+  {
+    "iteration": 1,
+    "definition_version": 2,
+    "n_cases": 24,
+    "pass_rate": 0.875,
+    "dev_pass_rate": 0.889,
+    "holdout_pass_rate": 0.833,
+    "grounded_rate": 0.947,
+    "correct_rate": 0.895,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "hallucination": 1,
+      "prompt_defect": 2
+    },
+    "pass_by_type": {
+      "answerable": "10/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "3/5",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 24.13,
+    "judge_vetoes": 0,
+    "judge_disagreements": 5
+  },
+  {
+    "iteration": 2,
+    "definition_version": 3,
+    "n_cases": 24,
+    "pass_rate": 0.917,
+    "dev_pass_rate": 0.944,
+    "holdout_pass_rate": 0.833,
+    "grounded_rate": 1.0,
+    "correct_rate": 0.947,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "over_length_rate": 0.0,
+    "failures_by_category": {
+      "hallucination": 1,
+      "prompt_defect": 1
+    },
+    "pass_by_type": {
+      "answerable": "10/10",
+      "edge_ambiguous": "3/4",
+      "edge_multi_doc": "4/5",
+      "out_of_scope": "5/5"
+    },
+    "avg_latency_s": 23.12,
+    "judge_vetoes": 1,
+    "judge_disagreements": 4
+  }
+]

@@ -1,0 +1,21 @@
+﻿  running agent v1 ---------------------------------------- 100% 0:00:00
+  judging ---------------------------------------- 100% 0:00:00
+| Iter | Def | Pass (all) | Dev | Holdout | Correct | Grounded | Refusal acc. |
+Citations | retrieval_miss | prompt_defect | hallucination | wrong_refusal | 
+Avg latency | Decision |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | v1 | 19/20 (95%) | 100% | 80% | 100% | 100% | 100% | 93% | 0 | 1 | 0 | 0 
+| 0.0s | baseline |
+# Re-evaluation of the final agent after the exact-identifier retrieval fix
+
+Definition `runs/hr_policy/agent_definition_final.json` on eval set 
+`runs/hr_policy/evals.json`, compared with results 
+`runs/hr_policy/results_iter0.json`.
+
+Pass rate now **95%** (19/20) vs before **95%**. Failures now by category: 
+{'prompt_defect': 1}.
+
+## Passed before, fails now (0)
+
+## Failed before, passes now (0)
+

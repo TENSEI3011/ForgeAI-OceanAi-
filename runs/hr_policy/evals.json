@@ -1,0 +1,379 @@
+[
+  {
+    "id": "A01",
+    "type": "answerable",
+    "question": "How many working days after a grievance isn't resolved can an employee escalate it to their HR Business Partner?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "10 working days"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "If it is not resolved within 10 working days, the employee may escalate it in writing to their HR Business Partner, who must respond within a further 10 working days."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#10",
+    "notes": ""
+  },
+  {
+    "id": "A02",
+    "type": "answerable",
+    "question": "What is the deadline for submitting an expense claim in Singapore?",
+    "expected_sources": [
+      "travel_and_expenses_policy.pdf"
+    ],
+    "expected_facts": [
+      "within 30 days of the end of the trip"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "travel_and_expenses_policy.pdf#9",
+    "notes": "removed 1 fact(s): 2 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "A03",
+    "type": "answerable",
+    "question": "How many public holidays does the Mumbai office observe annually?",
+    "expected_sources": [
+      "leave_policy.pdf"
+    ],
+    "expected_facts": [
+      "12"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "The Mumbai office observes 12 public holidays per year"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "leave_policy.pdf#10",
+    "notes": ""
+  },
+  {
+    "id": "A04",
+    "type": "answerable",
+    "question": "How many days after a sexual harassment incident must I report it to the Internal Committee?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "within 3 months"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#11",
+    "notes": ""
+  },
+  {
+    "id": "A05",
+    "type": "answerable",
+    "question": "What is the hotel cost limit per night in Dubai?",
+    "expected_sources": [
+      "travel_and_expenses_policy.pdf"
+    ],
+    "expected_facts": [
+      "USD 220 per night"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Tier A cities (Singapore, London, Rotterdam, Dubai, Hamburg): USD 220 per night."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "travel_and_expenses_policy.pdf#4",
+    "notes": ""
+  },
+  {
+    "id": "A06",
+    "type": "answerable",
+    "question": "How many days of paid sick leave do shore-based employees get per leave year?",
+    "expected_sources": [
+      "leave_policy.pdf"
+    ],
+    "expected_facts": [
+      "12 days"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Employees receive 12 days of paid sick leave per leave year."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "leave_policy.pdf#5",
+    "notes": ""
+  },
+  {
+    "id": "A07",
+    "type": "answerable",
+    "question": "How many days after joining must employees complete the online Code of Conduct training?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "30 days"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Every employee must complete the online Code of Conduct training in PeoplePort within 30 days of joining and then once every year."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#1",
+    "notes": ""
+  },
+  {
+    "id": "A08",
+    "type": "answerable",
+    "question": "What is the Global Assist emergency contact number in Singapore?",
+    "expected_sources": [
+      "travel_and_expenses_policy.pdf"
+    ],
+    "expected_facts": [
+      "+65 6800 1122"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "contact Global Assist on +65 6800 1122 (24 hours)"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "travel_and_expenses_policy.pdf#13",
+    "notes": ""
+  },
+  {
+    "id": "A09",
+    "type": "answerable",
+    "question": "How many comp-off days do I get for working a weekend on business travel?",
+    "expected_sources": [
+      "leave_policy.pdf"
+    ],
+    "expected_facts": [
+      "1 day"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "An employee who works on a weekly off-day or a public holiday at the manager's request earns 1 day of compensatory time off"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "leave_policy.pdf#12",
+    "notes": "removed 1 fact(s): 1 fact(s) judged not part of the answer"
+  },
+  {
+    "id": "A10",
+    "type": "answerable",
+    "question": "What is the lunch break duration for shore-based employees?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "1 hour"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "including a 1-hour lunch break"
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#2",
+    "notes": ""
+  },
+  {
+    "id": "E01",
+    "type": "edge_ambiguous",
+    "question": "I'm asked to give a small payment to a customs officer to speed up a routine process—what should I do?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "Facilitation payments are prohibited",
+      "Any request for such a payment must be refused"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Facilitation payments are prohibited, including small payments to port or customs officials to speed up routine actions.",
+      "Any request for such a payment must be refused and reported to the Compliance Officer within 24 hours."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#8",
+    "notes": "style: indirect: describe the user's own situation instead of naming the rule, item or section. "
+  },
+  {
+    "id": "E02",
+    "type": "edge_ambiguous",
+    "question": "can i get paid for using my own car in singapore?",
+    "expected_sources": [
+      "travel_and_expenses_policy.pdf"
+    ],
+    "expected_facts": [
+      "SGD 0.60 per km"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Use of a personal car for business is reimbursed at INR 12 per km in India and SGD 0.60 per km in Singapore, on submission of a mileage log."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "travel_and_expenses_policy.pdf#8",
+    "notes": "style: informal and typed in a hurry, with one or two spelling mistakes and no formal terms. "
+  },
+  {
+    "id": "E03",
+    "type": "edge_ambiguous",
+    "question": "How many days casual leave for personal stuff?",
+    "expected_sources": [
+      "leave_policy.pdf"
+    ],
+    "expected_facts": [
+      "6 days"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Employees receive 6 days of casual leave per leave year for short personal matters."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "leave_policy.pdf#7",
+    "notes": "style: very short and underspecified (4-8 words), using everyday words instead of the document's terms. "
+  },
+  {
+    "id": "E04",
+    "type": "edge_ambiguous",
+    "question": "I noticed my personal laptop has a file with crew details — what should I do next?",
+    "expected_sources": [
+      "code_of_conduct.pdf"
+    ],
+    "expected_facts": [
+      "Confidential or Restricted data must not be stored on personal devices",
+      "report to IT Security at security@coralis-shipping.example"
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "Confidential or Restricted data must not be stored on personal devices or personal cloud accounts.",
+      "Any suspected data breach, lost laptop or phishing incident must be reported to IT Security at security@coralis-shipping.example within 24 hours of discovery."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "code_of_conduct.pdf#6",
+    "notes": "style: indirect: describe the user's own situation instead of naming the rule, item or section. "
+  },
+  {
+    "id": "M01",
+    "type": "edge_multi_doc",
+    "question": "Do shore-based employees in Mumbai and Singapore need to use the PeoplePort HR system for leave applications and travel expenses?",
+    "expected_sources": [
+      "leave_policy.pdf",
+      "travel_and_expenses_policy.pdf"
+    ],
+    "expected_facts": [
+      "All leave is applied for, approved and recorded in the PeoplePort HR system.",
+      "This policy covers business travel and work-related expenses of shore-based employees of the Mumbai and Singapore offices."
+    ],
+    "should_refuse": false,
+    "source_quotes": [
+      "All leave is applied for, approved and recorded in the PeoplePort HR system.",
+      "This policy covers business travel and work-related expenses of shore- based employees of the Mumbai and Singapore offices."
+    ],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "leave_policy.pdf#1 + travel_and_expenses_policy.pdf#1",
+    "notes": ""
+  },
+  {
+    "id": "O01",
+    "type": "out_of_scope",
+    "question": "Can you tell me how my recent salary adjustment was calculated?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.20"
+  },
+  {
+    "id": "O02",
+    "type": "out_of_scope",
+    "question": "I heard there was an issue with one of the team members last month—can you share any details about that?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.25"
+  },
+  {
+    "id": "O03",
+    "type": "out_of_scope",
+    "question": "Is there a way to find out how much my colleague in the Singapore office earns?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "holdout",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.42"
+  },
+  {
+    "id": "O04",
+    "type": "out_of_scope",
+    "question": "I'm trying to understand why my payslip shows a deduction I didn't expect—can you explain that?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.34"
+  },
+  {
+    "id": "O05",
+    "type": "out_of_scope",
+    "question": "Do you have any information about the upcoming payroll credit date for next month?",
+    "expected_sources": [],
+    "expected_facts": [],
+    "should_refuse": true,
+    "source_quotes": [],
+    "tools_expected": [],
+    "verified": true,
+    "split": "dev",
+    "origin": "must-refuse topic",
+    "notes": "max similarity to any chunk 0.25"
+  }
+]

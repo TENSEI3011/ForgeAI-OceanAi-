@@ -1,0 +1,82 @@
+[
+  {
+    "topic": "Annual Leave Entitlement",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "leave_policy.pdf",
+        "snippet": "Employees with less than 5 years of continuous service are entitled to 21 working days of paid annual leave per leave year. Employees with 5 or more years of continuous service are entitled to 24 working days. Annual leave accrues monthly at 1.75 days per month (2 days per month for the 24-day en..."
+      }
+    ],
+    "note": "The excerpts provide clear, concrete rules about annual leave entitlement based on service length and accrual, directly answering typical user questions about annual leave entitlement.",
+    "top_similarity": 0.612,
+    "keyword_overlap": 1.0,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Code of Conduct Rules",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "code_of_conduct.pdf",
+        "snippet": "The company does not tolerate harassment of any kind. Complaints of sexual harassment are handled by the Internal Committee, which must be contacted within 3 months of the incident. The Internal Committee completes its inquiry within 90 days of receiving a complaint."
+      }
+    ],
+    "note": "The excerpts provide specific rules and procedures related to harassment, which is a key component of a code of conduct, including timelines and responsible bodies.",
+    "top_similarity": 0.703,
+    "keyword_overlap": 1.0,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Travel Approval Process",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "travel_and_expenses_policy.pdf",
+        "snippet": "All business travel must be pre-approved in the PeoplePort Travel module before any booking is made: ～ Domestic travel is approved by the line manager. ～ International travel is approved by the Department Head. ～ Any trip longer than 10 days, or with an estimated total cost above USD"
+      }
+    ],
+    "note": "The excerpts provide clear, concrete rules about who approves travel requests and under what conditions, directly addressing the travel approval process.",
+    "top_similarity": 0.662,
+    "keyword_overlap": 0.67,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Expense Claim Procedure",
+    "status": "supported",
+    "evidence": [
+      {
+        "source": "travel_and_expenses_policy.pdf",
+        "snippet": "Expense claims must be submitted through PeoplePort Expenses within 30 days of the end of the trip, with itemised receipts for every item above USD 25 (INR 2,000). Claims submitted more than 60 days after the trip are not reimbursed unless a Director approves them. Approved claims are reimbursed..."
+      }
+    ],
+    "note": "The excerpt provides clear, concrete procedures for submitting, timing, and processing expense claims, including thresholds, deadlines, and reimbursement timelines, directly addressing typical user questions about the expense claim procedure.",
+    "top_similarity": 0.632,
+    "keyword_overlap": 1.0,
+    "llm_status": "supported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Payroll Credit Dates",
+    "status": "unsupported",
+    "evidence": [],
+    "note": "The excerpts do not contain any information about payroll credit dates, salary crediting, or payslip deductions.",
+    "top_similarity": 0.329,
+    "keyword_overlap": 0.67,
+    "llm_status": "unsupported",
+    "served_by_tool": ""
+  },
+  {
+    "topic": "Payslip Deduction Explanations",
+    "status": "unsupported",
+    "evidence": [],
+    "note": "The excerpts do not contain any information about payslip deductions or what they mean, even though they mention payroll-related topics like expense claims and reimbursements, which are distinct from payslip deductions.",
+    "top_similarity": 0.388,
+    "keyword_overlap": 0.0,
+    "llm_status": "unsupported",
+    "served_by_tool": ""
+  }
+]

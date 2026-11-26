@@ -1,0 +1,125 @@
+{
+  "started": "2026-11-25 15:14:19",
+  "stages": {
+    "intake": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "groundability": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "generate": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "evalgen": {
+      "status": "ok",
+      "seconds": 323.3
+    },
+    "tournament": {
+      "status": "ok",
+      "seconds": 1194.6
+    },
+    "baseline_eval": {
+      "status": "ok",
+      "seconds": 170.4
+    },
+    "optimize": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "report": {
+      "status": "ok",
+      "seconds": 26.5
+    }
+  },
+  "documents": {
+    "loaded": [
+      "code_of_conduct.pdf",
+      "leave_policy.pdf",
+      "travel_and_expenses_policy.pdf"
+    ],
+    "skipped": []
+  },
+  "run_stats": {
+    "backend": "ollama",
+    "model": "qwen3:4b-instruct",
+    "judge_model": "llama3.2:3b",
+    "embed_model": "all-minilm",
+    "wall_seconds": 1717.6,
+    "total_calls": 189,
+    "total_cached_calls": 82,
+    "total_tokens": 175392,
+    "budget": {
+      "max_tokens": null,
+      "max_seconds": null
+    },
+    "by_stage": {
+      "intake": {
+        "calls": 11,
+        "cached_calls": 11,
+        "prompt_tokens": 6483,
+        "completion_tokens": 1364,
+        "seconds": 0.0
+      },
+      "groundability": {
+        "calls": 8,
+        "cached_calls": 8,
+        "prompt_tokens": 5742,
+        "completion_tokens": 742,
+        "seconds": 0.0
+      },
+      "generate": {
+        "calls": 3,
+        "cached_calls": 3,
+        "prompt_tokens": 4591,
+        "completion_tokens": 727,
+        "seconds": 0.0
+      },
+      "evalgen": {
+        "calls": 55,
+        "cached_calls": 24,
+        "prompt_tokens": 19683,
+        "completion_tokens": 4592,
+        "seconds": 323.0
+      },
+      "tournament": {
+        "calls": 2,
+        "cached_calls": 2,
+        "prompt_tokens": 2923,
+        "completion_tokens": 478,
+        "seconds": 0.0
+      },
+      "agent_under_test": {
+        "calls": 61,
+        "cached_calls": 23,
+        "prompt_tokens": 75786,
+        "completion_tokens": 7877,
+        "seconds": 944.2
+      },
+      "judge": {
+        "calls": 48,
+        "cached_calls": 11,
+        "prompt_tokens": 40333,
+        "completion_tokens": 3358,
+        "seconds": 385.2
+      },
+      "report": {
+        "calls": 1,
+        "cached_calls": 0,
+        "prompt_tokens": 583,
+        "completion_tokens": 130,
+        "seconds": 26.5
+      }
+    },
+    "warnings": []
+  },
+  "finished": "2026-11-25 15:42:57",
+  "final": {
+    "definition_version": 1,
+    "pass_rate": 0.95,
+    "holdout_pass_rate": 0.8,
+    "stop_reason": "dev pass rate 100% reached the target (90%)"
+  }
+}

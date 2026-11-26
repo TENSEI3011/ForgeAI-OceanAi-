@@ -1,0 +1,25 @@
+{
+  "tool_decisions": [
+    {
+      "tool": "csv_lookup",
+      "attached": false,
+      "reason": "The documents are policy documents (prose), not structured CSV tables with item codes or prices. No request involves looking up specific items or records by ID or code. Semantic search of policy text suffices."
+    },
+    {
+      "tool": "weather",
+      "attached": false,
+      "reason": "Weather is not mentioned in any policy or user request. The assistant does not need to report weather conditions for any location, and it is irrelevant to HR policy questions."
+    },
+    {
+      "tool": "current_date",
+      "attached": false,
+      "reason": "justification quote not found in the requester's words: 'how many days, how much, notice periods, carry-forward limits, must be used by 31 March, weekend travel must be recorded and availed within 60 days'"
+    },
+    {
+      "tool": "calculator",
+      "attached": false,
+      "reason": "critic pass rejected it: The requester asks about when salaries are credited and what deductions mean, which refers to explaining policy content, not performing arithmetic. The documents provide the factual rules (e.g., deduction types, credit dates), and no request involves computing totals, percentages, or quantities. Thus, no arithmetic is required."
+    }
+  ],
+  "dropped_rules": []
+}

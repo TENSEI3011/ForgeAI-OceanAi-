@@ -1,0 +1,10 @@
+pydantic>=2.6
+requests>=2.31
+numpy>=1.26
+pypdf>=4.0
+rapidfuzz>=3.6
+rich>=13.7
+python-dotenv>=1.0
+reportlab>=4.0   # only used to render the synthetic demo PDFs
+pytest>=8.0
+streamlit>=1.35  # optional web UI (app.py)

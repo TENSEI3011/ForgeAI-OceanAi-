@@ -1,0 +1,35 @@
+SMS MANUAL PART 7 - PERMIT TO WORK AND INCIDENT REPORTING
+Document SMS-07, Revision 4. Applies to all Coralis Shipping managed vessels.
+
+7.1 PERMIT TO WORK SYSTEM
+
+A permit to work is required before any of the following hazardous activities: hot work outside the engine room workshop, entry into enclosed spaces, work aloft or over the side, electrical work on live equipment above 50 volts, and work on pressurised pipelines.
+
+The permit is requested by the person in charge of the job, checked by the responsible officer (Chief Engineer for machinery spaces, Chief Officer for deck areas), and authorised by the Master. Hot work permits are valid for a maximum of 8 hours and enclosed space entry permits for a maximum of 12 hours. A permit expires at the end of its validity or at a change of watch if the work is handed over, whichever comes first; a new permit is then needed.
+
+7.2 ENCLOSED SPACE ENTRY
+
+Before entry, the atmosphere must be tested for oxygen, flammable gases and toxic gases. Entry is allowed only if oxygen is between 20.8% and 21% by volume and flammable gas is below 1% of the lower flammable limit. The space must be ventilated for at least 30 minutes before the first test. Testing is repeated every 30 minutes while people are inside. An attendant must stay at the entrance at all times with a means of communication, and a rescue team with breathing apparatus must be on standby.
+
+7.3 HOT WORK
+
+Hot work requires a fire watch during the work and for at least 60 minutes after it ends. A charged fire hose and a portable extinguisher must be at the work site. Hot work on fuel or cargo tanks needs written approval from the office technical superintendent in addition to the Master.
+
+7.4 INCIDENT REPORTING
+
+All incidents, accidents and near misses must be reported. Report categories and time limits:
+- Serious incidents (fatality, serious injury, fire, collision, grounding, pollution): notify the DPA by phone immediately and submit form SMS-F-071 within 24 hours.
+- Lost time injuries and equipment damage: submit form SMS-F-071 within 48 hours.
+- Near misses and unsafe conditions: submit form SMS-F-072 within 72 hours.
+
+Each vessel must report at least 4 near misses per month; the best near-miss report of each quarter receives the "Safety Eye" award of USD 200 for the crew welfare fund.
+
+7.5 INVESTIGATION
+
+The Master appoints an investigation team within 24 hours of a serious incident. The root-cause investigation report is sent to the office within 14 days. Corrective actions are tracked by the DPA and must be closed within 90 days, or an extension approved by the Technical Director.
+
+7.6 NO-BLAME POLICY
+
+Reports made in good faith are never used for disciplinary action against the reporter. Crew may also report anonymously through the Speak-Up box on board or speakup@coralis-shipping.example.
+
+Synthetic document for demonstration purposes.
