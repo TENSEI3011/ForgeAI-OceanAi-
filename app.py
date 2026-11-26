@@ -26,7 +26,7 @@ st.set_page_config(page_title="ForgeAI", page_icon="🛠️", layout="wide")
 try:
     for _k, _v in st.secrets.items():
         if isinstance(_v, (str, int, float, bool)):
-            os.environ.setdefault(_k, str(_v))
+            os.environ[_k] = str(_v)     # secrets win, so a rotated API key replaces the old one
 except Exception:
     pass
 FACTORY_PASSWORD = os.getenv("FACTORY_PASSWORD", "")
@@ -55,6 +55,9 @@ def run_dirs() -> list[Path]:
 
 st.title("ForgeAI: the agent that builds agents")
 from forgeai.llm import SETTINGS, check_backend  # noqa: E402
+
+# Settings are read once per process; take the current key on every run so a rotated key works at once
+SETTINGS.groq_key = os.getenv("GROQ_API_KEY", SETTINGS.groq_key)
 
 with st.sidebar:
     st.markdown(f"**Backend:** `{SETTINGS.backend}`  \n**Model:** `{SETTINGS.model}`  \n"
